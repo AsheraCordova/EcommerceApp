@@ -41,7 +41,7 @@ public class SplashScreen extends org.apache.cordova.CordovaPlugin {
 		p.setAttribute("class", "web-dialog");
 		
 		HTMLElement img = org.teavm.jso.dom.html.HTMLDocument.current().createElement("img");
-		img.setAttribute("src", "/res-swt/drawable/" + splashResource + ".png");
+		img.setAttribute("src", "res-swt/drawable/" + splashResource + ".png");
 		img.getStyle().setProperty("width", "100%");
 		img.getStyle().setProperty("height", "100%");
 		img.getStyle().setProperty("object-fit", "cover");
