@@ -1,0 +1,11 @@
+{
+  "name": "CorePluginIOS",
+  "version": "0.1.0",
+  "description": "Core Plugin",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/don/cordova-plugin-hello.git"
+  },
+  "author": "Don Coleman",
+  "license": "Apache-2"
+}

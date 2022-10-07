@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<plugin xmlns="http://www.phonegap.com/ns/plugins/1.0"
+        id="com.ashera.constraintlayout.swt"
+        version="1.0">
+
+  <name>Constraintlayout Plugin</name>
+
+  <platform name="swt">
+  	<config-file target="res/xml/config.xml" parent="/*">
+      <feature name="AndroidXConstraintLayout">
+        <param name="android-package" value="com.ashera.constraintlayout.AndroidXConstraintLayout"/>
+        <param name="onload" value="true" />
+      </feature>
+    </config-file>
+   	<framework src="core.gradle" custom="true" type="gradleReference" />
+  </platform>
+</plugin>

@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<plugin xmlns="http://www.phonegap.com/ns/plugins/1.0"
+        id="com.ashera.constraintlayout"
+        version="1.0">
+
+  <name>Constraint layout Plugin</name>
+
+  <engines>
+    <engine name="cordova" version=">=3.4.0"/>
+  </engines>
+  
+  <platform name="android">
+    <config-file target="res/xml/config.xml" parent="/*">
+      <feature name="AndroidXConstraintLayout">
+        <param name="android-package" value="com.ashera.constraintlayout.AndroidXConstraintLayout"/>
+        <param name="onload" value="true" />
+      </feature>
+    </config-file>
+    
+    <framework src="core.gradle" custom="true" type="gradleReference" />
+	 <!-- start src -->
+     <source-file src="src/com/ashera/constraintlayout/AndroidXConstraintLayout.java" target-dir="src/com/ashera/constraintlayout"/>
+     <source-file src="src/com/ashera/constraintlayout/BarrierImpl.java" target-dir="src/com/ashera/constraintlayout"/>
+     <source-file src="src/com/ashera/constraintlayout/CircularFlowImpl.java" target-dir="src/com/ashera/constraintlayout"/>
+     <source-file src="src/com/ashera/constraintlayout/ConstraintLayoutImpl.java" target-dir="src/com/ashera/constraintlayout"/>
+     <source-file src="src/com/ashera/constraintlayout/ConstraintReferencedIdsConverter.java" target-dir="src/com/ashera/constraintlayout"/>
+     <source-file src="src/com/ashera/constraintlayout/FlowImpl.java" target-dir="src/com/ashera/constraintlayout"/>
+     <source-file src="src/com/ashera/constraintlayout/GroupImpl.java" target-dir="src/com/ashera/constraintlayout"/>
+     <source-file src="src/com/ashera/constraintlayout/GuidelineImpl.java" target-dir="src/com/ashera/constraintlayout"/>
+     <source-file src="src/com/ashera/constraintlayout/PlaceholderImpl.java" target-dir="src/com/ashera/constraintlayout"/>
+     <!-- src end -->
+     
+     <!-- start tsc -->
+     <source-file src="tsc/src/android/widget/BarrierImpl.ts" target-dir="tsc/src/android/widget"/>
+     <source-file src="tsc/src/android/widget/CircularFlowImpl.ts" target-dir="tsc/src/android/widget"/>
+     <source-file src="tsc/src/android/widget/ConstraintLayoutImpl.ts" target-dir="tsc/src/android/widget"/>
+     <source-file src="tsc/src/android/widget/FlowImpl.ts" target-dir="tsc/src/android/widget"/>
+     <source-file src="tsc/src/android/widget/GroupImpl.ts" target-dir="tsc/src/android/widget"/>
+     <source-file src="tsc/src/android/widget/GuidelineImpl.ts" target-dir="tsc/src/android/widget"/>
+     <source-file src="tsc/src/android/widget/PlaceholderImpl.ts" target-dir="tsc/src/android/widget"/>
+     <!-- tsc end -->
+  </platform>
+
+
+</plugin>

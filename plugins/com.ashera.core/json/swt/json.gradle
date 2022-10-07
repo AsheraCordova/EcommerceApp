@@ -1,0 +1,15 @@
+repositories {
+    mavenLocal();
+    google();
+    jcenter();
+}
+
+dependencies {
+	def project_version = '1.0.0';
+	def gson_version = '2.8.5';
+	// json adapter
+	implementation "com.google.code.gson:gson:${gson_version}"
+	implementation "com.ashera:SWTJsonAdapter:${project_version}"
+
+    
+}

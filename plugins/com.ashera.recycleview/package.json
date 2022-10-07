@@ -1,0 +1,32 @@
+{
+  "_from": "git+https://github.com/AsheraCordova/RecycleView.git",
+  "_id": "com.ashera.recycleview@1.0.0",
+  "_inBundle": false,
+  "_integrity": "",
+  "_location": "/com.ashera.recycleview",
+  "_phantomChildren": {},
+  "_requested": {
+    "type": "git",
+    "raw": "https://github.com/AsheraCordova/RecycleView",
+    "rawSpec": "https://github.com/AsheraCordova/RecycleView",
+    "saveSpec": "git+https://github.com/AsheraCordova/RecycleView.git",
+    "fetchSpec": "https://github.com/AsheraCordova/RecycleView.git",
+    "gitCommittish": null
+  },
+  "_requiredBy": [
+    "#DEV:/",
+    "#USER"
+  ],
+  "_resolved": "git+https://github.com/AsheraCordova/RecycleView.git#1fe4abff119e23e828ba875eb93a60791cfc0715",
+  "_spec": "https://github.com/AsheraCordova/RecycleView",
+  "_where": "D:\\Java\\github_ashera\\EcommerceApp",
+  "author": {
+    "name": "Ram M"
+  },
+  "bundleDependencies": false,
+  "deprecated": false,
+  "description": "Recycleview Plugin - Ashera",
+  "license": "ISC",
+  "name": "com.ashera.recycleview",
+  "version": "1.0.0"
+}

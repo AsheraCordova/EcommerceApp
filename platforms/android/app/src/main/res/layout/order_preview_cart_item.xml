@@ -1,0 +1,161 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginLeft="10dp"
+    android:layout_marginRight="10dp"
+    android:orientation="vertical"
+    tools:ignore="MissingPrefix">
+
+    <RelativeLayout
+        android:id="@+id/errorLabel"
+        borderRadius="3dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="5dp"
+        android:background="#f6c26d"
+        android:padding="5dp"
+        android:visibility="gone">
+
+        <TextView
+            style="@style/h3_gray_500"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:paddingLeft="15dp"
+            android:paddingRight="15dp"
+            android:text="@string/out_of_stock"></TextView>
+    </RelativeLayout>
+
+    <LinearLayout
+        style="@style/border_separator"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:paddingBottom="1dp">
+
+        <FrameLayout
+            android:layout_width="40dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_margin="20dp">
+
+            <ImageView
+                android:id="@+id/type"
+                android:layout_width="40dp"
+                android:layout_height="wrap_content"
+                android:scaleType="centerInside"
+                android:src="@drawable/orderpreview_food"></ImageView>
+        </FrameLayout>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:padding="5dp">
+
+            <TextView
+                android:id="@+id/name"
+                style="@style/h2_black"
+                modelPojoToUi="text = name from item->loopvar"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:layout_toLeftOf="@+id/deleteItem"
+                android:text="Sample"
+                android:textStyle="bold"></TextView>
+
+            <ImageView
+                android:id="@+id/deleteItem"
+                onClick="deleteFromCart(model = . from item->loopvar)"
+                android:layout_width="40dp"
+                android:layout_height="20dp"
+                android:layout_alignParentTop="true"
+                android:layout_alignParentRight="true"
+                android:src="@drawable/common_delete"
+                tools:ignore="OnClick"></ImageView>
+
+            <LinearLayout
+                android:id="@+id/lowhighprice"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/name"
+                android:layout_marginTop="15dp"
+                android:layout_marginBottom="5dp">
+
+                <ImageView
+                    android:id="@+id/increment"
+                    modelUiToPojoEventIds="quantity"
+                    onClick="increment+(eventParams = . from eventparams_cart_incdec->strings)"
+                    android:layout_width="wrap_content"
+                    android:layout_height="30dp"
+                    android:layout_gravity="center"
+                    android:layout_marginRight="5dp"
+                    android:layout_weight="1"
+                    android:scaleType="centerInside"
+                    android:src="@drawable/common_plus_icon"
+                    tools:ignore="OnClick"></ImageView>
+
+                <EditText
+                    style="@style/card_edittext_style"
+                    android:id="@+id/quantity"
+                    background-swt="#f0f0f0"
+                    background-web="#f0f0f0"
+                    modelPojoToUi="text = quantity from item->loopvar"
+                    modelSyncEvents="onTextChange"
+                    modelUiToPojo="quantity = text into item->loopvar"
+                    modelUiToPojoEventIds="Price"
+                    onTextChange="updateCart(model = . from item->loopvar)"
+                    swtTextStyle="center"
+                    android:layout_width="60dp"
+                    android:layout_height="wrap_content"
+                    android:digits="0123456789"
+                    android:gravity="center"
+                    android:text=""></EditText>
+
+                <ImageView
+                    android:id="@+id/decrement"
+                    modelUiToPojoEventIds="quantity"
+                    onClick="decrement+(eventParams = . from eventparams_cart_incdec->strings)"
+                    android:layout_width="wrap_content"
+                    android:layout_height="30dp"
+                    android:layout_gravity="center"
+                    android:layout_marginRight="5dp"
+                    android:layout_weight="1"
+                    android:scaleType="centerInside"
+                    android:src="@drawable/common_minus_icon"
+                    tools:ignore="OnClick"></ImageView>
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/OldPrice"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/name"
+                android:layout_alignParentRight="true"
+                android:layout_marginTop="8dp"
+                android:gravity="right"
+                android:text="Rs 10"
+                android:textColor="#f00"
+                android:textStyle="bold"
+                android:visibility="gone"></TextView>
+
+            <TextView
+                android:id="@+id/Price"
+                modelPojoToUi="text = multiply(.) from item->loopvar"
+                modelPojoToUiParams="op1:quantity;op2:sellPrice;varType:string;varPath:totalPrice"
+                textFormat="@string/currency_format"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/name"
+                android:layout_alignParentRight="true"
+                android:layout_marginTop="25dp"
+                android:layout_toRightOf="@+id/lowhighprice"
+                android:gravity="right"
+                android:text="Rs 100"
+                style="@style/h2_black"
+                android:textStyle="bold"></TextView>
+        </RelativeLayout>
+    </LinearLayout>
+</LinearLayout>

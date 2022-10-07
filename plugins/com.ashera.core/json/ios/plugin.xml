@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<plugin xmlns="http://www.phonegap.com/ns/plugins/1.0"
+        id="com.ashera.json.ios"
+        version="1.0">
+
+  <name>JSONPlugin</name>
+
+  <engines>
+    <engine name="cordova" version=">=3.4.0"/>
+  </engines>
+
+  <platform name="ios">
+    <config-file target="config.xml" parent="/widget">
+      <feature name="com.ashera.json.ios">
+        	<param name="ios-package" value="JSONAdapterCordovaPlugin" />
+         	<param name="onload" value="true" />
+      </feature>
+    </config-file>
+
+	<!-- start ios -->
+     <header-file src="ios/src/ASDictionaryMap.h" target-dir="JSONCore/ios/src"/>
+     <source-file src="ios/src/ASDictionaryMap.m" target-dir="JSONCore/ios/src" compiler-flags="-fobjc-arc-exceptions"/>
+     <header-file src="ios/src/JSONAdapter.h" target-dir="JSONCore/ios/src"/>
+     <source-file src="ios/src/JSONAdapter.m" target-dir="JSONCore/ios/src" compiler-flags="-fobjc-arc-exceptions"/>
+     <header-file src="ios/src/JSONAdapterCordovaPlugin.h" target-dir="JSONCore/ios/src"/>
+     <source-file src="ios/src/JSONAdapterCordovaPlugin.m" target-dir="JSONCore/ios/src" compiler-flags="-fobjc-arc-exceptions"/>
+     <header-file src="ios/src/JSONAdapterImpl.h" target-dir="JSONCore/ios/src"/>
+     <source-file src="ios/src/JSONAdapterImpl.m" target-dir="JSONCore/ios/src" compiler-flags="-fobjc-arc-exceptions"/>
+     <header-file src="ios/src/NSMutableArrayJSONSafeList.h" target-dir="JSONCore/ios/src"/>
+     <source-file src="ios/src/NSMutableArrayJSONSafeList.m" target-dir="JSONCore/ios/src" compiler-flags="-fobjc-arc-exceptions"/>
+     <header-file src="ios/src/NSMutableArrayList.h" target-dir="JSONCore/ios/src"/>
+     <source-file src="ios/src/NSMutableArrayList.m" target-dir="JSONCore/ios/src" compiler-flags="-fobjc-arc-exceptions"/>
+     <!-- ios end -->
+  </platform>
+</plugin>

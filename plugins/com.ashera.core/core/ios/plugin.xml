@@ -1,0 +1,673 @@
+<?xml version="1.0" encoding="utf-8"?>
+<plugin xmlns="http://www.phonegap.com/ns/plugins/1.0"
+        id="com.ashera.core.ios"
+        version="1.0">
+
+  <name>CorePlugin</name>
+
+  <engines>
+    <engine name="cordova" version=">=3.4.0"/>
+  </engines>
+
+  <platform name="ios">
+    <config-file target="config.xml" parent="/widget">
+      <feature name="com.ashera.core.ios">
+        	<param name="ios-package" value="CoreCordovaPlugin" />
+         	<param name="onload" value="true" />
+      </feature>
+    </config-file>
+
+	<hook type="before_plugin_install" src="hooks/beforeInstall.js" />
+	<hook type="after_plugin_install" src="hooks/afterInstall.js" />
+	
+	<js-module src="www/coreManager.js" name="coreManager">
+    	<clobbers target="coreManager" />
+  	</js-module>
+	
+     <!-- start ios -->
+     <header-file src="ios/src/ASAppDelegate.h" target-dir="CorePlugin/ios/src"/>
+     <source-file src="ios/src/ASAppDelegate.m" target-dir="CorePlugin/ios/src" compiler-flags="-fobjc-arc-exceptions"/>
+     <header-file src="ios/src/ASDialogFragmentController.h" target-dir="CorePlugin/ios/src"/>
+     <source-file src="ios/src/ASDialogFragmentController.m" target-dir="CorePlugin/ios/src" compiler-flags="-fobjc-arc-exceptions"/>
+     <header-file src="ios/src/ASGenericFragmentController.h" target-dir="CorePlugin/ios/src"/>
+     <source-file src="ios/src/ASGenericFragmentController.m" target-dir="CorePlugin/ios/src" compiler-flags="-fobjc-arc-exceptions"/>
+     <header-file src="ios/src/ASMainViewController.h" target-dir="CorePlugin/ios/src"/>
+     <source-file src="ios/src/ASMainViewController.m" target-dir="CorePlugin/ios/src" compiler-flags="-fobjc-arc-exceptions"/>
+     <header-file src="ios/src/AttributedStringImpl.h" target-dir="CorePlugin/ios/src"/>
+     <source-file src="ios/src/AttributedStringImpl.m" target-dir="CorePlugin/ios/src" compiler-flags="-fobjc-arc-exceptions"/>
+     <header-file src="ios/src/CordovaActivity.h" target-dir="CorePlugin/ios/src"/>
+     <source-file src="ios/src/CordovaActivity.m" target-dir="CorePlugin/ios/src" compiler-flags="-fobjc-arc-exceptions"/>
+     <header-file src="ios/src/CoreCordovaPlugin.h" target-dir="CorePlugin/ios/src"/>
+     <source-file src="ios/src/CoreCordovaPlugin.m" target-dir="CorePlugin/ios/src" compiler-flags="-fobjc-arc-exceptions"/>
+     <header-file src="ios/src/CorePlugin.h" target-dir="CorePlugin/ios/src"/>
+     <source-file src="ios/src/CorePlugin.m" target-dir="CorePlugin/ios/src" compiler-flags="-fobjc-arc-exceptions"/>
+     <header-file src="ios/src/DialogFragment.h" target-dir="CorePlugin/ios/src"/>
+     <source-file src="ios/src/DialogFragment.m" target-dir="CorePlugin/ios/src" compiler-flags="-fobjc-arc-exceptions"/>
+     <header-file src="ios/src/GenericFragment.h" target-dir="CorePlugin/ios/src"/>
+     <source-file src="ios/src/GenericFragment.m" target-dir="CorePlugin/ios/src" compiler-flags="-fobjc-arc-exceptions"/>
+     <header-file src="ios/src/ICore.h" target-dir="CorePlugin/ios/src"/>
+     <source-file src="ios/src/ICore.m" target-dir="CorePlugin/ios/src" compiler-flags="-fobjc-arc-exceptions"/>
+     <header-file src="ios/src/ShapeDrawableImpl.h" target-dir="CorePlugin/ios/src"/>
+     <source-file src="ios/src/ShapeDrawableImpl.m" target-dir="CorePlugin/ios/src" compiler-flags="-fobjc-arc-exceptions"/>
+     <source-file src="ios/src/signal_recovery.c" target-dir="CorePlugin/ios/src"/>
+     <header-file src="ios/src/signal_recovery.h" target-dir="CorePlugin/ios/src"/>
+     <header-file src="ios/src/UINavigatorImpl.h" target-dir="CorePlugin/ios/src"/>
+     <source-file src="ios/src/UINavigatorImpl.m" target-dir="CorePlugin/ios/src" compiler-flags="-fobjc-arc-exceptions"/>
+     <!-- ios end -->
+     
+     <!-- start css_parser -->
+     <header-file src="library/css_parser/src/CssDataHolder.h" target-dir="CorePlugin/css_parser/src"/>
+     <source-file src="library/css_parser/src/CssDataHolder.m" target-dir="CorePlugin/css_parser/src" compiler-flags="-fno-objc-arc"/>
+     <header-file src="library/css_parser/src/CssResult.h" target-dir="CorePlugin/css_parser/src"/>
+     <source-file src="library/css_parser/src/CssResult.m" target-dir="CorePlugin/css_parser/src" compiler-flags="-fno-objc-arc"/>
+     <header-file src="library/css_parser/src/CssTree.h" target-dir="CorePlugin/css_parser/src"/>
+     <source-file src="library/css_parser/src/CssTree.m" target-dir="CorePlugin/css_parser/src" compiler-flags="-fno-objc-arc"/>
+     <header-file src="library/css_parser/src/Evaluator.h" target-dir="CorePlugin/css_parser/src"/>
+     <source-file src="library/css_parser/src/Evaluator.m" target-dir="CorePlugin/css_parser/src" compiler-flags="-fno-objc-arc"/>
+     <header-file src="library/css_parser/src/EvaluatorConstants.h" target-dir="CorePlugin/css_parser/src"/>
+     <source-file src="library/css_parser/src/EvaluatorConstants.m" target-dir="CorePlugin/css_parser/src" compiler-flags="-fno-objc-arc"/>
+     <header-file src="library/css_parser/src/EvaluatorTokenManager.h" target-dir="CorePlugin/css_parser/src"/>
+     <source-file src="library/css_parser/src/EvaluatorTokenManager.m" target-dir="CorePlugin/css_parser/src" compiler-flags="-fno-objc-arc"/>
+     <header-file src="library/css_parser/src/FontFace.h" target-dir="CorePlugin/css_parser/src"/>
+     <source-file src="library/css_parser/src/FontFace.m" target-dir="CorePlugin/css_parser/src" compiler-flags="-fno-objc-arc"/>
+     <header-file src="library/css_parser/src/JavaCharStream.h" target-dir="CorePlugin/css_parser/src"/>
+     <source-file src="library/css_parser/src/JavaCharStream.m" target-dir="CorePlugin/css_parser/src" compiler-flags="-fno-objc-arc"/>
+     <header-file src="library/css_parser/src/ParseException.h" target-dir="CorePlugin/css_parser/src"/>
+     <source-file src="library/css_parser/src/ParseException.m" target-dir="CorePlugin/css_parser/src" compiler-flags="-fno-objc-arc"/>
+     <header-file src="library/css_parser/src/Token.h" target-dir="CorePlugin/css_parser/src"/>
+     <source-file src="library/css_parser/src/Token.m" target-dir="CorePlugin/css_parser/src" compiler-flags="-fno-objc-arc"/>
+     <header-file src="library/css_parser/src/TokenMgrError.h" target-dir="CorePlugin/css_parser/src"/>
+     <source-file src="library/css_parser/src/TokenMgrError.m" target-dir="CorePlugin/css_parser/src" compiler-flags="-fno-objc-arc"/>
+     <!-- css_parser end -->
+     <!-- start html_parser -->
+     <header-file src="library/html_parser/src/AttributesImpl.h" target-dir="CorePlugin/html_parser/src"/>
+     <source-file src="library/html_parser/src/AttributesImpl.m" target-dir="CorePlugin/html_parser/src" compiler-flags="-fno-objc-arc"/>
+     <header-file src="library/html_parser/src/AutoDetector.h" target-dir="CorePlugin/html_parser/src"/>
+     <source-file src="library/html_parser/src/AutoDetector.m" target-dir="CorePlugin/html_parser/src" compiler-flags="-fno-objc-arc"/>
+     <header-file src="library/html_parser/src/Element.h" target-dir="CorePlugin/html_parser/src"/>
+     <source-file src="library/html_parser/src/Element.m" target-dir="CorePlugin/html_parser/src" compiler-flags="-fno-objc-arc"/>
+     <header-file src="library/html_parser/src/ElementType.h" target-dir="CorePlugin/html_parser/src"/>
+     <source-file src="library/html_parser/src/ElementType.m" target-dir="CorePlugin/html_parser/src" compiler-flags="-fno-objc-arc"/>
+     <header-file src="library/html_parser/src/HTMLModels.h" target-dir="CorePlugin/html_parser/src"/>
+     <source-file src="library/html_parser/src/HTMLModels.m" target-dir="CorePlugin/html_parser/src" compiler-flags="-fno-objc-arc"/>
+     <header-file src="library/html_parser/src/HtmlParser.h" target-dir="CorePlugin/html_parser/src"/>
+     <source-file src="library/html_parser/src/HtmlParser.m" target-dir="CorePlugin/html_parser/src" compiler-flags="-fno-objc-arc"/>
+     <header-file src="library/html_parser/src/HTMLScanner.h" target-dir="CorePlugin/html_parser/src"/>
+     <source-file src="library/html_parser/src/HTMLScanner.m" target-dir="CorePlugin/html_parser/src" compiler-flags="-fno-objc-arc"/>
+     <header-file src="library/html_parser/src/HTMLSchema.h" target-dir="CorePlugin/html_parser/src"/>
+     <source-file src="library/html_parser/src/HTMLSchema.m" target-dir="CorePlugin/html_parser/src" compiler-flags="-fno-objc-arc"/>
+     <header-file src="library/html_parser/src/SAX1ParserAdapter.h" target-dir="CorePlugin/html_parser/src"/>
+     <source-file src="library/html_parser/src/SAX1ParserAdapter.m" target-dir="CorePlugin/html_parser/src" compiler-flags="-fno-objc-arc"/>
+     <header-file src="library/html_parser/src/SAXFactoryImpl.h" target-dir="CorePlugin/html_parser/src"/>
+     <source-file src="library/html_parser/src/SAXFactoryImpl.m" target-dir="CorePlugin/html_parser/src" compiler-flags="-fno-objc-arc"/>
+     <header-file src="library/html_parser/src/SAXParserImpl.h" target-dir="CorePlugin/html_parser/src"/>
+     <source-file src="library/html_parser/src/SAXParserImpl.m" target-dir="CorePlugin/html_parser/src" compiler-flags="-fno-objc-arc"/>
+     <header-file src="library/html_parser/src/ScanHandler.h" target-dir="CorePlugin/html_parser/src"/>
+     <source-file src="library/html_parser/src/ScanHandler.m" target-dir="CorePlugin/html_parser/src" compiler-flags="-fno-objc-arc"/>
+     <header-file src="library/html_parser/src/Scanner.h" target-dir="CorePlugin/html_parser/src"/>
+     <source-file src="library/html_parser/src/Scanner.m" target-dir="CorePlugin/html_parser/src" compiler-flags="-fno-objc-arc"/>
+     <header-file src="library/html_parser/src/Schema.h" target-dir="CorePlugin/html_parser/src"/>
+     <source-file src="library/html_parser/src/Schema.m" target-dir="CorePlugin/html_parser/src" compiler-flags="-fno-objc-arc"/>
+     <header-file src="library/html_parser/src/TagSoupParser.h" target-dir="CorePlugin/html_parser/src"/>
+     <source-file src="library/html_parser/src/TagSoupParser.m" target-dir="CorePlugin/html_parser/src" compiler-flags="-fno-objc-arc"/>
+     <!-- html_parser end -->
+     <!-- start Plugin_HtmlParser -->
+     <header-file src="library/Plugin_HtmlParser/src/Html.h" target-dir="CorePlugin/Plugin_HtmlParser/src"/>
+     <source-file src="library/Plugin_HtmlParser/src/Html.m" target-dir="CorePlugin/Plugin_HtmlParser/src" compiler-flags="-fno-objc-arc"/>
+     <header-file src="library/Plugin_HtmlParser/src/HtmlParserPlugin.h" target-dir="CorePlugin/Plugin_HtmlParser/src"/>
+     <source-file src="library/Plugin_HtmlParser/src/HtmlParserPlugin.m" target-dir="CorePlugin/Plugin_HtmlParser/src" compiler-flags="-fno-objc-arc"/>
+     <header-file src="library/Plugin_HtmlParser/src/HtmlSaxHandler.h" target-dir="CorePlugin/Plugin_HtmlParser/src"/>
+     <source-file src="library/Plugin_HtmlParser/src/HtmlSaxHandler.m" target-dir="CorePlugin/Plugin_HtmlParser/src" compiler-flags="-fno-objc-arc"/>
+     <header-file src="library/Plugin_HtmlParser/src/HtmlToSpannedConverter.h" target-dir="CorePlugin/Plugin_HtmlParser/src"/>
+     <source-file src="library/Plugin_HtmlParser/src/HtmlToSpannedConverter.m" target-dir="CorePlugin/Plugin_HtmlParser/src" compiler-flags="-fno-objc-arc"/>
+     <header-file src="library/Plugin_HtmlParser/src/IHtmlParser.h" target-dir="CorePlugin/Plugin_HtmlParser/src"/>
+     <source-file src="library/Plugin_HtmlParser/src/IHtmlParser.m" target-dir="CorePlugin/Plugin_HtmlParser/src" compiler-flags="-fno-objc-arc"/>
+     <!-- Plugin_HtmlParser end -->
+     <!-- start widget_library -->
+     <header-file src="library/widget_library/src/AttributeCommand.h" target-dir="CorePlugin/widget_library/src"/>
+     <source-file src="library/widget_library/src/AttributeCommand.m" target-dir="CorePlugin/widget_library/src" compiler-flags="-fno-objc-arc"/>
+     <header-file src="library/widget_library/src/AttributeCommandChain.h" target-dir="CorePlugin/widget_library/src"/>
+     <source-file src="library/widget_library/src/AttributeCommandChain.m" target-dir="CorePlugin/widget_library/src" compiler-flags="-fno-objc-arc"/>
+     <header-file src="library/widget_library/src/AttributedString.h" target-dir="CorePlugin/widget_library/src"/>
+     <source-file src="library/widget_library/src/AttributedString.m" target-dir="CorePlugin/widget_library/src" compiler-flags="-fno-objc-arc"/>
+     <header-file src="library/widget_library/src/AugmentedIntervalTree.h" target-dir="CorePlugin/widget_library/src"/>
+     <source-file src="library/widget_library/src/AugmentedIntervalTree.m" target-dir="CorePlugin/widget_library/src" compiler-flags="-fno-objc-arc"/>
+     <header-file src="library/widget_library/src/BaseAttributeCommand.h" target-dir="CorePlugin/widget_library/src"/>
+     <source-file src="library/widget_library/src/BaseAttributeCommand.m" target-dir="CorePlugin/widget_library/src" compiler-flags="-fno-objc-arc"/>
+     <header-file src="library/widget_library/src/BaseHasWidgets.h" target-dir="CorePlugin/widget_library/src"/>
+     <source-file src="library/widget_library/src/BaseHasWidgets.m" target-dir="CorePlugin/widget_library/src" compiler-flags="-fno-objc-arc"/>
+     <header-file src="library/widget_library/src/BaseValidator.h" target-dir="CorePlugin/widget_library/src"/>
+     <source-file src="library/widget_library/src/BaseValidator.m" target-dir="CorePlugin/widget_library/src" compiler-flags="-fno-objc-arc"/>
+     <header-file src="library/widget_library/src/BaseWidget.h" target-dir="CorePlugin/widget_library/src"/>
+     <source-file src="library/widget_library/src/BaseWidget.m" target-dir="CorePlugin/widget_library/src" compiler-flags="-fno-objc-arc"/>
+     <header-file src="library/widget_library/src/BulletInterval.h" target-dir="CorePlugin/widget_library/src"/>
+     <source-file src="library/widget_library/src/BulletInterval.m" target-dir="CorePlugin/widget_library/src" compiler-flags="-fno-objc-arc"/>
+     <header-file src="library/widget_library/src/CodeGen.h" target-dir="CorePlugin/widget_library/src"/>
+     <source-file src="library/widget_library/src/CodeGen.m" target-dir="CorePlugin/widget_library/src" compiler-flags="-fno-objc-arc"/>
+     <header-file src="library/widget_library/src/ColorUtil.h" target-dir="CorePlugin/widget_library/src"/>
+     <source-file src="library/widget_library/src/ColorUtil.m" target-dir="CorePlugin/widget_library/src" compiler-flags="-fno-objc-arc"/>
+     <header-file src="library/widget_library/src/CommandHelper.h" target-dir="CorePlugin/widget_library/src"/>
+     <source-file src="library/widget_library/src/CommandHelper.m" target-dir="CorePlugin/widget_library/src" compiler-flags="-fno-objc-arc"/>
+     <header-file src="library/widget_library/src/CompositeHandler.h" target-dir="CorePlugin/widget_library/src"/>
+     <source-file src="library/widget_library/src/CompositeHandler.m" target-dir="CorePlugin/widget_library/src" compiler-flags="-fno-objc-arc"/>
+     <header-file src="library/widget_library/src/Converter.h" target-dir="CorePlugin/widget_library/src"/>
+     <source-file src="library/widget_library/src/Converter.m" target-dir="CorePlugin/widget_library/src" compiler-flags="-fno-objc-arc"/>
+     <header-file src="library/widget_library/src/ConverterFactory.h" target-dir="CorePlugin/widget_library/src"/>
+     <source-file src="library/widget_library/src/ConverterFactory.m" target-dir="CorePlugin/widget_library/src" compiler-flags="-fno-objc-arc"/>
+     <header-file src="library/widget_library/src/Error.h" target-dir="CorePlugin/widget_library/src"/>
+     <source-file src="library/widget_library/src/Error.m" target-dir="CorePlugin/widget_library/src" compiler-flags="-fno-objc-arc"/>
+     <header-file src="library/widget_library/src/Errors.h" target-dir="CorePlugin/widget_library/src"/>
+     <source-file src="library/widget_library/src/Errors.m" target-dir="CorePlugin/widget_library/src" compiler-flags="-fno-objc-arc"/>
+     <header-file src="library/widget_library/src/Event.h" target-dir="CorePlugin/widget_library/src"/>
+     <source-file src="library/widget_library/src/Event.m" target-dir="CorePlugin/widget_library/src" compiler-flags="-fno-objc-arc"/>
+     <header-file src="library/widget_library/src/EventBus.h" target-dir="CorePlugin/widget_library/src"/>
+     <source-file src="library/widget_library/src/EventBus.m" target-dir="CorePlugin/widget_library/src" compiler-flags="-fno-objc-arc"/>
+     <header-file src="library/widget_library/src/EventBusCallback.h" target-dir="CorePlugin/widget_library/src"/>
+     <source-file src="library/widget_library/src/EventBusCallback.m" target-dir="CorePlugin/widget_library/src" compiler-flags="-fno-objc-arc"/>
+     <header-file src="library/widget_library/src/EventBusHandler.h" target-dir="CorePlugin/widget_library/src"/>
+     <source-file src="library/widget_library/src/EventBusHandler.m" target-dir="CorePlugin/widget_library/src" compiler-flags="-fno-objc-arc"/>
+     <header-file src="library/widget_library/src/EventCommand.h" target-dir="CorePlugin/widget_library/src"/>
+     <source-file src="library/widget_library/src/EventCommand.m" target-dir="CorePlugin/widget_library/src" compiler-flags="-fno-objc-arc"/>
+     <header-file src="library/widget_library/src/EventCommandFactory.h" target-dir="CorePlugin/widget_library/src"/>
+     <source-file src="library/widget_library/src/EventCommandFactory.m" target-dir="CorePlugin/widget_library/src" compiler-flags="-fno-objc-arc"/>
+     <header-file src="library/widget_library/src/EventExpressionParser.h" target-dir="CorePlugin/widget_library/src"/>
+     <source-file src="library/widget_library/src/EventExpressionParser.m" target-dir="CorePlugin/widget_library/src" compiler-flags="-fno-objc-arc"/>
+     <header-file src="library/widget_library/src/ExpressionMethodHandler.h" target-dir="CorePlugin/widget_library/src"/>
+     <source-file src="library/widget_library/src/ExpressionMethodHandler.m" target-dir="CorePlugin/widget_library/src" compiler-flags="-fno-objc-arc"/>
+     <header-file src="library/widget_library/src/Field.h" target-dir="CorePlugin/widget_library/src"/>
+     <source-file src="library/widget_library/src/Field.m" target-dir="CorePlugin/widget_library/src" compiler-flags="-fno-objc-arc"/>
+     <header-file src="library/widget_library/src/FieldValidationException.h" target-dir="CorePlugin/widget_library/src"/>
+     <source-file src="library/widget_library/src/FieldValidationException.m" target-dir="CorePlugin/widget_library/src" compiler-flags="-fno-objc-arc"/>
+     <header-file src="library/widget_library/src/FileUtils.h" target-dir="CorePlugin/widget_library/src"/>
+     <source-file src="library/widget_library/src/FileUtils.m" target-dir="CorePlugin/widget_library/src" compiler-flags="-fno-objc-arc"/>
+     <header-file src="library/widget_library/src/FontDescriptor.h" target-dir="CorePlugin/widget_library/src"/>
+     <source-file src="library/widget_library/src/FontDescriptor.m" target-dir="CorePlugin/widget_library/src" compiler-flags="-fno-objc-arc"/>
+     <header-file src="library/widget_library/src/FontMetricsDescriptor.h" target-dir="CorePlugin/widget_library/src"/>
+     <source-file src="library/widget_library/src/FontMetricsDescriptor.m" target-dir="CorePlugin/widget_library/src" compiler-flags="-fno-objc-arc"/>
+     <header-file src="library/widget_library/src/Form.h" target-dir="CorePlugin/widget_library/src"/>
+     <source-file src="library/widget_library/src/Form.m" target-dir="CorePlugin/widget_library/src" compiler-flags="-fno-objc-arc"/>
+     <header-file src="library/widget_library/src/FormElement.h" target-dir="CorePlugin/widget_library/src"/>
+     <source-file src="library/widget_library/src/FormElement.m" target-dir="CorePlugin/widget_library/src" compiler-flags="-fno-objc-arc"/>
+     <header-file src="library/widget_library/src/GenericDecorator.h" target-dir="CorePlugin/widget_library/src"/>
+     <source-file src="library/widget_library/src/GenericDecorator.m" target-dir="CorePlugin/widget_library/src" compiler-flags="-fno-objc-arc"/>
+     <header-file src="library/widget_library/src/HasLifeCycleDecorators.h" target-dir="CorePlugin/widget_library/src"/>
+     <source-file src="library/widget_library/src/HasLifeCycleDecorators.m" target-dir="CorePlugin/widget_library/src" compiler-flags="-fno-objc-arc"/>
+     <header-file src="library/widget_library/src/HasText.h" target-dir="CorePlugin/widget_library/src"/>
+     <source-file src="library/widget_library/src/HasText.m" target-dir="CorePlugin/widget_library/src" compiler-flags="-fno-objc-arc"/>
+     <header-file src="library/widget_library/src/HasWidgets.h" target-dir="CorePlugin/widget_library/src"/>
+     <source-file src="library/widget_library/src/HasWidgets.m" target-dir="CorePlugin/widget_library/src" compiler-flags="-fno-objc-arc"/>
+     <header-file src="library/widget_library/src/IActivity.h" target-dir="CorePlugin/widget_library/src"/>
+     <source-file src="library/widget_library/src/IActivity.m" target-dir="CorePlugin/widget_library/src" compiler-flags="-fno-objc-arc"/>
+     <header-file src="library/widget_library/src/IAsyncCallBack.h" target-dir="CorePlugin/widget_library/src"/>
+     <source-file src="library/widget_library/src/IAsyncCallBack.m" target-dir="CorePlugin/widget_library/src" compiler-flags="-fno-objc-arc"/>
+     <header-file src="library/widget_library/src/IAttributable.h" target-dir="CorePlugin/widget_library/src"/>
+     <source-file src="library/widget_library/src/IAttributable.m" target-dir="CorePlugin/widget_library/src" compiler-flags="-fno-objc-arc"/>
+     <header-file src="library/widget_library/src/IBehavior.h" target-dir="CorePlugin/widget_library/src"/>
+     <source-file src="library/widget_library/src/IBehavior.m" target-dir="CorePlugin/widget_library/src" compiler-flags="-fno-objc-arc"/>
+     <header-file src="library/widget_library/src/ICompositeDecorator.h" target-dir="CorePlugin/widget_library/src"/>
+     <source-file src="library/widget_library/src/ICompositeDecorator.m" target-dir="CorePlugin/widget_library/src" compiler-flags="-fno-objc-arc"/>
+     <header-file src="library/widget_library/src/IConverter.h" target-dir="CorePlugin/widget_library/src"/>
+     <source-file src="library/widget_library/src/IConverter.m" target-dir="CorePlugin/widget_library/src" compiler-flags="-fno-objc-arc"/>
+     <header-file src="library/widget_library/src/ICustomMeasureHeight.h" target-dir="CorePlugin/widget_library/src"/>
+     <source-file src="library/widget_library/src/ICustomMeasureHeight.m" target-dir="CorePlugin/widget_library/src" compiler-flags="-fno-objc-arc"/>
+     <header-file src="library/widget_library/src/ICustomMeasureWidth.h" target-dir="CorePlugin/widget_library/src"/>
+     <source-file src="library/widget_library/src/ICustomMeasureWidth.m" target-dir="CorePlugin/widget_library/src" compiler-flags="-fno-objc-arc"/>
+     <header-file src="library/widget_library/src/IDecorator.h" target-dir="CorePlugin/widget_library/src"/>
+     <source-file src="library/widget_library/src/IDecorator.m" target-dir="CorePlugin/widget_library/src" compiler-flags="-fno-objc-arc"/>
+     <header-file src="library/widget_library/src/IdGenerator.h" target-dir="CorePlugin/widget_library/src"/>
+     <source-file src="library/widget_library/src/IdGenerator.m" target-dir="CorePlugin/widget_library/src" compiler-flags="-fno-objc-arc"/>
+     <header-file src="library/widget_library/src/IEventBus.h" target-dir="CorePlugin/widget_library/src"/>
+     <source-file src="library/widget_library/src/IEventBus.m" target-dir="CorePlugin/widget_library/src" compiler-flags="-fno-objc-arc"/>
+     <header-file src="library/widget_library/src/IFlatMap.h" target-dir="CorePlugin/widget_library/src"/>
+     <source-file src="library/widget_library/src/IFlatMap.m" target-dir="CorePlugin/widget_library/src" compiler-flags="-fno-objc-arc"/>
+     <header-file src="library/widget_library/src/IFragment.h" target-dir="CorePlugin/widget_library/src"/>
+     <source-file src="library/widget_library/src/IFragment.m" target-dir="CorePlugin/widget_library/src" compiler-flags="-fno-objc-arc"/>
+     <header-file src="library/widget_library/src/IHasMultiNativeWidgets.h" target-dir="CorePlugin/widget_library/src"/>
+     <source-file src="library/widget_library/src/IHasMultiNativeWidgets.m" target-dir="CorePlugin/widget_library/src" compiler-flags="-fno-objc-arc"/>
+     <header-file src="library/widget_library/src/IImageDownloader.h" target-dir="CorePlugin/widget_library/src"/>
+     <source-file src="library/widget_library/src/IImageDownloader.m" target-dir="CorePlugin/widget_library/src" compiler-flags="-fno-objc-arc"/>
+     <header-file src="library/widget_library/src/ILifeCycleDecorator.h" target-dir="CorePlugin/widget_library/src"/>
+     <source-file src="library/widget_library/src/ILifeCycleDecorator.m" target-dir="CorePlugin/widget_library/src" compiler-flags="-fno-objc-arc"/>
+     <header-file src="library/widget_library/src/IListener.h" target-dir="CorePlugin/widget_library/src"/>
+     <source-file src="library/widget_library/src/IListener.m" target-dir="CorePlugin/widget_library/src" compiler-flags="-fno-objc-arc"/>
+     <header-file src="library/widget_library/src/ImageDownloaderFactory.h" target-dir="CorePlugin/widget_library/src"/>
+     <source-file src="library/widget_library/src/ImageDownloaderFactory.m" target-dir="CorePlugin/widget_library/src" compiler-flags="-fno-objc-arc"/>
+     <header-file src="library/widget_library/src/ImageInterval.h" target-dir="CorePlugin/widget_library/src"/>
+     <source-file src="library/widget_library/src/ImageInterval.m" target-dir="CorePlugin/widget_library/src" compiler-flags="-fno-objc-arc"/>
+     <header-file src="library/widget_library/src/IMaxDimension.h" target-dir="CorePlugin/widget_library/src"/>
+     <source-file src="library/widget_library/src/IMaxDimension.m" target-dir="CorePlugin/widget_library/src" compiler-flags="-fno-objc-arc"/>
+     <header-file src="library/widget_library/src/IMaxHeight.h" target-dir="CorePlugin/widget_library/src"/>
+     <source-file src="library/widget_library/src/IMaxHeight.m" target-dir="CorePlugin/widget_library/src" compiler-flags="-fno-objc-arc"/>
+     <header-file src="library/widget_library/src/IMaxWidth.h" target-dir="CorePlugin/widget_library/src"/>
+     <source-file src="library/widget_library/src/IMaxWidth.m" target-dir="CorePlugin/widget_library/src" compiler-flags="-fno-objc-arc"/>
+     <header-file src="library/widget_library/src/IMeasureHeight.h" target-dir="CorePlugin/widget_library/src"/>
+     <source-file src="library/widget_library/src/IMeasureHeight.m" target-dir="CorePlugin/widget_library/src" compiler-flags="-fno-objc-arc"/>
+     <header-file src="library/widget_library/src/IMeasureWidth.h" target-dir="CorePlugin/widget_library/src"/>
+     <source-file src="library/widget_library/src/IMeasureWidth.m" target-dir="CorePlugin/widget_library/src" compiler-flags="-fno-objc-arc"/>
+     <header-file src="library/widget_library/src/IModel.h" target-dir="CorePlugin/widget_library/src"/>
+     <source-file src="library/widget_library/src/IModel.m" target-dir="CorePlugin/widget_library/src" compiler-flags="-fno-objc-arc"/>
+     <header-file src="library/widget_library/src/IModelGroup.h" target-dir="CorePlugin/widget_library/src"/>
+     <source-file src="library/widget_library/src/IModelGroup.m" target-dir="CorePlugin/widget_library/src" compiler-flags="-fno-objc-arc"/>
+     <header-file src="library/widget_library/src/Interval.h" target-dir="CorePlugin/widget_library/src"/>
+     <source-file src="library/widget_library/src/Interval.m" target-dir="CorePlugin/widget_library/src" compiler-flags="-fno-objc-arc"/>
+     <header-file src="library/widget_library/src/IPlugin.h" target-dir="CorePlugin/widget_library/src"/>
+     <source-file src="library/widget_library/src/IPlugin.m" target-dir="CorePlugin/widget_library/src" compiler-flags="-fno-objc-arc"/>
+     <header-file src="library/widget_library/src/IRoot.h" target-dir="CorePlugin/widget_library/src"/>
+     <source-file src="library/widget_library/src/IRoot.m" target-dir="CorePlugin/widget_library/src" compiler-flags="-fno-objc-arc"/>
+     <header-file src="library/widget_library/src/IsImage.h" target-dir="CorePlugin/widget_library/src"/>
+     <source-file src="library/widget_library/src/IsImage.m" target-dir="CorePlugin/widget_library/src" compiler-flags="-fno-objc-arc"/>
+     <header-file src="library/widget_library/src/IsRadioButton.h" target-dir="CorePlugin/widget_library/src"/>
+     <source-file src="library/widget_library/src/IsRadioButton.m" target-dir="CorePlugin/widget_library/src" compiler-flags="-fno-objc-arc"/>
+     <header-file src="library/widget_library/src/ITarget.h" target-dir="CorePlugin/widget_library/src"/>
+     <source-file src="library/widget_library/src/ITarget.m" target-dir="CorePlugin/widget_library/src" compiler-flags="-fno-objc-arc"/>
+     <header-file src="library/widget_library/src/ITemplate.h" target-dir="CorePlugin/widget_library/src"/>
+     <source-file src="library/widget_library/src/ITemplate.m" target-dir="CorePlugin/widget_library/src" compiler-flags="-fno-objc-arc"/>
+     <header-file src="library/widget_library/src/IWidget.h" target-dir="CorePlugin/widget_library/src"/>
+     <source-file src="library/widget_library/src/IWidget.m" target-dir="CorePlugin/widget_library/src" compiler-flags="-fno-objc-arc"/>
+     <header-file src="library/widget_library/src/IWidgetLifeCycleListener.h" target-dir="CorePlugin/widget_library/src"/>
+     <source-file src="library/widget_library/src/IWidgetLifeCycleListener.m" target-dir="CorePlugin/widget_library/src" compiler-flags="-fno-objc-arc"/>
+     <header-file src="library/widget_library/src/IWrapableWidget.h" target-dir="CorePlugin/widget_library/src"/>
+     <source-file src="library/widget_library/src/IWrapableWidget.m" target-dir="CorePlugin/widget_library/src" compiler-flags="-fno-objc-arc"/>
+     <header-file src="library/widget_library/src/LoopParam.h" target-dir="CorePlugin/widget_library/src"/>
+     <source-file src="library/widget_library/src/LoopParam.m" target-dir="CorePlugin/widget_library/src" compiler-flags="-fno-objc-arc"/>
+     <header-file src="library/widget_library/src/MeasureEvent.h" target-dir="CorePlugin/widget_library/src"/>
+     <source-file src="library/widget_library/src/MeasureEvent.m" target-dir="CorePlugin/widget_library/src" compiler-flags="-fno-objc-arc"/>
+     <header-file src="library/widget_library/src/MethodHandler.h" target-dir="CorePlugin/widget_library/src"/>
+     <source-file src="library/widget_library/src/MethodHandler.m" target-dir="CorePlugin/widget_library/src" compiler-flags="-fno-objc-arc"/>
+     <header-file src="library/widget_library/src/MethodHandlerFactory.h" target-dir="CorePlugin/widget_library/src"/>
+     <source-file src="library/widget_library/src/MethodHandlerFactory.m" target-dir="CorePlugin/widget_library/src" compiler-flags="-fno-objc-arc"/>
+     <header-file src="library/widget_library/src/ModelDataType.h" target-dir="CorePlugin/widget_library/src"/>
+     <source-file src="library/widget_library/src/ModelDataType.m" target-dir="CorePlugin/widget_library/src" compiler-flags="-fno-objc-arc"/>
+     <header-file src="library/widget_library/src/ModelExpressionParser.h" target-dir="CorePlugin/widget_library/src"/>
+     <source-file src="library/widget_library/src/ModelExpressionParser.m" target-dir="CorePlugin/widget_library/src" compiler-flags="-fno-objc-arc"/>
+     <header-file src="library/widget_library/src/ModelScope.h" target-dir="CorePlugin/widget_library/src"/>
+     <source-file src="library/widget_library/src/ModelScope.m" target-dir="CorePlugin/widget_library/src" compiler-flags="-fno-objc-arc"/>
+     <header-file src="library/widget_library/src/ModelStore.h" target-dir="CorePlugin/widget_library/src"/>
+     <source-file src="library/widget_library/src/ModelStore.m" target-dir="CorePlugin/widget_library/src" compiler-flags="-fno-objc-arc"/>
+     <header-file src="library/widget_library/src/OnLayoutEvent.h" target-dir="CorePlugin/widget_library/src"/>
+     <source-file src="library/widget_library/src/OnLayoutEvent.m" target-dir="CorePlugin/widget_library/src" compiler-flags="-fno-objc-arc"/>
+     <header-file src="library/widget_library/src/PlainMap.h" target-dir="CorePlugin/widget_library/src"/>
+     <source-file src="library/widget_library/src/PlainMap.m" target-dir="CorePlugin/widget_library/src" compiler-flags="-fno-objc-arc"/>
+     <header-file src="library/widget_library/src/PlainMapException.h" target-dir="CorePlugin/widget_library/src"/>
+     <source-file src="library/widget_library/src/PlainMapException.m" target-dir="CorePlugin/widget_library/src" compiler-flags="-fno-objc-arc"/>
+     <header-file src="library/widget_library/src/PluginInvoker.h" target-dir="CorePlugin/widget_library/src"/>
+     <source-file src="library/widget_library/src/PluginInvoker.m" target-dir="CorePlugin/widget_library/src" compiler-flags="-fno-objc-arc"/>
+     <header-file src="library/widget_library/src/PluginManager.h" target-dir="CorePlugin/widget_library/src"/>
+     <source-file src="library/widget_library/src/PluginManager.m" target-dir="CorePlugin/widget_library/src" compiler-flags="-fno-objc-arc"/>
+     <header-file src="library/widget_library/src/RectM.h" target-dir="CorePlugin/widget_library/src"/>
+     <source-file src="library/widget_library/src/RectM.m" target-dir="CorePlugin/widget_library/src" compiler-flags="-fno-objc-arc"/>
+     <header-file src="library/widget_library/src/ResourceBundleUtils.h" target-dir="CorePlugin/widget_library/src"/>
+     <source-file src="library/widget_library/src/ResourceBundleUtils.m" target-dir="CorePlugin/widget_library/src" compiler-flags="-fno-objc-arc"/>
+     <header-file src="library/widget_library/src/SimpleWrapableView.h" target-dir="CorePlugin/widget_library/src"/>
+     <source-file src="library/widget_library/src/SimpleWrapableView.m" target-dir="CorePlugin/widget_library/src" compiler-flags="-fno-objc-arc"/>
+     <header-file src="library/widget_library/src/StringUtils.h" target-dir="CorePlugin/widget_library/src"/>
+     <source-file src="library/widget_library/src/StringUtils.m" target-dir="CorePlugin/widget_library/src" compiler-flags="-fno-objc-arc"/>
+     <header-file src="library/widget_library/src/StyleInterval.h" target-dir="CorePlugin/widget_library/src"/>
+     <source-file src="library/widget_library/src/StyleInterval.m" target-dir="CorePlugin/widget_library/src" compiler-flags="-fno-objc-arc"/>
+     <header-file src="library/widget_library/src/StyleSheet.h" target-dir="CorePlugin/widget_library/src"/>
+     <source-file src="library/widget_library/src/StyleSheet.m" target-dir="CorePlugin/widget_library/src" compiler-flags="-fno-objc-arc"/>
+     <header-file src="library/widget_library/src/TestCase.h" target-dir="CorePlugin/widget_library/src"/>
+     <source-file src="library/widget_library/src/TestCase.m" target-dir="CorePlugin/widget_library/src" compiler-flags="-fno-objc-arc"/>
+     <header-file src="library/widget_library/src/UrlInterval.h" target-dir="CorePlugin/widget_library/src"/>
+     <source-file src="library/widget_library/src/UrlInterval.m" target-dir="CorePlugin/widget_library/src" compiler-flags="-fno-objc-arc"/>
+     <header-file src="library/widget_library/src/Validation.h" target-dir="CorePlugin/widget_library/src"/>
+     <source-file src="library/widget_library/src/Validation.m" target-dir="CorePlugin/widget_library/src" compiler-flags="-fno-objc-arc"/>
+     <header-file src="library/widget_library/src/ValidationErrorLabel.h" target-dir="CorePlugin/widget_library/src"/>
+     <source-file src="library/widget_library/src/ValidationErrorLabel.m" target-dir="CorePlugin/widget_library/src" compiler-flags="-fno-objc-arc"/>
+     <header-file src="library/widget_library/src/ValidatorFactory.h" target-dir="CorePlugin/widget_library/src"/>
+     <source-file src="library/widget_library/src/ValidatorFactory.m" target-dir="CorePlugin/widget_library/src" compiler-flags="-fno-objc-arc"/>
+     <header-file src="library/widget_library/src/WidgetAttribute.h" target-dir="CorePlugin/widget_library/src"/>
+     <source-file src="library/widget_library/src/WidgetAttribute.m" target-dir="CorePlugin/widget_library/src" compiler-flags="-fno-objc-arc"/>
+     <header-file src="library/widget_library/src/WidgetAttributeMap.h" target-dir="CorePlugin/widget_library/src"/>
+     <source-file src="library/widget_library/src/WidgetAttributeMap.m" target-dir="CorePlugin/widget_library/src" compiler-flags="-fno-objc-arc"/>
+     <header-file src="library/widget_library/src/WidgetAttributeMapFilter.h" target-dir="CorePlugin/widget_library/src"/>
+     <source-file src="library/widget_library/src/WidgetAttributeMapFilter.m" target-dir="CorePlugin/widget_library/src" compiler-flags="-fno-objc-arc"/>
+     <header-file src="library/widget_library/src/WidgetAttributeValue.h" target-dir="CorePlugin/widget_library/src"/>
+     <source-file src="library/widget_library/src/WidgetAttributeValue.m" target-dir="CorePlugin/widget_library/src" compiler-flags="-fno-objc-arc"/>
+     <header-file src="library/widget_library/src/WidgetAttributeValueFilter.h" target-dir="CorePlugin/widget_library/src"/>
+     <source-file src="library/widget_library/src/WidgetAttributeValueFilter.m" target-dir="CorePlugin/widget_library/src" compiler-flags="-fno-objc-arc"/>
+     <header-file src="library/widget_library/src/WidgetEvent.h" target-dir="CorePlugin/widget_library/src"/>
+     <source-file src="library/widget_library/src/WidgetEvent.m" target-dir="CorePlugin/widget_library/src" compiler-flags="-fno-objc-arc"/>
+     <header-file src="library/widget_library/src/WidgetFactory.h" target-dir="CorePlugin/widget_library/src"/>
+     <source-file src="library/widget_library/src/WidgetFactory.m" target-dir="CorePlugin/widget_library/src" compiler-flags="-fno-objc-arc"/>
+     <header-file src="library/widget_library/src/WidgetViewHolder.h" target-dir="CorePlugin/widget_library/src"/>
+     <source-file src="library/widget_library/src/WidgetViewHolder.m" target-dir="CorePlugin/widget_library/src" compiler-flags="-fno-objc-arc"/>
+     <header-file src="library/widget_library/src/WorkerThread.h" target-dir="CorePlugin/widget_library/src"/>
+     <source-file src="library/widget_library/src/WorkerThread.m" target-dir="CorePlugin/widget_library/src" compiler-flags="-fno-objc-arc"/>
+     <!-- widget_library end -->
+     
+     <!-- start AndroidCore -->
+     <header-file src="library/AndroidCore/src/AbsListView.h" target-dir="CorePlugin/AndroidCore/src"/>
+     <source-file src="library/AndroidCore/src/AbsListView.m" target-dir="CorePlugin/AndroidCore/src" compiler-flags="-fno-objc-arc"/>
+     <header-file src="library/AndroidCore/src/AccessibilityEvent.h" target-dir="CorePlugin/AndroidCore/src"/>
+     <source-file src="library/AndroidCore/src/AccessibilityEvent.m" target-dir="CorePlugin/AndroidCore/src" compiler-flags="-fno-objc-arc"/>
+     <header-file src="library/AndroidCore/src/AccessibilityManager.h" target-dir="CorePlugin/AndroidCore/src"/>
+     <source-file src="library/AndroidCore/src/AccessibilityManager.m" target-dir="CorePlugin/AndroidCore/src" compiler-flags="-fno-objc-arc"/>
+     <header-file src="library/AndroidCore/src/Activity.h" target-dir="CorePlugin/AndroidCore/src"/>
+     <source-file src="library/AndroidCore/src/Activity.m" target-dir="CorePlugin/AndroidCore/src" compiler-flags="-fno-objc-arc"/>
+     <header-file src="library/AndroidCore/src/ActivityManager.h" target-dir="CorePlugin/AndroidCore/src"/>
+     <source-file src="library/AndroidCore/src/ActivityManager.m" target-dir="CorePlugin/AndroidCore/src" compiler-flags="-fno-objc-arc"/>
+     <header-file src="library/AndroidCore/src/ActivityNotFoundException.h" target-dir="CorePlugin/AndroidCore/src"/>
+     <source-file src="library/AndroidCore/src/ActivityNotFoundException.m" target-dir="CorePlugin/AndroidCore/src" compiler-flags="-fno-objc-arc"/>
+     <header-file src="library/AndroidCore/src/Adapter.h" target-dir="CorePlugin/AndroidCore/src"/>
+     <source-file src="library/AndroidCore/src/Adapter.m" target-dir="CorePlugin/AndroidCore/src" compiler-flags="-fno-objc-arc"/>
+     <header-file src="library/AndroidCore/src/AdapterView.h" target-dir="CorePlugin/AndroidCore/src"/>
+     <source-file src="library/AndroidCore/src/AdapterView.m" target-dir="CorePlugin/AndroidCore/src" compiler-flags="-fno-objc-arc"/>
+     <header-file src="library/AndroidCore/src/AlertDialog.h" target-dir="CorePlugin/AndroidCore/src"/>
+     <source-file src="library/AndroidCore/src/AlertDialog.m" target-dir="CorePlugin/AndroidCore/src" compiler-flags="-fno-objc-arc"/>
+     <header-file src="library/AndroidCore/src/ApplicationInfo.h" target-dir="CorePlugin/AndroidCore/src"/>
+     <source-file src="library/AndroidCore/src/ApplicationInfo.m" target-dir="CorePlugin/AndroidCore/src" compiler-flags="-fno-objc-arc"/>
+     <header-file src="library/AndroidCore/src/ArrayMap.h" target-dir="CorePlugin/AndroidCore/src"/>
+     <source-file src="library/AndroidCore/src/ArrayMap.m" target-dir="CorePlugin/AndroidCore/src" compiler-flags="-fno-objc-arc"/>
+     <header-file src="library/AndroidCore/src/ArrayUtils.h" target-dir="CorePlugin/AndroidCore/src"/>
+     <source-file src="library/AndroidCore/src/ArrayUtils.m" target-dir="CorePlugin/AndroidCore/src" compiler-flags="-fno-objc-arc"/>
+     <header-file src="library/AndroidCore/src/AssetFileDescriptor.h" target-dir="CorePlugin/AndroidCore/src"/>
+     <source-file src="library/AndroidCore/src/AssetFileDescriptor.m" target-dir="CorePlugin/AndroidCore/src" compiler-flags="-fno-objc-arc"/>
+     <header-file src="library/AndroidCore/src/AssetManager.h" target-dir="CorePlugin/AndroidCore/src"/>
+     <source-file src="library/AndroidCore/src/AssetManager.m" target-dir="CorePlugin/AndroidCore/src" compiler-flags="-fno-objc-arc"/>
+     <header-file src="library/AndroidCore/src/AsyncTask.h" target-dir="CorePlugin/AndroidCore/src"/>
+     <source-file src="library/AndroidCore/src/AsyncTask.m" target-dir="CorePlugin/AndroidCore/src" compiler-flags="-fno-objc-arc"/>
+     <header-file src="library/AndroidCore/src/AttributeSet.h" target-dir="CorePlugin/AndroidCore/src"/>
+     <source-file src="library/AndroidCore/src/AttributeSet.m" target-dir="CorePlugin/AndroidCore/src" compiler-flags="-fno-objc-arc"/>
+     <header-file src="library/AndroidCore/src/AudioManager.h" target-dir="CorePlugin/AndroidCore/src"/>
+     <source-file src="library/AndroidCore/src/AudioManager.m" target-dir="CorePlugin/AndroidCore/src" compiler-flags="-fno-objc-arc"/>
+     <header-file src="library/AndroidCore/src/Base64.h" target-dir="CorePlugin/AndroidCore/src"/>
+     <source-file src="library/AndroidCore/src/Base64.m" target-dir="CorePlugin/AndroidCore/src" compiler-flags="-fno-objc-arc"/>
+     <header-file src="library/AndroidCore/src/BaseAdapter.h" target-dir="CorePlugin/AndroidCore/src"/>
+     <source-file src="library/AndroidCore/src/BaseAdapter.m" target-dir="CorePlugin/AndroidCore/src" compiler-flags="-fno-objc-arc"/>
+     <header-file src="library/AndroidCore/src/BaseMeasurableImageView.h" target-dir="CorePlugin/AndroidCore/src"/>
+     <source-file src="library/AndroidCore/src/BaseMeasurableImageView.m" target-dir="CorePlugin/AndroidCore/src" compiler-flags="-fno-objc-arc"/>
+     <header-file src="library/AndroidCore/src/BaseMeasurableView.h" target-dir="CorePlugin/AndroidCore/src"/>
+     <source-file src="library/AndroidCore/src/BaseMeasurableView.m" target-dir="CorePlugin/AndroidCore/src" compiler-flags="-fno-objc-arc"/>
+     <header-file src="library/AndroidCore/src/BaseMeasurableViewGroup.h" target-dir="CorePlugin/AndroidCore/src"/>
+     <source-file src="library/AndroidCore/src/BaseMeasurableViewGroup.m" target-dir="CorePlugin/AndroidCore/src" compiler-flags="-fno-objc-arc"/>
+     <header-file src="library/AndroidCore/src/Bitmap.h" target-dir="CorePlugin/AndroidCore/src"/>
+     <source-file src="library/AndroidCore/src/Bitmap.m" target-dir="CorePlugin/AndroidCore/src" compiler-flags="-fno-objc-arc"/>
+     <header-file src="library/AndroidCore/src/BitmapFactory.h" target-dir="CorePlugin/AndroidCore/src"/>
+     <source-file src="library/AndroidCore/src/BitmapFactory.m" target-dir="CorePlugin/AndroidCore/src" compiler-flags="-fno-objc-arc"/>
+     <header-file src="library/AndroidCore/src/BroadcastReceiver.h" target-dir="CorePlugin/AndroidCore/src"/>
+     <source-file src="library/AndroidCore/src/BroadcastReceiver.m" target-dir="CorePlugin/AndroidCore/src" compiler-flags="-fno-objc-arc"/>
+     <header-file src="library/AndroidCore/src/Build.h" target-dir="CorePlugin/AndroidCore/src"/>
+     <source-file src="library/AndroidCore/src/Build.m" target-dir="CorePlugin/AndroidCore/src" compiler-flags="-fno-objc-arc"/>
+     <header-file src="library/AndroidCore/src/Bundle.h" target-dir="CorePlugin/AndroidCore/src"/>
+     <source-file src="library/AndroidCore/src/Bundle.m" target-dir="CorePlugin/AndroidCore/src" compiler-flags="-fno-objc-arc"/>
+     <header-file src="library/AndroidCore/src/Button.h" target-dir="CorePlugin/AndroidCore/src"/>
+     <source-file src="library/AndroidCore/src/Button.m" target-dir="CorePlugin/AndroidCore/src" compiler-flags="-fno-objc-arc"/>
+     <header-file src="library/AndroidCore/src/Canvas.h" target-dir="CorePlugin/AndroidCore/src"/>
+     <source-file src="library/AndroidCore/src/Canvas.m" target-dir="CorePlugin/AndroidCore/src" compiler-flags="-fno-objc-arc"/>
+     <header-file src="library/AndroidCore/src/Chronometer.h" target-dir="CorePlugin/AndroidCore/src"/>
+     <source-file src="library/AndroidCore/src/Chronometer.m" target-dir="CorePlugin/AndroidCore/src" compiler-flags="-fno-objc-arc"/>
+     <header-file src="library/AndroidCore/src/ClientCertRequest.h" target-dir="CorePlugin/AndroidCore/src"/>
+     <source-file src="library/AndroidCore/src/ClientCertRequest.m" target-dir="CorePlugin/AndroidCore/src" compiler-flags="-fno-objc-arc"/>
+     <header-file src="library/AndroidCore/src/Color.h" target-dir="CorePlugin/AndroidCore/src"/>
+     <source-file src="library/AndroidCore/src/Color.m" target-dir="CorePlugin/AndroidCore/src" compiler-flags="-fno-objc-arc"/>
+     <header-file src="library/AndroidCore/src/ColorDrawable.h" target-dir="CorePlugin/AndroidCore/src"/>
+     <source-file src="library/AndroidCore/src/ColorDrawable.m" target-dir="CorePlugin/AndroidCore/src" compiler-flags="-fno-objc-arc"/>
+     <header-file src="library/AndroidCore/src/ColorStateList.h" target-dir="CorePlugin/AndroidCore/src"/>
+     <source-file src="library/AndroidCore/src/ColorStateList.m" target-dir="CorePlugin/AndroidCore/src" compiler-flags="-fno-objc-arc"/>
+     <header-file src="library/AndroidCore/src/ColorStateListFactory.h" target-dir="CorePlugin/AndroidCore/src"/>
+     <source-file src="library/AndroidCore/src/ColorStateListFactory.m" target-dir="CorePlugin/AndroidCore/src" compiler-flags="-fno-objc-arc"/>
+     <header-file src="library/AndroidCore/src/CompoundButton.h" target-dir="CorePlugin/AndroidCore/src"/>
+     <source-file src="library/AndroidCore/src/CompoundButton.m" target-dir="CorePlugin/AndroidCore/src" compiler-flags="-fno-objc-arc"/>
+     <header-file src="library/AndroidCore/src/Configuration.h" target-dir="CorePlugin/AndroidCore/src"/>
+     <source-file src="library/AndroidCore/src/Configuration.m" target-dir="CorePlugin/AndroidCore/src" compiler-flags="-fno-objc-arc"/>
+     <header-file src="library/AndroidCore/src/ConsoleMessage.h" target-dir="CorePlugin/AndroidCore/src"/>
+     <source-file src="library/AndroidCore/src/ConsoleMessage.m" target-dir="CorePlugin/AndroidCore/src" compiler-flags="-fno-objc-arc"/>
+     <header-file src="library/AndroidCore/src/ContainerHelpers.h" target-dir="CorePlugin/AndroidCore/src"/>
+     <source-file src="library/AndroidCore/src/ContainerHelpers.m" target-dir="CorePlugin/AndroidCore/src" compiler-flags="-fno-objc-arc"/>
+     <header-file src="library/AndroidCore/src/ContentResolver.h" target-dir="CorePlugin/AndroidCore/src"/>
+     <source-file src="library/AndroidCore/src/ContentResolver.m" target-dir="CorePlugin/AndroidCore/src" compiler-flags="-fno-objc-arc"/>
+     <header-file src="library/AndroidCore/src/Context.h" target-dir="CorePlugin/AndroidCore/src"/>
+     <source-file src="library/AndroidCore/src/Context.m" target-dir="CorePlugin/AndroidCore/src" compiler-flags="-fno-objc-arc"/>
+     <header-file src="library/AndroidCore/src/CookieManager.h" target-dir="CorePlugin/AndroidCore/src"/>
+     <source-file src="library/AndroidCore/src/CookieManager.m" target-dir="CorePlugin/AndroidCore/src" compiler-flags="-fno-objc-arc"/>
+     <header-file src="library/AndroidCore/src/Cursor.h" target-dir="CorePlugin/AndroidCore/src"/>
+     <source-file src="library/AndroidCore/src/Cursor.m" target-dir="CorePlugin/AndroidCore/src" compiler-flags="-fno-objc-arc"/>
+     <header-file src="library/AndroidCore/src/DataSetObservable.h" target-dir="CorePlugin/AndroidCore/src"/>
+     <source-file src="library/AndroidCore/src/DataSetObservable.m" target-dir="CorePlugin/AndroidCore/src" compiler-flags="-fno-objc-arc"/>
+     <header-file src="library/AndroidCore/src/DataSetObserver.h" target-dir="CorePlugin/AndroidCore/src"/>
+     <source-file src="library/AndroidCore/src/DataSetObserver.m" target-dir="CorePlugin/AndroidCore/src" compiler-flags="-fno-objc-arc"/>
+     <header-file src="library/AndroidCore/src/DateUtils.h" target-dir="CorePlugin/AndroidCore/src"/>
+     <source-file src="library/AndroidCore/src/DateUtils.m" target-dir="CorePlugin/AndroidCore/src" compiler-flags="-fno-objc-arc"/>
+     <header-file src="library/AndroidCore/src/Debug.h" target-dir="CorePlugin/AndroidCore/src"/>
+     <source-file src="library/AndroidCore/src/Debug.m" target-dir="CorePlugin/AndroidCore/src" compiler-flags="-fno-objc-arc"/>
+     <header-file src="library/AndroidCore/src/DialogInterface.h" target-dir="CorePlugin/AndroidCore/src"/>
+     <source-file src="library/AndroidCore/src/DialogInterface.m" target-dir="CorePlugin/AndroidCore/src" compiler-flags="-fno-objc-arc"/>
+     <header-file src="library/AndroidCore/src/DisplayMetrics.h" target-dir="CorePlugin/AndroidCore/src"/>
+     <source-file src="library/AndroidCore/src/DisplayMetrics.m" target-dir="CorePlugin/AndroidCore/src" compiler-flags="-fno-objc-arc"/>
+     <header-file src="library/AndroidCore/src/Drawable.h" target-dir="CorePlugin/AndroidCore/src"/>
+     <source-file src="library/AndroidCore/src/Drawable.m" target-dir="CorePlugin/AndroidCore/src" compiler-flags="-fno-objc-arc"/>
+     <header-file src="library/AndroidCore/src/DrawableFactory.h" target-dir="CorePlugin/AndroidCore/src"/>
+     <source-file src="library/AndroidCore/src/DrawableFactory.m" target-dir="CorePlugin/AndroidCore/src" compiler-flags="-fno-objc-arc"/>
+     <header-file src="library/AndroidCore/src/Editable.h" target-dir="CorePlugin/AndroidCore/src"/>
+     <source-file src="library/AndroidCore/src/Editable.m" target-dir="CorePlugin/AndroidCore/src" compiler-flags="-fno-objc-arc"/>
+     <header-file src="library/AndroidCore/src/EditText.h" target-dir="CorePlugin/AndroidCore/src"/>
+     <source-file src="library/AndroidCore/src/EditText.m" target-dir="CorePlugin/AndroidCore/src" compiler-flags="-fno-objc-arc"/>
+     <header-file src="library/AndroidCore/src/EmptyArray.h" target-dir="CorePlugin/AndroidCore/src"/>
+     <source-file src="library/AndroidCore/src/EmptyArray.m" target-dir="CorePlugin/AndroidCore/src" compiler-flags="-fno-objc-arc"/>
+     <header-file src="library/AndroidCore/src/Environment.h" target-dir="CorePlugin/AndroidCore/src"/>
+     <source-file src="library/AndroidCore/src/Environment.m" target-dir="CorePlugin/AndroidCore/src" compiler-flags="-fno-objc-arc"/>
+     <header-file src="library/AndroidCore/src/FastMath.h" target-dir="CorePlugin/AndroidCore/src"/>
+     <source-file src="library/AndroidCore/src/FastMath.m" target-dir="CorePlugin/AndroidCore/src" compiler-flags="-fno-objc-arc"/>
+     <header-file src="library/AndroidCore/src/FrameLayout.h" target-dir="CorePlugin/AndroidCore/src"/>
+     <source-file src="library/AndroidCore/src/FrameLayout.m" target-dir="CorePlugin/AndroidCore/src" compiler-flags="-fno-objc-arc"/>
+     <header-file src="library/AndroidCore/src/GeolocationPermissions.h" target-dir="CorePlugin/AndroidCore/src"/>
+     <source-file src="library/AndroidCore/src/GeolocationPermissions.m" target-dir="CorePlugin/AndroidCore/src" compiler-flags="-fno-objc-arc"/>
+     <header-file src="library/AndroidCore/src/GetChars.h" target-dir="CorePlugin/AndroidCore/src"/>
+     <source-file src="library/AndroidCore/src/GetChars.m" target-dir="CorePlugin/AndroidCore/src" compiler-flags="-fno-objc-arc"/>
+     <header-file src="library/AndroidCore/src/Gravity.h" target-dir="CorePlugin/AndroidCore/src"/>
+     <source-file src="library/AndroidCore/src/Gravity.m" target-dir="CorePlugin/AndroidCore/src" compiler-flags="-fno-objc-arc"/>
+     <header-file src="library/AndroidCore/src/GrowingArrayUtils.h" target-dir="CorePlugin/AndroidCore/src"/>
+     <source-file src="library/AndroidCore/src/GrowingArrayUtils.m" target-dir="CorePlugin/AndroidCore/src" compiler-flags="-fno-objc-arc"/>
+     <header-file src="library/AndroidCore/src/HorizontalScrollView.h" target-dir="CorePlugin/AndroidCore/src"/>
+     <source-file src="library/AndroidCore/src/HorizontalScrollView.m" target-dir="CorePlugin/AndroidCore/src" compiler-flags="-fno-objc-arc"/>
+     <header-file src="library/AndroidCore/src/HttpAuthHandler.h" target-dir="CorePlugin/AndroidCore/src"/>
+     <source-file src="library/AndroidCore/src/HttpAuthHandler.m" target-dir="CorePlugin/AndroidCore/src" compiler-flags="-fno-objc-arc"/>
+     <header-file src="library/AndroidCore/src/InputFilter.h" target-dir="CorePlugin/AndroidCore/src"/>
+     <source-file src="library/AndroidCore/src/InputFilter.m" target-dir="CorePlugin/AndroidCore/src" compiler-flags="-fno-objc-arc"/>
+     <header-file src="library/AndroidCore/src/Insets.h" target-dir="CorePlugin/AndroidCore/src"/>
+     <source-file src="library/AndroidCore/src/Insets.m" target-dir="CorePlugin/AndroidCore/src" compiler-flags="-fno-objc-arc"/>
+     <header-file src="library/AndroidCore/src/IntArray.h" target-dir="CorePlugin/AndroidCore/src"/>
+     <source-file src="library/AndroidCore/src/IntArray.m" target-dir="CorePlugin/AndroidCore/src" compiler-flags="-fno-objc-arc"/>
+     <header-file src="library/AndroidCore/src/Intent.h" target-dir="CorePlugin/AndroidCore/src"/>
+     <source-file src="library/AndroidCore/src/Intent.m" target-dir="CorePlugin/AndroidCore/src" compiler-flags="-fno-objc-arc"/>
+     <header-file src="library/AndroidCore/src/IntentFilter.h" target-dir="CorePlugin/AndroidCore/src"/>
+     <source-file src="library/AndroidCore/src/IntentFilter.m" target-dir="CorePlugin/AndroidCore/src" compiler-flags="-fno-objc-arc"/>
+     <header-file src="library/AndroidCore/src/JavascriptInterface.h" target-dir="CorePlugin/AndroidCore/src"/>
+     <source-file src="library/AndroidCore/src/JavascriptInterface.m" target-dir="CorePlugin/AndroidCore/src" compiler-flags="-fno-objc-arc"/>
+     <header-file src="library/AndroidCore/src/JsPromptResult.h" target-dir="CorePlugin/AndroidCore/src"/>
+     <source-file src="library/AndroidCore/src/JsPromptResult.m" target-dir="CorePlugin/AndroidCore/src" compiler-flags="-fno-objc-arc"/>
+     <header-file src="library/AndroidCore/src/JsResult.h" target-dir="CorePlugin/AndroidCore/src"/>
+     <source-file src="library/AndroidCore/src/JsResult.m" target-dir="CorePlugin/AndroidCore/src" compiler-flags="-fno-objc-arc"/>
+     <header-file src="library/AndroidCore/src/KeyEvent.h" target-dir="CorePlugin/AndroidCore/src"/>
+     <source-file src="library/AndroidCore/src/KeyEvent.m" target-dir="CorePlugin/AndroidCore/src" compiler-flags="-fno-objc-arc"/>
+     <header-file src="library/AndroidCore/src/Layout.h" target-dir="CorePlugin/AndroidCore/src"/>
+     <source-file src="library/AndroidCore/src/Layout.m" target-dir="CorePlugin/AndroidCore/src" compiler-flags="-fno-objc-arc"/>
+     <header-file src="library/AndroidCore/src/LayoutDirection.h" target-dir="CorePlugin/AndroidCore/src"/>
+     <source-file src="library/AndroidCore/src/LayoutDirection.m" target-dir="CorePlugin/AndroidCore/src" compiler-flags="-fno-objc-arc"/>
+     <header-file src="library/AndroidCore/src/LayoutInflater.h" target-dir="CorePlugin/AndroidCore/src"/>
+     <source-file src="library/AndroidCore/src/LayoutInflater.m" target-dir="CorePlugin/AndroidCore/src" compiler-flags="-fno-objc-arc"/>
+     <header-file src="library/AndroidCore/src/LinearLayout.h" target-dir="CorePlugin/AndroidCore/src"/>
+     <source-file src="library/AndroidCore/src/LinearLayout.m" target-dir="CorePlugin/AndroidCore/src" compiler-flags="-fno-objc-arc"/>
+     <header-file src="library/AndroidCore/src/Linkify.h" target-dir="CorePlugin/AndroidCore/src"/>
+     <source-file src="library/AndroidCore/src/Linkify.m" target-dir="CorePlugin/AndroidCore/src" compiler-flags="-fno-objc-arc"/>
+     <header-file src="library/AndroidCore/src/ListAdapter.h" target-dir="CorePlugin/AndroidCore/src"/>
+     <source-file src="library/AndroidCore/src/ListAdapter.m" target-dir="CorePlugin/AndroidCore/src" compiler-flags="-fno-objc-arc"/>
+     <header-file src="library/AndroidCore/src/Lists.h" target-dir="CorePlugin/AndroidCore/src"/>
+     <source-file src="library/AndroidCore/src/Lists.m" target-dir="CorePlugin/AndroidCore/src" compiler-flags="-fno-objc-arc"/>
+     <header-file src="library/AndroidCore/src/ListView.h" target-dir="CorePlugin/AndroidCore/src"/>
+     <source-file src="library/AndroidCore/src/ListView.m" target-dir="CorePlugin/AndroidCore/src" compiler-flags="-fno-objc-arc"/>
+     <header-file src="library/AndroidCore/src/Log.h" target-dir="CorePlugin/AndroidCore/src"/>
+     <source-file src="library/AndroidCore/src/Log.m" target-dir="CorePlugin/AndroidCore/src" compiler-flags="-fno-objc-arc"/>
+     <header-file src="library/AndroidCore/src/LongSparseArray.h" target-dir="CorePlugin/AndroidCore/src"/>
+     <source-file src="library/AndroidCore/src/LongSparseArray.m" target-dir="CorePlugin/AndroidCore/src" compiler-flags="-fno-objc-arc"/>
+     <header-file src="library/AndroidCore/src/LongSparseLongArray.h" target-dir="CorePlugin/AndroidCore/src"/>
+     <source-file src="library/AndroidCore/src/LongSparseLongArray.m" target-dir="CorePlugin/AndroidCore/src" compiler-flags="-fno-objc-arc"/>
+     <header-file src="library/AndroidCore/src/Looper.h" target-dir="CorePlugin/AndroidCore/src"/>
+     <source-file src="library/AndroidCore/src/Looper.m" target-dir="CorePlugin/AndroidCore/src" compiler-flags="-fno-objc-arc"/>
+     <header-file src="library/AndroidCore/src/MapCollections.h" target-dir="CorePlugin/AndroidCore/src"/>
+     <source-file src="library/AndroidCore/src/MapCollections.m" target-dir="CorePlugin/AndroidCore/src" compiler-flags="-fno-objc-arc"/>
+     <header-file src="library/AndroidCore/src/MathUtils.h" target-dir="CorePlugin/AndroidCore/src"/>
+     <source-file src="library/AndroidCore/src/MathUtils.m" target-dir="CorePlugin/AndroidCore/src" compiler-flags="-fno-objc-arc"/>
+     <header-file src="library/AndroidCore/src/Menu.h" target-dir="CorePlugin/AndroidCore/src"/>
+     <source-file src="library/AndroidCore/src/Menu.m" target-dir="CorePlugin/AndroidCore/src" compiler-flags="-fno-objc-arc"/>
+     <header-file src="library/AndroidCore/src/MenuItem.h" target-dir="CorePlugin/AndroidCore/src"/>
+     <source-file src="library/AndroidCore/src/MenuItem.m" target-dir="CorePlugin/AndroidCore/src" compiler-flags="-fno-objc-arc"/>
+     <header-file src="library/AndroidCore/src/MimeTypeMap.h" target-dir="CorePlugin/AndroidCore/src"/>
+     <source-file src="library/AndroidCore/src/MimeTypeMap.m" target-dir="CorePlugin/AndroidCore/src" compiler-flags="-fno-objc-arc"/>
+     <header-file src="library/AndroidCore/src/NoCopySpan.h" target-dir="CorePlugin/AndroidCore/src"/>
+     <source-file src="library/AndroidCore/src/NoCopySpan.m" target-dir="CorePlugin/AndroidCore/src" compiler-flags="-fno-objc-arc"/>
+     <header-file src="library/AndroidCore/src/NonNull.h" target-dir="CorePlugin/AndroidCore/src"/>
+     <source-file src="library/AndroidCore/src/NonNull.m" target-dir="CorePlugin/AndroidCore/src" compiler-flags="-fno-objc-arc"/>
+     <header-file src="library/AndroidCore/src/Nullable.h" target-dir="CorePlugin/AndroidCore/src"/>
+     <source-file src="library/AndroidCore/src/Nullable.m" target-dir="CorePlugin/AndroidCore/src" compiler-flags="-fno-objc-arc"/>
+     <header-file src="library/AndroidCore/src/Objects.h" target-dir="CorePlugin/AndroidCore/src"/>
+     <source-file src="library/AndroidCore/src/Objects.m" target-dir="CorePlugin/AndroidCore/src" compiler-flags="-fno-objc-arc"/>
+     <header-file src="library/AndroidCore/src/Observable.h" target-dir="CorePlugin/AndroidCore/src"/>
+     <source-file src="library/AndroidCore/src/Observable.m" target-dir="CorePlugin/AndroidCore/src" compiler-flags="-fno-objc-arc"/>
+     <header-file src="library/AndroidCore/src/PackageManager.h" target-dir="CorePlugin/AndroidCore/src"/>
+     <source-file src="library/AndroidCore/src/PackageManager.m" target-dir="CorePlugin/AndroidCore/src" compiler-flags="-fno-objc-arc"/>
+     <header-file src="library/AndroidCore/src/Pair.h" target-dir="CorePlugin/AndroidCore/src"/>
+     <source-file src="library/AndroidCore/src/Pair.m" target-dir="CorePlugin/AndroidCore/src" compiler-flags="-fno-objc-arc"/>
+     <header-file src="library/AndroidCore/src/Parcel.h" target-dir="CorePlugin/AndroidCore/src"/>
+     <source-file src="library/AndroidCore/src/Parcel.m" target-dir="CorePlugin/AndroidCore/src" compiler-flags="-fno-objc-arc"/>
+     <header-file src="library/AndroidCore/src/Parcelable.h" target-dir="CorePlugin/AndroidCore/src"/>
+     <source-file src="library/AndroidCore/src/Parcelable.m" target-dir="CorePlugin/AndroidCore/src" compiler-flags="-fno-objc-arc"/>
+     <header-file src="library/AndroidCore/src/Patterns.h" target-dir="CorePlugin/AndroidCore/src"/>
+     <source-file src="library/AndroidCore/src/Patterns.m" target-dir="CorePlugin/AndroidCore/src" compiler-flags="-fno-objc-arc"/>
+     <header-file src="library/AndroidCore/src/PermissionRequest.h" target-dir="CorePlugin/AndroidCore/src"/>
+     <source-file src="library/AndroidCore/src/PermissionRequest.m" target-dir="CorePlugin/AndroidCore/src" compiler-flags="-fno-objc-arc"/>
+     <header-file src="library/AndroidCore/src/Pools.h" target-dir="CorePlugin/AndroidCore/src"/>
+     <source-file src="library/AndroidCore/src/Pools.m" target-dir="CorePlugin/AndroidCore/src" compiler-flags="-fno-objc-arc"/>
+     <header-file src="library/AndroidCore/src/Preconditions.h" target-dir="CorePlugin/AndroidCore/src"/>
+     <source-file src="library/AndroidCore/src/Preconditions.m" target-dir="CorePlugin/AndroidCore/src" compiler-flags="-fno-objc-arc"/>
+     <header-file src="library/AndroidCore/src/ProgressBar.h" target-dir="CorePlugin/AndroidCore/src"/>
+     <source-file src="library/AndroidCore/src/ProgressBar.m" target-dir="CorePlugin/AndroidCore/src" compiler-flags="-fno-objc-arc"/>
+     <header-file src="library/AndroidCore/src/R.h" target-dir="CorePlugin/AndroidCore/src"/>
+     <source-file src="library/AndroidCore/src/R.m" target-dir="CorePlugin/AndroidCore/src" compiler-flags="-fno-objc-arc"/>
+     <header-file src="library/AndroidCore/src/RadioGroup.h" target-dir="CorePlugin/AndroidCore/src"/>
+     <source-file src="library/AndroidCore/src/RadioGroup.m" target-dir="CorePlugin/AndroidCore/src" compiler-flags="-fno-objc-arc"/>
+     <header-file src="library/AndroidCore/src/Rect.h" target-dir="CorePlugin/AndroidCore/src"/>
+     <source-file src="library/AndroidCore/src/Rect.m" target-dir="CorePlugin/AndroidCore/src" compiler-flags="-fno-objc-arc"/>
+     <header-file src="library/AndroidCore/src/RectF.h" target-dir="CorePlugin/AndroidCore/src"/>
+     <source-file src="library/AndroidCore/src/RectF.m" target-dir="CorePlugin/AndroidCore/src" compiler-flags="-fno-objc-arc"/>
+     <header-file src="library/AndroidCore/src/RelativeLayout.h" target-dir="CorePlugin/AndroidCore/src"/>
+     <source-file src="library/AndroidCore/src/RelativeLayout.m" target-dir="CorePlugin/AndroidCore/src" compiler-flags="-fno-objc-arc"/>
+     <header-file src="library/AndroidCore/src/RenderNode.h" target-dir="CorePlugin/AndroidCore/src"/>
+     <source-file src="library/AndroidCore/src/RenderNode.m" target-dir="CorePlugin/AndroidCore/src" compiler-flags="-fno-objc-arc"/>
+     <header-file src="library/AndroidCore/src/Resources.h" target-dir="CorePlugin/AndroidCore/src"/>
+     <source-file src="library/AndroidCore/src/Resources.m" target-dir="CorePlugin/AndroidCore/src" compiler-flags="-fno-objc-arc"/>
+     <header-file src="library/AndroidCore/src/ScrollView.h" target-dir="CorePlugin/AndroidCore/src"/>
+     <source-file src="library/AndroidCore/src/ScrollView.m" target-dir="CorePlugin/AndroidCore/src" compiler-flags="-fno-objc-arc"/>
+     <header-file src="library/AndroidCore/src/ShapeDrawable.h" target-dir="CorePlugin/AndroidCore/src"/>
+     <source-file src="library/AndroidCore/src/ShapeDrawable.m" target-dir="CorePlugin/AndroidCore/src" compiler-flags="-fno-objc-arc"/>
+     <header-file src="library/AndroidCore/src/Space.h" target-dir="CorePlugin/AndroidCore/src"/>
+     <source-file src="library/AndroidCore/src/Space.m" target-dir="CorePlugin/AndroidCore/src" compiler-flags="-fno-objc-arc"/>
+     <header-file src="library/AndroidCore/src/Spannable.h" target-dir="CorePlugin/AndroidCore/src"/>
+     <source-file src="library/AndroidCore/src/Spannable.m" target-dir="CorePlugin/AndroidCore/src" compiler-flags="-fno-objc-arc"/>
+     <header-file src="library/AndroidCore/src/SpannableImpl.h" target-dir="CorePlugin/AndroidCore/src"/>
+     <source-file src="library/AndroidCore/src/SpannableImpl.m" target-dir="CorePlugin/AndroidCore/src" compiler-flags="-fno-objc-arc"/>
+     <header-file src="library/AndroidCore/src/SpannableStringBuilder.h" target-dir="CorePlugin/AndroidCore/src"/>
+     <source-file src="library/AndroidCore/src/SpannableStringBuilder.m" target-dir="CorePlugin/AndroidCore/src" compiler-flags="-fno-objc-arc"/>
+     <header-file src="library/AndroidCore/src/SparseArray.h" target-dir="CorePlugin/AndroidCore/src"/>
+     <source-file src="library/AndroidCore/src/SparseArray.m" target-dir="CorePlugin/AndroidCore/src" compiler-flags="-fno-objc-arc"/>
+     <header-file src="library/AndroidCore/src/SparseBooleanArray.h" target-dir="CorePlugin/AndroidCore/src"/>
+     <source-file src="library/AndroidCore/src/SparseBooleanArray.m" target-dir="CorePlugin/AndroidCore/src" compiler-flags="-fno-objc-arc"/>
+     <header-file src="library/AndroidCore/src/SparseIntArray.h" target-dir="CorePlugin/AndroidCore/src"/>
+     <source-file src="library/AndroidCore/src/SparseIntArray.m" target-dir="CorePlugin/AndroidCore/src" compiler-flags="-fno-objc-arc"/>
+     <header-file src="library/AndroidCore/src/SpinnerAdapter.h" target-dir="CorePlugin/AndroidCore/src"/>
+     <source-file src="library/AndroidCore/src/SpinnerAdapter.m" target-dir="CorePlugin/AndroidCore/src" compiler-flags="-fno-objc-arc"/>
+     <header-file src="library/AndroidCore/src/SslError.h" target-dir="CorePlugin/AndroidCore/src"/>
+     <source-file src="library/AndroidCore/src/SslError.m" target-dir="CorePlugin/AndroidCore/src" compiler-flags="-fno-objc-arc"/>
+     <header-file src="library/AndroidCore/src/SslErrorHandler.h" target-dir="CorePlugin/AndroidCore/src"/>
+     <source-file src="library/AndroidCore/src/SslErrorHandler.m" target-dir="CorePlugin/AndroidCore/src" compiler-flags="-fno-objc-arc"/>
+     <header-file src="library/AndroidCore/src/StateListDrawable.h" target-dir="CorePlugin/AndroidCore/src"/>
+     <source-file src="library/AndroidCore/src/StateListDrawable.m" target-dir="CorePlugin/AndroidCore/src" compiler-flags="-fno-objc-arc"/>
+     <header-file src="library/AndroidCore/src/StateSet.h" target-dir="CorePlugin/AndroidCore/src"/>
+     <source-file src="library/AndroidCore/src/StateSet.m" target-dir="CorePlugin/AndroidCore/src" compiler-flags="-fno-objc-arc"/>
+     <header-file src="library/AndroidCore/src/SuppressLint.h" target-dir="CorePlugin/AndroidCore/src"/>
+     <source-file src="library/AndroidCore/src/SuppressLint.m" target-dir="CorePlugin/AndroidCore/src" compiler-flags="-fno-objc-arc"/>
+     <header-file src="library/AndroidCore/src/Switch.h" target-dir="CorePlugin/AndroidCore/src"/>
+     <source-file src="library/AndroidCore/src/Switch.m" target-dir="CorePlugin/AndroidCore/src" compiler-flags="-fno-objc-arc"/>
+     <header-file src="library/AndroidCore/src/SystemClock.h" target-dir="CorePlugin/AndroidCore/src"/>
+     <source-file src="library/AndroidCore/src/SystemClock.m" target-dir="CorePlugin/AndroidCore/src" compiler-flags="-fno-objc-arc"/>
+     <header-file src="library/AndroidCore/src/TableLayout.h" target-dir="CorePlugin/AndroidCore/src"/>
+     <source-file src="library/AndroidCore/src/TableLayout.m" target-dir="CorePlugin/AndroidCore/src" compiler-flags="-fno-objc-arc"/>
+     <header-file src="library/AndroidCore/src/TableRow.h" target-dir="CorePlugin/AndroidCore/src"/>
+     <source-file src="library/AndroidCore/src/TableRow.m" target-dir="CorePlugin/AndroidCore/src" compiler-flags="-fno-objc-arc"/>
+     <header-file src="library/AndroidCore/src/TargetApi.h" target-dir="CorePlugin/AndroidCore/src"/>
+     <source-file src="library/AndroidCore/src/TargetApi.m" target-dir="CorePlugin/AndroidCore/src" compiler-flags="-fno-objc-arc"/>
+     <header-file src="library/AndroidCore/src/TelephonyManager.h" target-dir="CorePlugin/AndroidCore/src"/>
+     <source-file src="library/AndroidCore/src/TelephonyManager.m" target-dir="CorePlugin/AndroidCore/src" compiler-flags="-fno-objc-arc"/>
+     <header-file src="library/AndroidCore/src/TextDirectionHeuristic.h" target-dir="CorePlugin/AndroidCore/src"/>
+     <source-file src="library/AndroidCore/src/TextDirectionHeuristic.m" target-dir="CorePlugin/AndroidCore/src" compiler-flags="-fno-objc-arc"/>
+     <header-file src="library/AndroidCore/src/TextDirectionHeuristics.h" target-dir="CorePlugin/AndroidCore/src"/>
+     <source-file src="library/AndroidCore/src/TextDirectionHeuristics.m" target-dir="CorePlugin/AndroidCore/src" compiler-flags="-fno-objc-arc"/>
+     <header-file src="library/AndroidCore/src/TextUtils.h" target-dir="CorePlugin/AndroidCore/src"/>
+     <source-file src="library/AndroidCore/src/TextUtils.m" target-dir="CorePlugin/AndroidCore/src" compiler-flags="-fno-objc-arc"/>
+     <header-file src="library/AndroidCore/src/TextView.h" target-dir="CorePlugin/AndroidCore/src"/>
+     <source-file src="library/AndroidCore/src/TextView.m" target-dir="CorePlugin/AndroidCore/src" compiler-flags="-fno-objc-arc"/>
+     <header-file src="library/AndroidCore/src/TextWatcher.h" target-dir="CorePlugin/AndroidCore/src"/>
+     <source-file src="library/AndroidCore/src/TextWatcher.m" target-dir="CorePlugin/AndroidCore/src" compiler-flags="-fno-objc-arc"/>
+     <header-file src="library/AndroidCore/src/Trace.h" target-dir="CorePlugin/AndroidCore/src"/>
+     <source-file src="library/AndroidCore/src/Trace.m" target-dir="CorePlugin/AndroidCore/src" compiler-flags="-fno-objc-arc"/>
+     <header-file src="library/AndroidCore/src/UnsupportedAppUsage.h" target-dir="CorePlugin/AndroidCore/src"/>
+     <source-file src="library/AndroidCore/src/UnsupportedAppUsage.m" target-dir="CorePlugin/AndroidCore/src" compiler-flags="-fno-objc-arc"/>
+     <header-file src="library/AndroidCore/src/Uri.h" target-dir="CorePlugin/AndroidCore/src"/>
+     <source-file src="library/AndroidCore/src/Uri.m" target-dir="CorePlugin/AndroidCore/src" compiler-flags="-fno-objc-arc"/>
+     <header-file src="library/AndroidCore/src/ValueCallback.h" target-dir="CorePlugin/AndroidCore/src"/>
+     <source-file src="library/AndroidCore/src/ValueCallback.m" target-dir="CorePlugin/AndroidCore/src" compiler-flags="-fno-objc-arc"/>
+     <header-file src="library/AndroidCore/src/View.h" target-dir="CorePlugin/AndroidCore/src"/>
+     <source-file src="library/AndroidCore/src/View.m" target-dir="CorePlugin/AndroidCore/src" compiler-flags="-fno-objc-arc"/>
+     <header-file src="library/AndroidCore/src/ViewGroup.h" target-dir="CorePlugin/AndroidCore/src"/>
+     <source-file src="library/AndroidCore/src/ViewGroup.m" target-dir="CorePlugin/AndroidCore/src" compiler-flags="-fno-objc-arc"/>
+     <header-file src="library/AndroidCore/src/ViewParent.h" target-dir="CorePlugin/AndroidCore/src"/>
+     <source-file src="library/AndroidCore/src/ViewParent.m" target-dir="CorePlugin/AndroidCore/src" compiler-flags="-fno-objc-arc"/>
+     <header-file src="library/AndroidCore/src/WebChromeClient.h" target-dir="CorePlugin/AndroidCore/src"/>
+     <source-file src="library/AndroidCore/src/WebChromeClient.m" target-dir="CorePlugin/AndroidCore/src" compiler-flags="-fno-objc-arc"/>
+     <header-file src="library/AndroidCore/src/WebResourceResponse.h" target-dir="CorePlugin/AndroidCore/src"/>
+     <source-file src="library/AndroidCore/src/WebResourceResponse.m" target-dir="CorePlugin/AndroidCore/src" compiler-flags="-fno-objc-arc"/>
+     <header-file src="library/AndroidCore/src/WebSettings.h" target-dir="CorePlugin/AndroidCore/src"/>
+     <source-file src="library/AndroidCore/src/WebSettings.m" target-dir="CorePlugin/AndroidCore/src" compiler-flags="-fno-objc-arc"/>
+     <header-file src="library/AndroidCore/src/WebStorage.h" target-dir="CorePlugin/AndroidCore/src"/>
+     <source-file src="library/AndroidCore/src/WebStorage.m" target-dir="CorePlugin/AndroidCore/src" compiler-flags="-fno-objc-arc"/>
+     <header-file src="library/AndroidCore/src/WebView.h" target-dir="CorePlugin/AndroidCore/src"/>
+     <source-file src="library/AndroidCore/src/WebView.m" target-dir="CorePlugin/AndroidCore/src" compiler-flags="-fno-objc-arc"/>
+     <header-file src="library/AndroidCore/src/WebViewClient.h" target-dir="CorePlugin/AndroidCore/src"/>
+     <source-file src="library/AndroidCore/src/WebViewClient.m" target-dir="CorePlugin/AndroidCore/src" compiler-flags="-fno-objc-arc"/>
+     <header-file src="library/AndroidCore/src/Window.h" target-dir="CorePlugin/AndroidCore/src"/>
+     <source-file src="library/AndroidCore/src/Window.m" target-dir="CorePlugin/AndroidCore/src" compiler-flags="-fno-objc-arc"/>
+     <header-file src="library/AndroidCore/src/WindowManager.h" target-dir="CorePlugin/AndroidCore/src"/>
+     <source-file src="library/AndroidCore/src/WindowManager.m" target-dir="CorePlugin/AndroidCore/src" compiler-flags="-fno-objc-arc"/>
+     <!-- AndroidCore end -->
+     
+      <!-- start AndroidXCore -->
+     <header-file src="library/AndroidXCore/src/CallSuper.h" target-dir="CorePlugin/AndroidXCore/src"/>
+     <source-file src="library/AndroidXCore/src/CallSuper.m" target-dir="CorePlugin/AndroidXCore/src" compiler-flags="-fno-objc-arc"/>
+     <header-file src="library/AndroidXCore/src/Fragment.h" target-dir="CorePlugin/AndroidXCore/src"/>
+     <source-file src="library/AndroidXCore/src/Fragment.m" target-dir="CorePlugin/AndroidXCore/src" compiler-flags="-fno-objc-arc"/>
+     <header-file src="library/AndroidXCore/src/GravityCompat.h" target-dir="CorePlugin/AndroidXCore/src"/>
+     <source-file src="library/AndroidXCore/src/GravityCompat.m" target-dir="CorePlugin/AndroidXCore/src" compiler-flags="-fno-objc-arc"/>
+     <header-file src="library/AndroidXCore/src/IntDef.h" target-dir="CorePlugin/AndroidXCore/src"/>
+     <source-file src="library/AndroidXCore/src/IntDef.m" target-dir="CorePlugin/AndroidXCore/src" compiler-flags="-fno-objc-arc"/>
+     <header-file src="library/AndroidXCore/src/IntRange.h" target-dir="CorePlugin/AndroidXCore/src"/>
+     <source-file src="library/AndroidXCore/src/IntRange.m" target-dir="CorePlugin/AndroidXCore/src" compiler-flags="-fno-objc-arc"/>
+     <header-file src="library/AndroidXCore/src/LayoutRes.h" target-dir="CorePlugin/AndroidXCore/src"/>
+     <source-file src="library/AndroidXCore/src/LayoutRes.m" target-dir="CorePlugin/AndroidXCore/src" compiler-flags="-fno-objc-arc"/>
+     <header-file src="library/AndroidXCore/src/MainThread.h" target-dir="CorePlugin/AndroidXCore/src"/>
+     <source-file src="library/AndroidXCore/src/MainThread.m" target-dir="CorePlugin/AndroidXCore/src" compiler-flags="-fno-objc-arc"/>
+     <header-file src="library/AndroidXCore/src/MarginLayoutParamsCompat.h" target-dir="CorePlugin/AndroidXCore/src"/>
+     <source-file src="library/AndroidXCore/src/MarginLayoutParamsCompat.m" target-dir="CorePlugin/AndroidXCore/src" compiler-flags="-fno-objc-arc"/>
+     <header-file src="library/AndroidXCore/src/RestrictTo.h" target-dir="CorePlugin/AndroidXCore/src"/>
+     <source-file src="library/AndroidXCore/src/RestrictTo.m" target-dir="CorePlugin/AndroidXCore/src" compiler-flags="-fno-objc-arc"/>
+     <header-file src="library/AndroidXCore/src/TraceCompat.h" target-dir="CorePlugin/AndroidXCore/src"/>
+     <source-file src="library/AndroidXCore/src/TraceCompat.m" target-dir="CorePlugin/AndroidXCore/src" compiler-flags="-fno-objc-arc"/>
+     <header-file src="library/AndroidXCore/src/ViewCompat.h" target-dir="CorePlugin/AndroidXCore/src"/>
+     <source-file src="library/AndroidXCore/src/ViewCompat.m" target-dir="CorePlugin/AndroidXCore/src" compiler-flags="-fno-objc-arc"/>
+     <header-file src="library/AndroidXCore/src/ViewGroupCompat.h" target-dir="CorePlugin/AndroidXCore/src"/>
+     <source-file src="library/AndroidXCore/src/ViewGroupCompat.m" target-dir="CorePlugin/AndroidXCore/src" compiler-flags="-fno-objc-arc"/>
+     <header-file src="library/AndroidXCore/src/VisibleForTesting.h" target-dir="CorePlugin/AndroidXCore/src"/>
+     <source-file src="library/AndroidXCore/src/VisibleForTesting.m" target-dir="CorePlugin/AndroidXCore/src" compiler-flags="-fno-objc-arc"/>
+     <!-- AndroidXCore end -->
+  </platform>
+</plugin>

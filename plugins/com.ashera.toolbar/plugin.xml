@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="utf-8"?>
+<plugin xmlns="http://www.phonegap.com/ns/plugins/1.0"
+        id="com.ashera.toolbar"
+        version="1.0">
+
+  <name>CordovaToolbarPlugin Plugin</name>
+
+  <engines>
+    <engine name="cordova" version=">=3.4.0"/>
+  </engines>
+  
+  
+  <platform name="android">
+    <config-file target="res/xml/config.xml" parent="/*">
+      <feature name="CordovaToolbarPlugin">
+        <param name="android-package" value="com.ashera.toolbar.CordovaToolbarPlugin"/>
+        <param name="onload" value="true" />
+      </feature>
+    </config-file>
+
+   	 <!-- start src -->
+     <source-file src="android/src/com/ashera/toolbar/CordovaToolbarPlugin.java" target-dir="src/com/ashera/toolbar"/>
+     <source-file src="android/src/com/ashera/toolbar/ToolbarImpl.java" target-dir="src/com/ashera/toolbar"/>
+     <source-file src="android/src/com/ashera/toolbar/ToolbarPlugin.java" target-dir="src/com/ashera/toolbar"/>
+     <!-- src end -->
+     <!-- start res -->
+
+     <!-- res end -->
+     <!-- start tsc -->
+     <source-file src="android/tsc/src/android/widget/ToolbarImpl.ts" target-dir="tsc/src/android/widget"/>
+     <!-- tsc end -->
+  </platform>
+  <platform name="ios">
+    <config-file target="config.xml" parent="/widget">
+      <feature name="CordovaToolbarPlugin">
+        	<param name="ios-package" value="CordovaToolbarPlugin" />
+         	<param name="onload" value="true" />
+      </feature>
+    </config-file>
+
+   	 <!-- start ios -->
+     <header-file src="ios/ios/src/ActionMenuViewImpl.h" target-dir="ToolbarPlugin/ios/src"/>
+     <source-file src="ios/ios/src/ActionMenuViewImpl.m" target-dir="ToolbarPlugin/ios/src" compiler-flags="-fobjc-arc-exceptions"/>
+     <header-file src="ios/ios/src/CordovaToolbarPlugin.h" target-dir="ToolbarPlugin/ios/src"/>
+     <source-file src="ios/ios/src/CordovaToolbarPlugin.m" target-dir="ToolbarPlugin/ios/src" compiler-flags="-fobjc-arc-exceptions"/>
+     <header-file src="ios/ios/src/KxMenu.h" target-dir="ToolbarPlugin/ios/src"/>
+     <source-file src="ios/ios/src/KxMenu.m" target-dir="ToolbarPlugin/ios/src" compiler-flags="-fobjc-arc-exceptions"/>
+     <header-file src="ios/ios/src/ToolbarImpl.h" target-dir="ToolbarPlugin/ios/src"/>
+     <source-file src="ios/ios/src/ToolbarImpl.m" target-dir="ToolbarPlugin/ios/src" compiler-flags="-fobjc-arc-exceptions"/>
+     <header-file src="ios/ios/src/ToolbarPlugin.h" target-dir="ToolbarPlugin/ios/src"/>
+     <source-file src="ios/ios/src/ToolbarPlugin.m" target-dir="ToolbarPlugin/ios/src" compiler-flags="-fobjc-arc-exceptions"/>
+     <!-- ios end -->
+     <!-- start tsc -->
+     <source-file src="ios/tsc/src/ios/widget/ActionMenuViewImpl.ts" target-dir="tsc/src/ios/widget"/>
+     <source-file src="ios/tsc/src/ios/widget/ToolbarImpl.ts" target-dir="tsc/src/ios/widget"/>
+     <!-- tsc end -->
+     <!-- start AndroidToolbarPlugin -->
+     <header-file src="ios/library/AndroidToolbarPlugin/src/ActionMenuPresenter.h" target-dir="AndroidToolbarPlugin/AndroidToolbarPlugin/src"/>
+     <source-file src="ios/library/AndroidToolbarPlugin/src/ActionMenuPresenter.m" target-dir="AndroidToolbarPlugin/AndroidToolbarPlugin/src" compiler-flags="-fno-objc-arc"/>
+     <header-file src="ios/library/AndroidToolbarPlugin/src/ActionMenuView.h" target-dir="AndroidToolbarPlugin/AndroidToolbarPlugin/src"/>
+     <source-file src="ios/library/AndroidToolbarPlugin/src/ActionMenuView.m" target-dir="AndroidToolbarPlugin/AndroidToolbarPlugin/src" compiler-flags="-fno-objc-arc"/>
+     <header-file src="ios/library/AndroidToolbarPlugin/src/BaseMenuPresenter.h" target-dir="AndroidToolbarPlugin/AndroidToolbarPlugin/src"/>
+     <source-file src="ios/library/AndroidToolbarPlugin/src/BaseMenuPresenter.m" target-dir="AndroidToolbarPlugin/AndroidToolbarPlugin/src" compiler-flags="-fno-objc-arc"/>
+     <header-file src="ios/library/AndroidToolbarPlugin/src/LinearLayoutCompat.h" target-dir="AndroidToolbarPlugin/AndroidToolbarPlugin/src"/>
+     <source-file src="ios/library/AndroidToolbarPlugin/src/LinearLayoutCompat.m" target-dir="AndroidToolbarPlugin/AndroidToolbarPlugin/src" compiler-flags="-fno-objc-arc"/>
+     <header-file src="ios/library/AndroidToolbarPlugin/src/MenuBuilder.h" target-dir="AndroidToolbarPlugin/AndroidToolbarPlugin/src"/>
+     <source-file src="ios/library/AndroidToolbarPlugin/src/MenuBuilder.m" target-dir="AndroidToolbarPlugin/AndroidToolbarPlugin/src" compiler-flags="-fno-objc-arc"/>
+     <header-file src="ios/library/AndroidToolbarPlugin/src/MenuItemImpl.h" target-dir="AndroidToolbarPlugin/AndroidToolbarPlugin/src"/>
+     <source-file src="ios/library/AndroidToolbarPlugin/src/MenuItemImpl.m" target-dir="AndroidToolbarPlugin/AndroidToolbarPlugin/src" compiler-flags="-fno-objc-arc"/>
+     <header-file src="ios/library/AndroidToolbarPlugin/src/MenuParser.h" target-dir="AndroidToolbarPlugin/AndroidToolbarPlugin/src"/>
+     <source-file src="ios/library/AndroidToolbarPlugin/src/MenuParser.m" target-dir="AndroidToolbarPlugin/AndroidToolbarPlugin/src" compiler-flags="-fno-objc-arc"/>
+     <header-file src="ios/library/AndroidToolbarPlugin/src/MenuPresenter.h" target-dir="AndroidToolbarPlugin/AndroidToolbarPlugin/src"/>
+     <source-file src="ios/library/AndroidToolbarPlugin/src/MenuPresenter.m" target-dir="AndroidToolbarPlugin/AndroidToolbarPlugin/src" compiler-flags="-fno-objc-arc"/>
+     <header-file src="ios/library/AndroidToolbarPlugin/src/RtlSpacingHelper.h" target-dir="AndroidToolbarPlugin/AndroidToolbarPlugin/src"/>
+     <source-file src="ios/library/AndroidToolbarPlugin/src/RtlSpacingHelper.m" target-dir="AndroidToolbarPlugin/AndroidToolbarPlugin/src" compiler-flags="-fno-objc-arc"/>
+     <header-file src="ios/library/AndroidToolbarPlugin/src/Toolbar.h" target-dir="AndroidToolbarPlugin/AndroidToolbarPlugin/src"/>
+     <source-file src="ios/library/AndroidToolbarPlugin/src/Toolbar.m" target-dir="AndroidToolbarPlugin/AndroidToolbarPlugin/src" compiler-flags="-fno-objc-arc"/>
+     <header-file src="ios/library/AndroidToolbarPlugin/src/ViewUtils.h" target-dir="AndroidToolbarPlugin/AndroidToolbarPlugin/src"/>
+     <source-file src="ios/library/AndroidToolbarPlugin/src/ViewUtils.m" target-dir="AndroidToolbarPlugin/AndroidToolbarPlugin/src" compiler-flags="-fno-objc-arc"/>
+     <!-- AndroidToolbarPlugin end -->
+  </platform>
+  <platform name="browser">
+  	<config-file target="res/xml/config.xml" parent="/*">
+      <feature name="CordovaToolbarPlugin">
+        <param name="android-package" value="com.ashera.toolbar.CordovaToolbarPlugin"/>
+        <param name="onload" value="true" />
+      </feature>
+    </config-file>
+   	<framework src="browser/core.gradle" custom="true" type="gradleReference" />
+   	<resource-file src="browser/www/css/toolbar.css" target="../../src/main/assets/www/css/toolbar.css" />
+   	<js-module src="browser/www/js/add_res.js" name="toolbarAddRes">
+    	 <runs/>
+  	</js-module>
+  </platform>
+  <platform name="swt">
+    <config-file target="res/xml/config.xml" parent="/*">
+      <feature name="CordovaToolbarPlugin">
+        <param name="android-package" value="com.ashera.toolbar.CordovaToolbarPlugin"/>
+        <param name="onload" value="true" />
+      </feature>
+    </config-file>  
+   	<framework src="swt/core.gradle" custom="true" type="gradleReference" />
+  </platform>
+
+
+
+
+
+</plugin>

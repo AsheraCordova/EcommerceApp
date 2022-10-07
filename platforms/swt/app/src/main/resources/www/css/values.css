@@ -1,0 +1,249 @@
+
+            .error_banner {
+					layout_alignParentBottom:"true";
+			layout_alignParentEnd:"true";
+			layout_alignParentRight:"true";
+			layout_alignParentLeft:"true";
+			layout_alignParentStart:"true";
+			padding:"5dp";
+			textStyle:"bold";
+			gravity:"center";
+			background:"@color/color_red_300";
+			textColor:"@color/color_white";
+			text:"@string/error_text";
+			layout_height:"wrap_content";
+			layout_width:"match_parent";
+			
+                 }
+        
+            .h3_white {
+					textColor:"@color/color_white";
+			textSize:"@dimen/font_small";
+			
+                 }
+        
+            .h3_gray_500 {
+					textColor:"@color/color_gray_500";
+			textSize:"@dimen/font_small";
+			
+                 }
+        
+            .h2_white {
+					textColor:"@color/color_white";
+			textSize:"@dimen/font_medium";
+			
+                 }
+        
+            .h2_red {
+					textColor:"@color/color_red";
+			textSize:"@dimen/font_medium";
+			
+                 }
+        
+            .h1_black {
+					textColor:"@color/color_black";
+			textSize:"@dimen/font_big";
+			
+                 }
+        
+            .h2_black {
+					textColor:"@color/color_black";
+			textSize:"@dimen/font_medium";
+			
+                 }
+        
+            .h2_yellow {
+					textColor:"@color/color_yellow";
+			textSize:"@dimen/font_medium";
+			
+                 }
+        
+            .h2_gray_900 {
+					textColor:"@color/color_gray_900";
+			textSize:"@dimen/font_medium";
+			
+                 }
+        
+            .h2_gray_500 {
+					textColor:"@color/color_gray_500";
+			textSize:"@dimen/font_medium";
+			
+                 }
+        
+            .h3_red_300 {
+					textColor:"@color/color_red_300";
+			textSize:"@dimen/font_small";
+			
+                 }
+        
+            .h3_green_300 {
+					textColor:"@color/color_green_300";
+			textSize:"@dimen/font_small";
+			
+                 }
+        
+            .h3_black {
+					textColor:"@color/color_black";
+			textSize:"@dimen/font_small";
+			
+                 }
+        
+            .hyperlink {
+					padding:"3dp";
+			
+                 }
+        
+            .button_style {
+					background:"@drawable/common_9_button";
+			textSize:"@dimen/font_medium";
+			textColor:"@color/color_red";
+			textStyle:"bold";
+			backgroundCapInsetsLeft-swt:"30dp";
+				backgroundCapInsetsRight-swt:"30dp";
+				backgroundCapInsetsLeft-web:"30dp";
+				backgroundCapInsetsRight-web:"30dp";
+				backgroundCapInsetsLeft-ios:"30dp";
+				backgroundCapInsetsRight-ios:"30dp";
+				
+                 }
+        
+            .button_style_red {
+					background:"@drawable/common_button_red_9";
+			textSize:"@dimen/font_medium";
+			textColor:"@color/color_white";
+			textStyle:"bold";
+			backgroundCapInsetsLeft-swt:"30dp";
+				backgroundCapInsetsRight-swt:"30dp";
+				backgroundCapInsetsLeft-web:"30dp";
+				backgroundCapInsetsRight-web:"30dp";
+				backgroundCapInsetsLeft-ios:"30dp";
+				backgroundCapInsetsRight-ios:"30dp";
+				
+                 }
+        
+            .button_style_red_small {
+					background:"@drawable/common_button_red_small_9";
+			textSize:"@dimen/font_medium";
+			textColor:"@color/color_white";
+			textStyle:"bold";
+			backgroundCapInsetsLeft-swt:"15dp";
+				backgroundCapInsetsRight-swt:"15dp";
+				backgroundCapInsetsLeft-web:"15dp";
+				backgroundCapInsetsRight-web:"15dp";
+				backgroundCapInsetsLeft-ios:"15dp";
+				backgroundCapInsetsRight-ios:"15dp";
+				
+                 }
+        
+            .form_edittext_style {
+					paddingBottom:"20dp";
+			
+                 }
+        
+            .card_edittext_style {
+					textColor:"@color/color_black";
+			
+                 }
+        
+            .form_password_style {
+					paddingBottom:"20dp";
+			inputType:"textPassword";
+			password:"true";
+			
+                 }
+        
+            .main_layout {
+					background:"@color/color_gray_100";
+			
+                 }
+        
+            .category {
+					background:"#fff";
+			borderColor:"#cccccc";
+				borderRadius:"3dp";
+				 borderWidth:"1dp";
+				
+                 }
+        
+            .border_separator {
+					borderColor:"#fff";
+				borderBottomWidth:"1dp";
+				
+                 }
+        
+            .image_logo {
+					layout_width:"150dp";
+			layout_height:"150dp";
+			adjustViewBounds:"true";
+			src:"@drawable/ashera_logo_no_resize";
+			
+                 }
+        
+            .notification_container_style {
+					background:"@color/bg_color";
+			padding:"5dp";
+			borderRadius:"3dp";
+				
+                 }
+        
+            .notification_text_style {
+					paddingLeft:"15dp";
+			paddingRight:"15dp";
+			textColor:"@color/color_white";
+			textSize:"@dimen/font_small";
+			
+                 }
+        
+            .card_style {
+					background:"#fff";
+			borderRadius:"5dp";
+				
+                 }
+        
+            .horizontal_border_separator {
+					layout_width:"1dp";
+			layout_height:"80dp";
+			layout_marginLeft:"15dp";
+			layout_marginRight:"15dp";
+			background:"@color/color_gray_900";
+			
+                 }
+        
+            .rounded_textview {
+					layout_width:"50dp";
+			layout_height:"50dp";
+			background:"@color/color_black";
+			gravity:"center";
+			textSize:"@dimen/font_medium";
+			textColor:"@color/color_white";
+			textStyle:"bold";
+			borderRadius:"25dp";
+				
+                 }
+        
+            .dialog_layout {
+					background:"@color/color_white";
+			
+                 }
+        
+            .rounded_notification_style {
+					layout_width:"20dp";
+			layout_height:"20dp";
+			background:"#f00";
+			gravity:"center";
+			textColor:"#fff";
+			textSize:"7sp";
+			borderRadius:"10dp";
+				
+                 }
+        
+            .section_header {
+					background:"@color/color_gray_50";
+			textColor:"@color/color_white";
+			textStyle:"bold";
+			gravity:"center";
+			padding:"10dp";
+			textSize:"@dimen/font_medium";
+			
+                 }
+        

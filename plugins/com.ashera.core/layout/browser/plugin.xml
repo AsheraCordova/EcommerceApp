@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<plugin xmlns="http://www.phonegap.com/ns/plugins/1.0"
+        id="com.ashera.layout.web"
+        version="1.0">
+
+  <name>Layout Plugin</name>
+
+  <platform name="browser">
+  	<config-file target="res/xml/config.xml" parent="/*">
+      <feature name="AndroidLayoutsCordovaPlugin">
+        <param name="android-package" value="com.ashera.layout.AndroidLayoutsCordovaPlugin"/>
+        <param name="onload" value="true" />
+      </feature>
+    </config-file>
+   	<framework src="layout.gradle" custom="true" type="gradleReference" />
+   	<resource-file src="www/css/layout.css" target="../../src/main/assets/www/css/layout.css" />
+   	
+   	<js-module src="www/js/add_res.js" name="layoutAddRes">
+    	 <runs/>
+  	</js-module>
+  </platform>
+</plugin>

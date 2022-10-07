@@ -1,0 +1,7 @@
+repositories {
+    mavenLocal();
+}
+
+dependencies {
+    compile 'com.ashera:converter:1.0.0';
+}

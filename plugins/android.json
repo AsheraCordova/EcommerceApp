@@ -1,0 +1,82 @@
+{
+  "prepare_queue": {
+    "installed": [],
+    "uninstalled": []
+  },
+  "config_munge": {
+    "files": {}
+  },
+  "installed_plugins": {
+    "com.ashera.core": {
+      "PACKAGE_NAME": "com.ashera.ecommerce"
+    },
+    "com.ashera.capinsets": {
+      "PACKAGE_NAME": "com.ashera.ecommerce"
+    },
+    "com.ashera.constraintlayout": {
+      "PACKAGE_NAME": "com.ashera.ecommerce"
+    },
+    "com.ashera.cssborder": {
+      "PACKAGE_NAME": "com.ashera.ecommerce"
+    },
+    "com.ashera.datetime": {
+      "PACKAGE_NAME": "com.ashera.ecommerce"
+    },
+    "com.ashera.drawerlayout": {
+      "PACKAGE_NAME": "com.ashera.ecommerce"
+    },
+    "com.ashera.gridlayout": {
+      "PACKAGE_NAME": "com.ashera.ecommerce"
+    },
+    "com.ashera.recycleview": {
+      "PACKAGE_NAME": "com.ashera.ecommerce"
+    },
+    "com.ashera.toolbar": {
+      "PACKAGE_NAME": "com.ashera.ecommerce"
+    },
+    "com.ashera.iqkeyboardmanager.ios": {
+      "PACKAGE_NAME": "com.ashera.ecommerce"
+    },
+    "com.ashera.shutterbug": {
+      "PACKAGE_NAME": "com.ashera.ecommerce"
+    },
+    "com.ashera.glide": {
+      "PACKAGE_NAME": "com.ashera.ecommerce"
+    },
+    "com.ashera.sdwebimage.ios": {
+      "PACKAGE_NAME": "com.ashera.ecommerce"
+    },
+    "cordova-plugin-splashscreen": {
+      "PACKAGE_NAME": "com.ashera.ecommerce"
+    },
+    "cordova-plugin-splashscreen-ashera": {
+      "PACKAGE_NAME": "com.ashera.ecommerce"
+    },
+    "com.filfatstudios.spinnerdialog": {
+      "PACKAGE_NAME": "com.ashera.ecommerce"
+    },
+    "cordova-plugin-camera": {
+      "ANDROIDX_CORE_VERSION": "1.6.+",
+      "PACKAGE_NAME": "com.ashera.ecommerce"
+    },
+    "cordova-plugin-camera-swt": {
+      "PACKAGE_NAME": "com.ashera.ecommerce"
+    },
+    "cordova-plugin-qrscanner": {
+      "PACKAGE_NAME": "com.ashera.ecommerce"
+    },
+    "cordova-plugin-qrscanner-swt": {
+      "PACKAGE_NAME": "com.ashera.ecommerce"
+    },
+    "cordova-plugin-sqlite-2": {
+      "PACKAGE_NAME": "com.ashera.ecommerce"
+    },
+    "cordova-plugin-sqlite-2-swt": {
+      "PACKAGE_NAME": "com.ashera.ecommerce"
+    },
+    "com.ashera.indexeddbshim": {
+      "PACKAGE_NAME": "com.ashera.ecommerce"
+    }
+  },
+  "dependent_plugins": {}
+}

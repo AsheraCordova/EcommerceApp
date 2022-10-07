@@ -1,0 +1,16 @@
+export const registrationForm:string = '@+id/registrationForm';
+export const dateOfBirth:string = '@+id/dateOfBirth';
+export const dateOfBirthError:string = '@+id/dateOfBirthError';
+export const phoneNumber:string = '@+id/phoneNumber';
+export const phoneNumberError:string = '@+id/phoneNumberError';
+export const emailId:string = '@+id/emailId';
+export const emailIdError:string = '@+id/emailIdError';
+export const password:string = '@+id/password';
+export const passwordError:string = '@+id/passwordError';
+export const agreeTerms:string = '@+id/agreeTerms';
+export const agreeTermsError:string = '@+id/agreeTermsError';
+export const submit:string = '@+id/submit';
+export const firstName:string = '@+id/firstName';
+export const firstNameError:string = '@+id/firstNameError';
+export const lastName:string = '@+id/lastName';
+export const lastNameError:string = '@+id/lastNameError';

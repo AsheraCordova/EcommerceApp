@@ -1,0 +1,234 @@
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data></data>
+
+    <LinearLayout
+        style="@style/dialog_layout"
+        fragment="DashboardQuantity"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <FrameLayout
+            style="@style/border_separator"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="10dp">
+
+                <TextView
+                    style="@style/h2_gray_500"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerInParent="true"
+                    android:gravity="center_vertical"
+                    android:text="@string/quantity_selection"
+                    android:textStyle="bold"></TextView>
+
+                <ImageView
+                    onClick="quantityDialogDismiss"
+                    android:layout_width="20dp"
+                    android:layout_height="20dp"
+                    android:layout_alignParentRight="true"
+                    android:scaleType="fitXY"
+                    android:src="@drawable/close"></ImageView>
+            </RelativeLayout>
+        </FrameLayout>
+
+        <LinearLayout
+            style="@style/border_separator"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingBottom="1dp">
+
+            <FrameLayout
+                android:layout_width="40dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_margin="20dp">
+
+                <ImageView
+                    android:id="@+id/type"
+                    android:layout_width="40dp"
+                    android:layout_height="wrap_content"
+                    android:scaleType="centerInside"
+                    android:src="@drawable/orderpreview_food"></ImageView>
+            </FrameLayout>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:padding="5dp">
+
+                <TextView
+                    android:id="@+id/name"
+                    style="@style/h2_black"
+                    modelPojoToUi="text = name from item->view"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:layout_toLeftOf="@+id/sell_price"
+                    android:text="Sample Test"
+                    android:textStyle="bold"></TextView>
+
+                <TextView
+                    android:id="@+id/sell_price"
+                    style="@style/h2_black"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:gravity="right"
+                    android:paddingRight="5dp"
+                    android:text="Rs 100"
+                    android:textStyle="bold"></TextView>
+
+                <LinearLayout
+                    android:id="@+id/lowhighprice"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/name"
+                    android:orientation="vertical">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="10dp">
+
+                        <ImageView
+                            android:id="@+id/increment"
+                            modelUiToPojoEventIds="quantity"
+                            onClick="increment+(eventParams = . from eventparams_increment->strings)"
+                            android:layout_width="30dp"
+                            android:layout_height="30dp"
+                            android:layout_gravity="center"
+                            android:layout_marginRight="5dp"
+                            android:scaleType="centerInside"
+                            android:src="@drawable/common_plus_icon"
+                            tools:ignore="OnClick"></ImageView>
+
+                        <EditText
+                            android:id="@+id/quantity"
+                            style="@style/card_edittext_style"
+                            background-swt="#fff"
+                            background-web="#fff"
+                            formGroupId="defaultForm"
+                            modelPojoToUi="text = quantity from item->view"
+                            modelSyncEvents="onTextChange"
+                            modelUiToPojo="quantity = text into item->view"
+                            onTextChange=""
+                            swtTextStyle="center"
+                            validation="required,integer"
+                            validationErrorDisplayType="label"
+                            android:layout_width="60dp"
+                            android:layout_height="wrap_content"
+                            android:gravity="center"></EditText>
+
+                        <ImageView
+                            android:id="@+id/decrement"
+                            modelUiToPojoEventIds="quantity"
+                            onClick="decrement+(eventParams = . from eventparams_increment->strings)"
+                            android:layout_width="30dp"
+                            android:layout_height="30dp"
+                            android:layout_gravity="center"
+                            android:layout_marginLeft="5dp"
+                            android:scaleType="centerInside"
+                            android:src="@drawable/common_minus_icon"
+                            tools:ignore="OnClick"></ImageView>
+                    </LinearLayout>
+
+                    <TextView
+                        android:id="@+id/quantityError"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:textColor="@color/color_red_300"
+                        android:textSize="12sp"
+                        android:visibility="gone"></TextView>
+                </LinearLayout>
+            </RelativeLayout>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/mixerContainer"
+            modelPojoToUi="visibility = visible(.) from mixers->view"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="#fff"
+            android:orientation="vertical"
+            android:visibility="visible">
+
+            <TextView
+                style="@style/h2_black"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="5dp"
+                android:layout_marginBottom="10dp"
+                android:text="@string/add_mixer"
+                android:textStyle="bold"></TextView>
+
+            <RelativeLayout
+                android:id="@+id/statusBar"
+                style="@style/notification_container_style"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp">
+
+                <TextView
+                    style="@style/notification_text_style"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_toRightOf="@+id/helpLocation"
+                    android:gravity="center"
+                    android:text="@string/mixer_help"></TextView>
+
+                <ImageView
+                    android:id="@+id/helpLocation"
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
+                    android:layout_alignParentLeft="true"
+                    android:layout_marginLeft="5dp"
+                    android:scaleType="centerInside"
+                    android:src="@drawable/location_help"></ImageView>
+            </RelativeLayout>
+
+            <HorizontalScrollView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:fillViewport="true">
+
+                <LinearLayout
+                    android:id="@+id/mixerGridLayout"
+                    autoInject="true"
+                    layout_marginBottom-swt="30dp"
+                    modelFor="let item in . from mixers->view into loopvar as map"
+                    modelIdPath="itemId"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="5dp"
+                    android:orientation="horizontal"
+                    tools:listitem="@layout/dashboard_mixer_item"></LinearLayout>
+            </HorizontalScrollView>
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/addToBagButton"
+            style="@style/button_style_red"
+            autoInject="true"
+            onClick="addToBag(model = . from item->view,mixers = . from mixers->view)"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="10dp"
+            android:gravity="center"
+            android:text="@string/add_to_bag"
+            tools:ignore="OnClick"></TextView>
+    </LinearLayout>
+</layout>

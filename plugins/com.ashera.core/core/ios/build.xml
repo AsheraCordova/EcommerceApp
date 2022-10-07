@@ -1,0 +1,26 @@
+<project default="copy_from_android">
+    <property name="project_dir"  value="../android/app/src/main/"/>
+
+    <property name="overwrite" value="true"/>
+    <target name="copy_from_android">
+        <copy todir="www" overwrite="${overwrite}">  
+  			<fileset dir="${project_dir}/assets/www" includes="**" excludes="cordova-js-src/**,cordova.js,cordova_plugins.js,plugins/**"/>  
+		</copy>
+		
+        <copy todir="www/layout" overwrite="${overwrite}">  
+  			<fileset dir="${project_dir}/res/layout" />  
+		</copy>
+		
+        
+        <copy todir="font" overwrite="${overwrite}">  
+  			<fileset dir="${project_dir}/res/font" />  
+		</copy>
+		
+        <copy todir="font" overwrite="${overwrite}" failonerror="false">  
+  			<fileset dir="${project_dir}/resources/font" erroronmissingdir="false"/>  
+		</copy>
+  		
+  		
+    </target>
+   
+</project>

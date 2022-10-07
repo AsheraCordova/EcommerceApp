@@ -1,0 +1,138 @@
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+
+    <data></data>
+
+    <ScrollView
+        fragment="Login"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/bg_color"
+        android:fillViewport="true">
+
+        <RelativeLayout
+            android:id="@+id/loginForm"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="50dp"
+                    android:layout_marginRight="50dp"
+                    android:orientation="vertical">
+
+                    <ImageView
+                        style="@style/image_logo"
+                        android:layout_gravity="center"
+                        android:layout_marginTop="20dp"
+                        android:layout_marginBottom="50dp" />
+
+                    <EditText
+                        android:id="@+id/username"
+                        style="@style/form_edittext_style"
+                        formGroupId="defaultForm"
+                        validation="required"
+                        validationErrorDisplayType="label"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:drawableStart="@drawable/login_phone_num"
+                        android:drawablePadding="10dp"
+                        android:hint="@string/mobile_number"
+                        android:inputType="phone"
+                        android:text=""></EditText>
+
+                    <TextView
+                        android:id="@+id/usernameError"
+                        style="@style/h3_red_300"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:visibility="gone"></TextView>
+
+                    <EditText
+                        android:id="@+id/password"
+                        style="@style/form_password_style"
+                        formGroupId="defaultForm"
+                        validation="required"
+                        validationErrorDisplayType="label"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:drawableStart="@drawable/login_password"
+                        android:drawablePadding="10dp"
+                        android:hint="@string/password"
+                        android:inputType="textPassword"
+                        android:text=""></EditText>
+
+                    <TextView
+                        android:id="@+id/passwordError"
+                        style="@style/h3_red_300"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:visibility="gone"></TextView>
+
+                    <com.ashera.layout.Link
+                        style="@style/h2_white"
+                        onClick="goToForgotPassword"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="end"
+                        android:padding="3dp"
+                        android:text="@string/forgot_password"></com.ashera.layout.Link>
+
+                    <TextView
+                        android:id="@+id/submit"
+                        autoInject="true"
+                        style="@style/button_style"
+                        onClick="login"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_marginTop="30dp"
+                        android:gravity="center"
+                        android:paddingHorizontal="80dp"
+                        android:text="@string/login"></TextView>
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_marginTop="20dp"
+                        android:gravity="center"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            style="@style/h2_white"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:padding="3dp"
+                            android:text="@string/first_time_user"></TextView>
+
+                        <com.ashera.layout.Link
+                            style="@style/h2_yellow"
+                            onClick="goToRegister"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:padding="3dp"
+                            android:text="@string/click_me"></com.ashera.layout.Link>
+                    </LinearLayout>
+                </LinearLayout>
+            </LinearLayout>
+
+        </RelativeLayout>
+    </ScrollView>
+
+</layout>

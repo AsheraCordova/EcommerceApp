@@ -1,0 +1,32 @@
+{
+  "_from": "git+https://github.com/AsheraCordova/Toolbar.git",
+  "_id": "com.ashera.toolbar@1.0.0",
+  "_inBundle": false,
+  "_integrity": "",
+  "_location": "/com.ashera.toolbar",
+  "_phantomChildren": {},
+  "_requested": {
+    "type": "git",
+    "raw": "https://github.com/AsheraCordova/Toolbar",
+    "rawSpec": "https://github.com/AsheraCordova/Toolbar",
+    "saveSpec": "git+https://github.com/AsheraCordova/Toolbar.git",
+    "fetchSpec": "https://github.com/AsheraCordova/Toolbar.git",
+    "gitCommittish": null
+  },
+  "_requiredBy": [
+    "#DEV:/",
+    "#USER"
+  ],
+  "_resolved": "git+https://github.com/AsheraCordova/Toolbar.git#20cf719bf8775841ec21d89825ad2dbe7b90bd03",
+  "_spec": "https://github.com/AsheraCordova/Toolbar",
+  "_where": "D:\\Java\\github_ashera\\EcommerceApp",
+  "author": {
+    "name": "Ram M"
+  },
+  "bundleDependencies": false,
+  "deprecated": false,
+  "description": "@description@",
+  "license": "ISC",
+  "name": "com.ashera.toolbar",
+  "version": "1.0.0"
+}

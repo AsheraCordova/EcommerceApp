@@ -1,0 +1,16 @@
+export const mixerContainer:string = '@+id/mixerContainer';
+export const type:string = '@+id/type';
+export const name:string = '@+id/name';
+export const sell_price:string = '@+id/sell_price';
+export const lowhighprice:string = '@+id/lowhighprice';
+export const increment:string = '@+id/increment';
+export const decrement:string = '@+id/decrement';
+export const statusBar:string = '@+id/statusBar';
+export const addToBag:string = '@+id/addToBag';
+export const cancel:string = '@+id/cancel';
+export const helpLocation:string = '@+id/helpLocation';
+export const mixerGridLayout:string = '@+id/mixerGridLayout';
+export const mixerGrid:string = '@+id/mixerGrid';
+export const mixerItem:string = '@+id/mixerItem';
+export const mixerImage:string = '@+id/mixerImage';
+export const mixerText:string = '@+id/mixerText';

@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data></data>
+
+    <LinearLayout
+        fragment="Webview"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <include layout="@layout/toolbar" />
+
+        <FrameLayout
+            android:id="@+id/main_view"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <WebView
+                zIndex="0"
+                autoInject="true"
+                android:id="@+id/webview"
+                modelPojoToUi="loadUrl = . from webviewUrl->view;"
+                onPageFinished="showWebView"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"></WebView>
+
+            <ProgressBar
+                zIndex="1"
+                android:layout_gravity="center"
+                android:id="@+id/progressbar"
+                modelPojoToUi="visibility = gone(.) from webviewVisible->view"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"></ProgressBar>
+        </FrameLayout>
+    </LinearLayout>
+</layout>

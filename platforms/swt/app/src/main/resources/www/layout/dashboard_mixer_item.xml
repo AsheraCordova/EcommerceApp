@@ -1,0 +1,44 @@
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    style="@style/category"
+    android:padding="1dp"
+    modelPojoToUi="background = mixerBg from item->loopvar"
+    android:layout_marginLeft="5dp"
+    tools:ignore="MissingPrefix">
+
+    <LinearLayout
+        android:id="@+id/mixerItem"
+        swtAttachEventBubbler="mouseup,mousedown"
+        onLongClick="removeMixerFromCart(model = . from item->loopvar)"
+        onClick="addMixersToCart(model = . from item->loopvar)"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginRight="5dp"
+
+        android:gravity="center"
+        android:orientation="vertical"
+        android:padding="5dp"
+        tools:ignore="OnClick">
+
+        <ImageView
+            android:src="@drawable/mixer_can"
+            modelPojoToUi="src = image from item->loopvar"
+            android:id="@+id/mixerImage"
+            android:layout_width="wrap_content"
+            android:layout_height="30dp"></ImageView>
+
+        <TextView
+            android:id="@+id/mixerText"
+            style="@style/h3_gray_500"
+            modelPojoToUi="text = nameAndQty from item->loopvar"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="5dp"
+            android:gravity="center"
+            android:text="Test123"
+            android:textStyle="bold"></TextView>
+    </LinearLayout>
+</FrameLayout>

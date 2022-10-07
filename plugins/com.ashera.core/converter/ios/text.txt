@@ -1,0 +1,171 @@
+
+
+update user_details set apartment_id=232 where apartment_id=233;
+update apartment set name ='Abil Imperial Atria - Deleted', deleted=true where apartment_id=233;
+
+
+update user_details set apartment_id=470 where apartment_id=468;
+update user_details set apartment_id=470 where apartment_id=485;
+update apartment set name ='Amar Courtyards - Deleted', deleted=true where apartment_id=468;
+update apartment set name ='Amar Courtyards - Deleted', deleted=true where apartment_id=485;
+
+
+update user_details set apartment_id=332 where apartment_id=531;
+update apartment set name ='Bramha Exuberance - Deleted', deleted=true where apartment_id=531;
+
+update user_details set apartment_id=3 where apartment_id=330;
+update apartment set name ='Caroline Society - Deleted', deleted=true where apartment_id=330;
+
+update user_details set apartment_id=466 where apartment_id=467;
+update apartment set name ='Crystal Garden - Deleted', deleted=true where apartment_id=467;
+
+update user_details set apartment_id=168 where apartment_id=173;
+update apartment set name ='Dwarka Flora Residency - Deleted', deleted=true where apartment_id=173;
+
+update user_details set apartment_id=364 where apartment_id=376;
+update apartment set name ='Gagan Arena - Deleted', deleted=true where apartment_id=376;
+
+update user_details set apartment_id=494 where apartment_id=510;
+update apartment set name ='Godrej Infinity - Deleted', deleted=true where apartment_id=510;
+
+update user_details set apartment_id=491 where apartment_id=492;
+update user_details set apartment_id=491 where apartment_id=504;
+update apartment set name ='Greens Maple Society - Deleted', deleted=true where apartment_id=492;
+update apartment set name ='Greens Maple Society - Deleted', deleted=true where apartment_id=504;
+
+update apartment set name ='High Mont - Deleted', deleted=true where apartment_id=323;
+update apartment set name ='High Mont - Deleted', deleted=true where apartment_id=327;
+update apartment set name ='High Mont - Deleted', deleted=true where apartment_id=328;
+
+update user_details set apartment_id=451 where apartment_id=455;
+update apartment set name ='House - Deleted', deleted=true where apartment_id=455;
+
+update user_details set apartment_id=474 where apartment_id=493;
+update user_details set apartment_id=474 where apartment_id=501;
+update apartment set name ='Konark Campus - Deleted', deleted=true where apartment_id=493;
+update apartment set name ='Konark Campus - Deleted', deleted=true where apartment_id=501;
+
+
+update apartment set name ='Konark Indrayu Enclave 2 - Deleted', deleted=true where apartment_id=333;
+
+update user_details set apartment_id=479 where apartment_id=483;
+update apartment set name ='Le Mirage - Deleted', deleted=true where apartment_id=483;
+
+update apartment set name ='Life Montage, opposite Sunny\'s World - Deleted', deleted=true where apartment_id=489;
+
+update user_details set apartment_id=216 where apartment_id=219;
+update apartment set name ='Nirmiti zion - Deleted', deleted=true where apartment_id=219;
+
+update user_details set apartment_id=487 where apartment_id=490;
+update apartment set name ='Park Xpress - Deleted', deleted=true where apartment_id=490;
+
+update user_details set apartment_id=254 where apartment_id=256;
+update apartment set name ='Raheja Vistas - Deleted', deleted=true where apartment_id=256;
+
+update apartment set name ='Royal Orchid - Deleted', deleted=true where apartment_id=336;
+
+update user_details set apartment_id=245 where apartment_id=252;
+update apartment set name ='Sacred Heart Town - Deleted', deleted=true where apartment_id=252;
+
+update user_details set apartment_id=498 where apartment_id=511;
+update apartment set name ='Sayali Heritage - Deleted', deleted=true where apartment_id=511;
+
+
+update user_details set apartment_id=484 where apartment_id=486;
+update apartment set name ='Sukhwani Lawns - Deleted', deleted=true where apartment_id=486;
+
+update apartment set name ='Teerth Towers - Deleted', deleted=true where apartment_id=359;
+
+update user_details set apartment_id=482 where apartment_id=502;
+update apartment set name ='Todkar Residency - Deleted', deleted=true where apartment_id=502;
+
+update user_details set apartment_id=217 where apartment_id=218;
+update apartment set name ='Yash Orchid - Deleted', deleted=true where apartment_id=218;
+
+update user_details set apartment_id=104 where apartment_id=105;
+update apartment set name ='Yuthika Baner - Deleted', deleted=true where apartment_id=105;
+
+
+
+
+select name, apartment_id, deleted, address from apartment where name in (
+(SELECT name
+FROM apartment
+GROUP BY name
+HAVING COUNT(*) > 1)) order by name, apartment_id
+
+select count(*) x, apartment_id from time_slots 
+where timeslot_date >= CURDATE()
+group by apartment_id order by x
+
+desc time_slots
+
+
+select * from user_details where  apartment_id in (468,
+470,
+485
+)
+
+
+select * from time_slots order by date_created desc
+
+
+desc apartment;
+
+21:44:20	STARTED					Executing for: 'farmconprod' [MySQL], Database: farmcon	
+21:44:21	SUCCESS	UPDATE	1.228		1	OK	update user_details set apartment_id=232 where apartment_id=233
+21:44:22	SUCCESS	UPDATE	1.323		1	OK	update apartment set name ='Abil Imperial Atria - Deleted', deleted=true where apartment_id=233
+21:44:24	SUCCESS	UPDATE	1.208		0	OK. No rows were affected	update user_details set apartment_id=470 where apartment_id=468
+21:44:25	SUCCESS	UPDATE	1.13		0	OK. No rows were affected	update user_details set apartment_id=470 where apartment_id=485
+21:44:27	SUCCESS	UPDATE	1.254		1	OK	update apartment set name ='Amar Courtyards - Deleted', deleted=true where apartment_id=468
+21:44:28	SUCCESS	UPDATE	1.189		1	OK	update apartment set name ='Amar Courtyards - Deleted', deleted=true where apartment_id=485
+21:44:30	SUCCESS	UPDATE	1.228		0	OK. No rows were affected	update user_details set apartment_id=332 where apartment_id=531
+21:44:31	SUCCESS	UPDATE	1.234		1	OK	update apartment set name ='Bramha Exuberance - Deleted', deleted=true where apartment_id=531
+21:44:33	SUCCESS	UPDATE	1.311		0	OK. No rows were affected	update user_details set apartment_id=3 where apartment_id=330
+21:44:34	SUCCESS	UPDATE	1.568		1	OK	update apartment set name ='Caroline Society - Deleted', deleted=true where apartment_id=330
+21:44:36	SUCCESS	UPDATE	1.228		1	OK	update user_details set apartment_id=466 where apartment_id=467
+21:44:38	SUCCESS	UPDATE	1.241		1	OK	update apartment set name ='Crystal Garden - Deleted', deleted=true where apartment_id=467
+21:44:39	SUCCESS	UPDATE	1.319		1	OK	update user_details set apartment_id=168 where apartment_id=173
+21:44:41	SUCCESS	UPDATE	1.335		1	OK	update apartment set name ='Dwarka Flora Residency - Deleted', deleted=true where apartment_id=173
+21:44:42	SUCCESS	UPDATE	1.209		0	OK. No rows were affected	update user_details set apartment_id=364 where apartment_id=376
+21:44:44	SUCCESS	UPDATE	1.223		1	OK	update apartment set name ='Gagan Arena - Deleted', deleted=true where apartment_id=376
+21:44:45	SUCCESS	UPDATE	1.207		0	OK. No rows were affected	update user_details set apartment_id=494 where apartment_id=510
+21:44:47	SUCCESS	UPDATE	1.136		1	OK	update apartment set name ='Godrej Infinity - Deleted', deleted=true where apartment_id=510
+21:44:48	SUCCESS	UPDATE	1.33		0	OK. No rows were affected	update user_details set apartment_id=491 where apartment_id=492
+21:44:50	SUCCESS	UPDATE	1.329		0	OK. No rows were affected	update user_details set apartment_id=491 where apartment_id=504
+21:44:51	SUCCESS	UPDATE	1.073		1	OK	update apartment set name ='Greens Maple Society - Deleted', deleted=true where apartment_id=492
+21:44:53	SUCCESS	UPDATE	1.114		1	OK	update apartment set name ='Greens Maple Society - Deleted', deleted=true where apartment_id=504
+21:44:54	SUCCESS	UPDATE	1.249		1	OK	update apartment set name ='High Mont - Deleted', deleted=true where apartment_id=323
+21:44:56	SUCCESS	UPDATE	1.442		1	OK	update apartment set name ='High Mont - Deleted', deleted=true where apartment_id=327
+21:44:58	SUCCESS	UPDATE	1.445		1	OK	update apartment set name ='High Mont - Deleted', deleted=true where apartment_id=328
+21:44:59	SUCCESS	UPDATE	1.34		6	OK	update user_details set apartment_id=451 where apartment_id=455
+21:45:01	SUCCESS	UPDATE	1.222		1	OK	update apartment set name ='House - Deleted', deleted=true where apartment_id=455
+21:45:02	SUCCESS	UPDATE	1.436		8	OK	update user_details set apartment_id=474 where apartment_id=493
+21:45:04	SUCCESS	UPDATE	1.239		0	OK. No rows were affected	update user_details set apartment_id=474 where apartment_id=501
+21:45:06	SUCCESS	UPDATE	1.023		1	OK	update apartment set name ='Konark Campus - Deleted', deleted=true where apartment_id=493
+21:45:07	SUCCESS	UPDATE	1.336		1	OK	update apartment set name ='Konark Campus - Deleted', deleted=true where apartment_id=501
+21:45:09	SUCCESS	UPDATE	1.208		1	OK	update apartment set name ='Konark Indrayu Enclave 2 - Deleted', deleted=true where apartment_id=333
+21:45:10	SUCCESS	UPDATE	1.495		0	OK. No rows were affected	update user_details set apartment_id=479 where apartment_id=483
+21:45:12	SUCCESS	UPDATE	1.243		1	OK	update apartment set name ='Le Mirage - Deleted', deleted=true where apartment_id=483
+21:45:13	SUCCESS	UPDATE	1.124		1	OK	update apartment set name ='Life Montage, opposite Sunny\'s World - Deleted', deleted=true where apartment_id=489
+21:45:15	SUCCESS	UPDATE	1.12		0	OK. No rows were affected	update user_details set apartment_id=216 where apartment_id=219
+21:45:16	SUCCESS	UPDATE	1.535		1	OK	update apartment set name ='Nirmiti zion - Deleted', deleted=true where apartment_id=219
+21:45:18	SUCCESS	UPDATE	1.434		0	OK. No rows were affected	update user_details set apartment_id=487 where apartment_id=490
+21:45:20	SUCCESS	UPDATE	1.228		1	OK	update apartment set name ='Park Xpress - Deleted', deleted=true where apartment_id=490
+21:45:22	SUCCESS	UPDATE	1.228		4	OK	update user_details set apartment_id=254 where apartment_id=256
+21:45:23	SUCCESS	UPDATE	1.022		1	OK	update apartment set name ='Raheja Vistas - Deleted', deleted=true where apartment_id=256
+21:45:24	SUCCESS	UPDATE	1.225		1	OK	update apartment set name ='Royal Orchid - Deleted', deleted=true where apartment_id=336
+21:45:26	SUCCESS	UPDATE	1.225		1	OK	update user_details set apartment_id=245 where apartment_id=252
+21:45:28	SUCCESS	UPDATE	1.123		1	OK	update apartment set name ='Sacred Heart Town - Deleted', deleted=true where apartment_id=252
+21:45:29	SUCCESS	UPDATE	1.23		0	OK. No rows were affected	update user_details set apartment_id=498 where apartment_id=511
+21:45:31	SUCCESS	UPDATE	1.641		1	OK	update apartment set name ='Sayali Heritage - Deleted', deleted=true where apartment_id=511
+21:45:33	SUCCESS	UPDATE	1.429		0	OK. No rows were affected	update user_details set apartment_id=484 where apartment_id=486
+21:45:34	SUCCESS	UPDATE	1.136		1	OK	update apartment set name ='Sukhwani Lawns - Deleted', deleted=true where apartment_id=486
+21:45:36	SUCCESS	UPDATE	1.121		1	OK	update apartment set name ='Teerth Towers - Deleted', deleted=true where apartment_id=359
+21:45:37	SUCCESS	UPDATE	1.124		0	OK. No rows were affected	update user_details set apartment_id=482 where apartment_id=502
+21:45:39	SUCCESS	UPDATE	1.217		1	OK	update apartment set name ='Todkar Residency - Deleted', deleted=true where apartment_id=502
+21:45:40	SUCCESS	UPDATE	1.329		0	OK. No rows were affected	update user_details set apartment_id=217 where apartment_id=218
+21:45:42	SUCCESS	UPDATE	1.119		1	OK	update apartment set name ='Yash Orchid - Deleted', deleted=true where apartment_id=218
+21:45:43	SUCCESS	UPDATE	1.227		0	OK. No rows were affected	update user_details set apartment_id=104 where apartment_id=105
+21:45:45	SUCCESS	UPDATE	1.073		1	OK	update apartment set name ='Yuthika Baner - Deleted', deleted=true where apartment_id=105
+21:45:48	FINISHED		69.005	0.0	53	Success: 55 Failed: 0	

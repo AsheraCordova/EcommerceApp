@@ -1,0 +1,32 @@
+{
+  "_from": "git+https://github.com/AsheraCordova/CapInsets.git",
+  "_id": "com.ashera.capinsets@1.0.0",
+  "_inBundle": false,
+  "_integrity": "",
+  "_location": "/com.ashera.capinsets",
+  "_phantomChildren": {},
+  "_requested": {
+    "type": "git",
+    "raw": "https://github.com/AsheraCordova/CapInsets",
+    "rawSpec": "https://github.com/AsheraCordova/CapInsets",
+    "saveSpec": "git+https://github.com/AsheraCordova/CapInsets.git",
+    "fetchSpec": "https://github.com/AsheraCordova/CapInsets.git",
+    "gitCommittish": null
+  },
+  "_requiredBy": [
+    "#DEV:/",
+    "#USER"
+  ],
+  "_resolved": "git+https://github.com/AsheraCordova/CapInsets.git#a51a4bf710104574edf166d47e0307c899ebd82b",
+  "_spec": "https://github.com/AsheraCordova/CapInsets",
+  "_where": "D:\\Java\\github_ashera\\EcommerceApp",
+  "author": {
+    "name": "Ram M"
+  },
+  "bundleDependencies": false,
+  "deprecated": false,
+  "description": "@description@",
+  "license": "ISC",
+  "name": "com.ashera.capinsets",
+  "version": "1.0.0"
+}

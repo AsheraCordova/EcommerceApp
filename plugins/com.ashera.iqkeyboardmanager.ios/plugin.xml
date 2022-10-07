@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<plugin xmlns="http://www.phonegap.com/ns/plugins/1.0"
+        id="com.ashera.iqkeyboardmanager.ios"
+        version="1.0">
+
+  <name>CordovaIQkeyboardManagerPlugin Plugin</name>
+
+  <engines>
+    <engine name="cordova" version=">=3.4.0"/>
+  </engines>
+  
+  <platform name="ios">
+	<framework src="ios/IQKeyboardManager" type="podspec" spec="~> 6.5.6" />
+  	
+    <config-file target="config.xml" parent="/widget">
+      <feature name="CordovaIQkeyboardManagerPlugin">
+        	<param name="ios-package" value="CordovaIQkeyboardManagerPlugin" />
+         	<param name="onload" value="true" />
+      </feature>
+    </config-file>
+
+   	 <!-- start ios -->
+     <header-file src="ios/ios/src/ASIQPreviousNextView.h" target-dir="IQkeyboardManagerPlugin/ios/src"/>
+     <source-file src="ios/ios/src/ASIQPreviousNextView.m" target-dir="IQkeyboardManagerPlugin/ios/src" compiler-flags="-fobjc-arc-exceptions"/>
+     <header-file src="ios/ios/src/CordovaIQkeyboardManagerPlugin.h" target-dir="IQkeyboardManagerPlugin/ios/src"/>
+     <source-file src="ios/ios/src/CordovaIQkeyboardManagerPlugin.m" target-dir="IQkeyboardManagerPlugin/ios/src" compiler-flags="-fobjc-arc-exceptions"/>
+     <header-file src="ios/ios/src/IQkeyboardManagerImpl.h" target-dir="IQkeyboardManagerPlugin/ios/src"/>
+     <source-file src="ios/ios/src/IQkeyboardManagerImpl.m" target-dir="IQkeyboardManagerPlugin/ios/src" compiler-flags="-fobjc-arc-exceptions"/>
+     <header-file src="ios/ios/src/IQkeyboardManagerPlugin.h" target-dir="IQkeyboardManagerPlugin/ios/src"/>
+     <source-file src="ios/ios/src/IQkeyboardManagerPlugin.m" target-dir="IQkeyboardManagerPlugin/ios/src" compiler-flags="-fobjc-arc-exceptions"/>
+     <header-file src="ios/ios/src/IQPreviousNextViewImpl.h" target-dir="IQkeyboardManagerPlugin/ios/src"/>
+     <source-file src="ios/ios/src/IQPreviousNextViewImpl.m" target-dir="IQkeyboardManagerPlugin/ios/src" compiler-flags="-fobjc-arc-exceptions"/>
+     <!-- ios end -->
+     <!-- start tsc -->
+     <source-file src="ios/tsc/src/ios/widget/IQkeyboardManagerImpl.ts" target-dir="tsc/src/ios/widget"/>
+     <source-file src="ios/tsc/src/ios/widget/IQPreviousNextViewImpl.ts" target-dir="tsc/src/ios/widget"/>
+     <!-- tsc end -->
+  </platform>
+  
+
+
+</plugin>

@@ -1,0 +1,200 @@
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data></data>
+
+    <LinearLayout
+        fragment="OrderPreviewCart"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/bg_color"
+            android:paddingVertical="7dp">
+
+            <LinearLayout
+                android:id="@+id/backButton"
+                onClick="goToPreviousScreen"
+                swtAttachEventBubbler="mouseup"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="center">
+
+                <ImageView
+                    android:layout_width="30dp"
+                    android:layout_height="25dp"
+                    android:src="@drawable/common_back_page"></ImageView>
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="40dp"
+                    android:adjustViewBounds="true"
+                    android:scaleType="fitCenter"
+                    android:src="@drawable/ashera_logo_no_resize"></ImageView>
+            </LinearLayout>
+
+
+            <TextView
+                android:id="@+id/clearLabel"
+                style="@style/h2_white"
+                onClick="removeAllItems"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentEnd="true"
+                android:layout_centerVertical="true"
+                android:gravity="end"
+                android:paddingHorizontal="10dp"
+                android:text="@string/clear" />
+
+        </RelativeLayout>
+
+        <FrameLayout
+            style="@style/main_layout"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:fillViewport="true">
+
+            <RelativeLayout
+                android:id="@+id/otpForm"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <LinearLayout
+                    android:id="@+id/noData"
+                    modelPojoToUi="visibility = gone(.) from cartItems->view"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_margin="50dp"
+                    android:orientation="vertical"
+                    android:visibility="gone">
+
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="130dp"
+                        android:layout_gravity="center"
+                        android:scaleType="centerInside"
+                        android:src="@drawable/order_preview_empty_bag"></ImageView>
+
+                    <TextView
+                        style="@style/h2_gray_900"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_marginTop="30dp"
+                        android:text="@string/empty_bag"
+                        android:textStyle="bold"></TextView>
+
+                    <TextView
+                        style="@style/button_style"
+                        onClick="goToPreviousScreen"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_marginTop="40dp"
+                        android:gravity="center"
+                        android:paddingHorizontal="40dp"
+                        android:text="@string/continue_booking"></TextView>
+                </LinearLayout>
+
+                <RelativeLayout
+                    android:id="@+id/cartItemsContainer"
+                    modelPojoToUi="visibility = visible(.) from cartItems->view"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+                    <RelativeLayout
+                        android:id="@+id/statusBar"
+                        style="@style/notification_container_style"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="10dp"
+                        android:layout_marginTop="5dp"
+                        android:layout_marginRight="10dp">
+
+                        <TextView
+                            autoInject="true"
+                            android:id="@+id/locationText"
+                            modelPojoToUi="text = . from distance->view"
+                            style="@style/notification_text_style"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_centerVertical="true"
+                            android:layout_toLeftOf="@+id/helpLocation"
+                            android:gravity="center"
+                            textFormat="@string/you_are_about_s_kms_from_our_store"
+                            android:text=""></TextView>
+
+                        <ImageView
+                            android:id="@+id/helpLocation"
+                            onClick="goToFAQPlaceOrder"
+                            android:layout_width="20dp"
+                            android:layout_height="20dp"
+                            android:layout_centerVertical="true"
+                            android:layout_marginRight="5dp"
+                            android:layout_toLeftOf="@+id/refreshLocation"
+                            android:scaleType="fitXY"
+                            android:src="@drawable/location_help" />
+
+                        <ImageView
+                            android:id="@+id/refreshLocation"
+                            onClick="refreshLocation"
+                            android:layout_width="20dp"
+                            android:layout_height="20dp"
+                            android:layout_alignParentRight="true"
+                            android:layout_centerVertical="true"
+                            android:scaleType="fitXY"
+                            android:src="@drawable/location_reload" />
+                    </RelativeLayout>
+
+                    <FrameLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_above="@+id/qrcode"
+                        android:layout_below="@+id/statusBar"
+                        android:layout_margin="10dp">
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:orientation="vertical">
+
+                            <androidx.recyclerview.widget.RecyclerView
+                                android:id="@+id/cartItemsRecyclerView"
+                                autoInject="true"
+                                layout="@xml/recyclerview_cart"
+                                modelFor="let item in . from cartItems->view into loopvar as map"
+                                modelIdPath="itemId"
+                                paddingRight-swt="30dp"
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                tools:listitem="@layout/order_preview_cart_item"></androidx.recyclerview.widget.RecyclerView>
+                        </LinearLayout>
+                    </FrameLayout>
+
+                    <LinearLayout
+                        android:id="@+id/qrcode"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentBottom="true"
+                        android:orientation="vertical">
+
+                        <TextView
+                            style="@style/button_style_red"
+                            onClick="bookItem"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:gravity="center"
+                            android:text="@string/book_now" />
+                    </LinearLayout>
+
+                </RelativeLayout>
+
+            </RelativeLayout>
+        </FrameLayout>
+    </LinearLayout>
+
+</layout>

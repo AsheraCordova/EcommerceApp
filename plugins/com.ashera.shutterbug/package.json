@@ -1,0 +1,32 @@
+{
+  "_from": "git+https://github.com/AsheraCordova/ShutterBug.git",
+  "_id": "com.ashera.shutterbug@1.0.0",
+  "_inBundle": false,
+  "_integrity": "",
+  "_location": "/com.ashera.shutterbug",
+  "_phantomChildren": {},
+  "_requested": {
+    "type": "git",
+    "raw": "https://github.com/AsheraCordova/ShutterBug",
+    "rawSpec": "https://github.com/AsheraCordova/ShutterBug",
+    "saveSpec": "git+https://github.com/AsheraCordova/ShutterBug.git",
+    "fetchSpec": "https://github.com/AsheraCordova/ShutterBug.git",
+    "gitCommittish": null
+  },
+  "_requiredBy": [
+    "#DEV:/",
+    "#USER"
+  ],
+  "_resolved": "git+https://github.com/AsheraCordova/ShutterBug.git#70b6adcb383f98188454891c1e0176b7ff7f1dc9",
+  "_spec": "https://github.com/AsheraCordova/ShutterBug",
+  "_where": "D:\\Java\\github_ashera\\EcommerceApp",
+  "author": {
+    "name": "Ram M"
+  },
+  "bundleDependencies": false,
+  "deprecated": false,
+  "description": "@description@",
+  "license": "ISC",
+  "name": "com.ashera.shutterbug",
+  "version": "1.0.0"
+}

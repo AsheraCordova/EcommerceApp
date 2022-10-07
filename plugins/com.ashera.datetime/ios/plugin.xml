@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<plugin xmlns="http://www.phonegap.com/ns/plugins/1.0"
+        id="com.ashera.datetime.ios"
+        version="1.0">
+
+  <name>CordovaDateTimePlugin Plugin</name>
+
+  <engines>
+    <engine name="cordova" version=">=3.4.0"/>
+  </engines>
+  
+  <platform name="ios">
+    <config-file target="config.xml" parent="/widget">
+      <feature name="CordovaDateTimePlugin">
+        	<param name="ios-package" value="CordovaDateTimePlugin" />
+         	<param name="onload" value="true" />
+      </feature>
+    </config-file>
+
+   	 <!-- start ios -->
+     <header-file src="ios/src/CordovaDateTimePlugin.h" target-dir="DateTimePlugin/ios/src"/>
+     <source-file src="ios/src/CordovaDateTimePlugin.m" target-dir="DateTimePlugin/ios/src" compiler-flags="-fobjc-arc-exceptions"/>
+     <header-file src="ios/src/DatePicker.h" target-dir="DateTimePlugin/ios/src"/>
+     <source-file src="ios/src/DatePicker.m" target-dir="DateTimePlugin/ios/src" compiler-flags="-fobjc-arc-exceptions"/>
+     <header-file src="ios/src/DatePickerImpl.h" target-dir="DateTimePlugin/ios/src"/>
+     <source-file src="ios/src/DatePickerImpl.m" target-dir="DateTimePlugin/ios/src" compiler-flags="-fobjc-arc-exceptions"/>
+     <header-file src="ios/src/DateTimePlugin.h" target-dir="DateTimePlugin/ios/src"/>
+     <source-file src="ios/src/DateTimePlugin.m" target-dir="DateTimePlugin/ios/src" compiler-flags="-fobjc-arc-exceptions"/>
+     <header-file src="ios/src/TimePicker.h" target-dir="DateTimePlugin/ios/src"/>
+     <source-file src="ios/src/TimePicker.m" target-dir="DateTimePlugin/ios/src" compiler-flags="-fobjc-arc-exceptions"/>
+     <header-file src="ios/src/TimePickerImpl.h" target-dir="DateTimePlugin/ios/src"/>
+     <source-file src="ios/src/TimePickerImpl.m" target-dir="DateTimePlugin/ios/src" compiler-flags="-fobjc-arc-exceptions"/>
+     <!-- ios end -->
+     <!-- start tsc -->
+     <source-file src="tsc/src/ios/widget/DatePickerImpl.ts" target-dir="tsc/src/ios/widget"/>
+     <source-file src="tsc/src/ios/widget/TimePickerImpl.ts" target-dir="tsc/src/ios/widget"/>
+     <!-- tsc end -->
+  </platform>
+  
+
+
+</plugin>

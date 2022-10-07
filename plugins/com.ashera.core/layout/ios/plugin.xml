@@ -1,0 +1,177 @@
+<?xml version="1.0" encoding="utf-8"?>
+<plugin xmlns="http://www.phonegap.com/ns/plugins/1.0"
+        id="com.ashera.layout.ios"
+        version="1.0">
+
+  <name>LayoutPlugin</name>
+
+  <engines>
+    <engine name="cordova" version=">=3.4.0"/>
+  </engines>
+
+  <platform name="ios">
+    <config-file target="config.xml" parent="/widget">
+      <feature name="com.ashera.layout.ios">
+        	<param name="ios-package" value="AndroidLayoutsCordovaPlugin" />
+         	<param name="onload" value="true" />
+      </feature>
+    </config-file>
+
+	<!-- start tsc -->
+     <source-file src="tsc/src/ios/widget/ButtonImpl.ts" target-dir="tsc/src/ios/widget"/>
+     <source-file src="tsc/src/ios/widget/CheckBoxImpl.ts" target-dir="tsc/src/ios/widget"/>
+     <source-file src="tsc/src/ios/widget/ChronometerImpl.ts" target-dir="tsc/src/ios/widget"/>
+     <source-file src="tsc/src/ios/widget/EditTextImpl.ts" target-dir="tsc/src/ios/widget"/>
+     <source-file src="tsc/src/ios/widget/FrameLayoutImpl.ts" target-dir="tsc/src/ios/widget"/>
+     <source-file src="tsc/src/ios/widget/HorizontalScrollViewImpl.ts" target-dir="tsc/src/ios/widget"/>
+     <source-file src="tsc/src/ios/widget/ImageButtonImpl.ts" target-dir="tsc/src/ios/widget"/>
+     <source-file src="tsc/src/ios/widget/ImageViewImpl.ts" target-dir="tsc/src/ios/widget"/>
+     <source-file src="tsc/src/ios/widget/LinearLayoutImpl.ts" target-dir="tsc/src/ios/widget"/>
+     <source-file src="tsc/src/ios/widget/LinkImpl.ts" target-dir="tsc/src/ios/widget"/>
+     <source-file src="tsc/src/ios/widget/ListViewImpl.ts" target-dir="tsc/src/ios/widget"/>
+     <source-file src="tsc/src/ios/widget/ModelImpl.ts" target-dir="tsc/src/ios/widget"/>
+     <source-file src="tsc/src/ios/widget/MultiSelectionSpinnerImpl.ts" target-dir="tsc/src/ios/widget"/>
+     <source-file src="tsc/src/ios/widget/ProgressBarImpl.ts" target-dir="tsc/src/ios/widget"/>
+     <source-file src="tsc/src/ios/widget/RadioButtonImpl.ts" target-dir="tsc/src/ios/widget"/>
+     <source-file src="tsc/src/ios/widget/RadioGroupImpl.ts" target-dir="tsc/src/ios/widget"/>
+     <source-file src="tsc/src/ios/widget/RelativeLayoutImpl.ts" target-dir="tsc/src/ios/widget"/>
+     <source-file src="tsc/src/ios/widget/RootImpl.ts" target-dir="tsc/src/ios/widget"/>
+     <source-file src="tsc/src/ios/widget/ScrollViewImpl.ts" target-dir="tsc/src/ios/widget"/>
+     <source-file src="tsc/src/ios/widget/SpinnerImpl.ts" target-dir="tsc/src/ios/widget"/>
+     <source-file src="tsc/src/ios/widget/SwitchImpl.ts" target-dir="tsc/src/ios/widget"/>
+     <source-file src="tsc/src/ios/widget/TableLayoutImpl.ts" target-dir="tsc/src/ios/widget"/>
+     <source-file src="tsc/src/ios/widget/TableRowImpl.ts" target-dir="tsc/src/ios/widget"/>
+     <source-file src="tsc/src/ios/widget/TextViewImpl.ts" target-dir="tsc/src/ios/widget"/>
+     <source-file src="tsc/src/ios/widget/ToggleButtonImpl.ts" target-dir="tsc/src/ios/widget"/>
+     <source-file src="tsc/src/ios/widget/UIProgressViewImpl.ts" target-dir="tsc/src/ios/widget"/>
+     <source-file src="tsc/src/ios/widget/UITextViewImpl.ts" target-dir="tsc/src/ios/widget"/>
+     <source-file src="tsc/src/ios/widget/UITextViewLabelImpl.ts" target-dir="tsc/src/ios/widget"/>
+     <source-file src="tsc/src/ios/widget/ViewGroupImpl.ts" target-dir="tsc/src/ios/widget"/>
+     <source-file src="tsc/src/ios/widget/ViewGroupModelImpl.ts" target-dir="tsc/src/ios/widget"/>
+     <source-file src="tsc/src/ios/widget/ViewImpl.ts" target-dir="tsc/src/ios/widget"/>
+     <source-file src="tsc/src/ios/widget/ViewOnlyImpl.ts" target-dir="tsc/src/ios/widget"/>
+     <source-file src="tsc/src/ios/widget/WebViewImpl.ts" target-dir="tsc/src/ios/widget"/>
+     <!-- tsc end -->
+	<!-- start ios -->
+     <header-file src="ios/src/AndroidLayoutsCordovaPlugin.h" target-dir="LayoutPlugin/ios/src"/>
+     <source-file src="ios/src/AndroidLayoutsCordovaPlugin.m" target-dir="LayoutPlugin/ios/src" compiler-flags="-fobjc-arc-exceptions"/>
+     <header-file src="ios/src/ButtonImpl.h" target-dir="LayoutPlugin/ios/src"/>
+     <source-file src="ios/src/ButtonImpl.m" target-dir="LayoutPlugin/ios/src" compiler-flags="-fobjc-arc-exceptions"/>
+     <header-file src="ios/src/CheckBoxImpl.h" target-dir="LayoutPlugin/ios/src"/>
+     <source-file src="ios/src/CheckBoxImpl.m" target-dir="LayoutPlugin/ios/src" compiler-flags="-fobjc-arc-exceptions"/>
+     <header-file src="ios/src/ChronometerImpl.h" target-dir="LayoutPlugin/ios/src"/>
+     <source-file src="ios/src/ChronometerImpl.m" target-dir="LayoutPlugin/ios/src" compiler-flags="-fobjc-arc-exceptions"/>
+     <header-file src="ios/src/EditTextImpl.h" target-dir="LayoutPlugin/ios/src"/>
+     <source-file src="ios/src/EditTextImpl.m" target-dir="LayoutPlugin/ios/src" compiler-flags="-fobjc-arc-exceptions"/>
+     <header-file src="ios/src/FrameLayoutImpl.h" target-dir="LayoutPlugin/ios/src"/>
+     <source-file src="ios/src/FrameLayoutImpl.m" target-dir="LayoutPlugin/ios/src" compiler-flags="-fobjc-arc-exceptions"/>
+     <header-file src="ios/src/HorizontalScrollViewImpl.h" target-dir="LayoutPlugin/ios/src"/>
+     <source-file src="ios/src/HorizontalScrollViewImpl.m" target-dir="LayoutPlugin/ios/src" compiler-flags="-fobjc-arc-exceptions"/>
+     <header-file src="ios/src/ImageButtonImpl.h" target-dir="LayoutPlugin/ios/src"/>
+     <source-file src="ios/src/ImageButtonImpl.m" target-dir="LayoutPlugin/ios/src" compiler-flags="-fobjc-arc-exceptions"/>
+     <header-file src="ios/src/ImageViewImpl.h" target-dir="LayoutPlugin/ios/src"/>
+     <source-file src="ios/src/ImageViewImpl.m" target-dir="LayoutPlugin/ios/src" compiler-flags="-fobjc-arc-exceptions"/>
+     <header-file src="ios/src/LayoutNativeVars.h" target-dir="LayoutPlugin/ios/src"/>
+     <source-file src="ios/src/LayoutNativeVars.m" target-dir="LayoutPlugin/ios/src" compiler-flags="-fobjc-arc-exceptions"/>
+     <header-file src="ios/src/LayoutPlugin.h" target-dir="LayoutPlugin/ios/src"/>
+     <source-file src="ios/src/LayoutPlugin.m" target-dir="LayoutPlugin/ios/src" compiler-flags="-fobjc-arc-exceptions"/>
+     <header-file src="ios/src/LinearLayoutImpl.h" target-dir="LayoutPlugin/ios/src"/>
+     <source-file src="ios/src/LinearLayoutImpl.m" target-dir="LayoutPlugin/ios/src" compiler-flags="-fobjc-arc-exceptions"/>
+     <header-file src="ios/src/LinkImpl.h" target-dir="LayoutPlugin/ios/src"/>
+     <source-file src="ios/src/LinkImpl.m" target-dir="LayoutPlugin/ios/src" compiler-flags="-fobjc-arc-exceptions"/>
+     <header-file src="ios/src/ListViewImpl.h" target-dir="LayoutPlugin/ios/src"/>
+     <source-file src="ios/src/ListViewImpl.m" target-dir="LayoutPlugin/ios/src" compiler-flags="-fobjc-arc-exceptions"/>
+     <header-file src="ios/src/MeasurableCompoundButton.h" target-dir="LayoutPlugin/ios/src"/>
+     <source-file src="ios/src/MeasurableCompoundButton.m" target-dir="LayoutPlugin/ios/src" compiler-flags="-fobjc-arc-exceptions"/>
+     <header-file src="ios/src/MeasurableImageView.h" target-dir="LayoutPlugin/ios/src"/>
+     <source-file src="ios/src/MeasurableImageView.m" target-dir="LayoutPlugin/ios/src" compiler-flags="-fobjc-arc-exceptions"/>
+     <header-file src="ios/src/MeasurableSwitch.h" target-dir="LayoutPlugin/ios/src"/>
+     <source-file src="ios/src/MeasurableSwitch.m" target-dir="LayoutPlugin/ios/src" compiler-flags="-fobjc-arc-exceptions"/>
+     <header-file src="ios/src/MeasurableTextView.h" target-dir="LayoutPlugin/ios/src"/>
+     <source-file src="ios/src/MeasurableTextView.m" target-dir="LayoutPlugin/ios/src" compiler-flags="-fobjc-arc-exceptions"/>
+     <header-file src="ios/src/MeasurableView.h" target-dir="LayoutPlugin/ios/src"/>
+     <source-file src="ios/src/MeasurableView.m" target-dir="LayoutPlugin/ios/src" compiler-flags="-fobjc-arc-exceptions"/>
+     <header-file src="ios/src/MeasurableViewGroup.h" target-dir="LayoutPlugin/ios/src"/>
+     <source-file src="ios/src/MeasurableViewGroup.m" target-dir="LayoutPlugin/ios/src" compiler-flags="-fobjc-arc-exceptions"/>
+     <header-file src="ios/src/ModelImpl.h" target-dir="LayoutPlugin/ios/src"/>
+     <source-file src="ios/src/ModelImpl.m" target-dir="LayoutPlugin/ios/src" compiler-flags="-fobjc-arc-exceptions"/>
+     <header-file src="ios/src/MultiSelectionSpinnerImpl.h" target-dir="LayoutPlugin/ios/src"/>
+     <source-file src="ios/src/MultiSelectionSpinnerImpl.m" target-dir="LayoutPlugin/ios/src" compiler-flags="-fobjc-arc-exceptions"/>
+     <header-file src="ios/src/ProgressBarImpl.h" target-dir="LayoutPlugin/ios/src"/>
+     <source-file src="ios/src/ProgressBarImpl.m" target-dir="LayoutPlugin/ios/src" compiler-flags="-fobjc-arc-exceptions"/>
+     <header-file src="ios/src/RadioButtonImpl.h" target-dir="LayoutPlugin/ios/src"/>
+     <source-file src="ios/src/RadioButtonImpl.m" target-dir="LayoutPlugin/ios/src" compiler-flags="-fobjc-arc-exceptions"/>
+     <header-file src="ios/src/RadioGroupImpl.h" target-dir="LayoutPlugin/ios/src"/>
+     <source-file src="ios/src/RadioGroupImpl.m" target-dir="LayoutPlugin/ios/src" compiler-flags="-fobjc-arc-exceptions"/>
+     <header-file src="ios/src/RelativeLayoutImpl.h" target-dir="LayoutPlugin/ios/src"/>
+     <source-file src="ios/src/RelativeLayoutImpl.m" target-dir="LayoutPlugin/ios/src" compiler-flags="-fobjc-arc-exceptions"/>
+     <header-file src="ios/src/RootImpl.h" target-dir="LayoutPlugin/ios/src"/>
+     <source-file src="ios/src/RootImpl.m" target-dir="LayoutPlugin/ios/src" compiler-flags="-fobjc-arc-exceptions"/>
+     <header-file src="ios/src/ScrollViewImpl.h" target-dir="LayoutPlugin/ios/src"/>
+     <source-file src="ios/src/ScrollViewImpl.m" target-dir="LayoutPlugin/ios/src" compiler-flags="-fobjc-arc-exceptions"/>
+     <header-file src="ios/src/SpinnerImpl.h" target-dir="LayoutPlugin/ios/src"/>
+     <source-file src="ios/src/SpinnerImpl.m" target-dir="LayoutPlugin/ios/src" compiler-flags="-fobjc-arc-exceptions"/>
+     <header-file src="ios/src/SwitchImpl.h" target-dir="LayoutPlugin/ios/src"/>
+     <source-file src="ios/src/SwitchImpl.m" target-dir="LayoutPlugin/ios/src" compiler-flags="-fobjc-arc-exceptions"/>
+     <header-file src="ios/src/TableLayoutImpl.h" target-dir="LayoutPlugin/ios/src"/>
+     <source-file src="ios/src/TableLayoutImpl.m" target-dir="LayoutPlugin/ios/src" compiler-flags="-fobjc-arc-exceptions"/>
+     <header-file src="ios/src/TableRowImpl.h" target-dir="LayoutPlugin/ios/src"/>
+     <source-file src="ios/src/TableRowImpl.m" target-dir="LayoutPlugin/ios/src" compiler-flags="-fobjc-arc-exceptions"/>
+     <header-file src="ios/src/TextViewImpl.h" target-dir="LayoutPlugin/ios/src"/>
+     <source-file src="ios/src/TextViewImpl.m" target-dir="LayoutPlugin/ios/src" compiler-flags="-fobjc-arc-exceptions"/>
+     <header-file src="ios/src/ToggleButtonImpl.h" target-dir="LayoutPlugin/ios/src"/>
+     <source-file src="ios/src/ToggleButtonImpl.m" target-dir="LayoutPlugin/ios/src" compiler-flags="-fobjc-arc-exceptions"/>
+     <header-file src="ios/src/UIProgressViewImpl.h" target-dir="LayoutPlugin/ios/src"/>
+     <source-file src="ios/src/UIProgressViewImpl.m" target-dir="LayoutPlugin/ios/src" compiler-flags="-fobjc-arc-exceptions"/>
+     <header-file src="ios/src/UITextViewImpl.h" target-dir="LayoutPlugin/ios/src"/>
+     <source-file src="ios/src/UITextViewImpl.m" target-dir="LayoutPlugin/ios/src" compiler-flags="-fobjc-arc-exceptions"/>
+     <header-file src="ios/src/UITextViewLabelImpl.h" target-dir="LayoutPlugin/ios/src"/>
+     <source-file src="ios/src/UITextViewLabelImpl.m" target-dir="LayoutPlugin/ios/src" compiler-flags="-fobjc-arc-exceptions"/>
+     <header-file src="ios/src/ViewGroupImpl.h" target-dir="LayoutPlugin/ios/src"/>
+     <source-file src="ios/src/ViewGroupImpl.m" target-dir="LayoutPlugin/ios/src" compiler-flags="-fobjc-arc-exceptions"/>
+     <header-file src="ios/src/ViewGroupModelImpl.h" target-dir="LayoutPlugin/ios/src"/>
+     <source-file src="ios/src/ViewGroupModelImpl.m" target-dir="LayoutPlugin/ios/src" compiler-flags="-fobjc-arc-exceptions"/>
+     <header-file src="ios/src/ViewImpl.h" target-dir="LayoutPlugin/ios/src"/>
+     <source-file src="ios/src/ViewImpl.m" target-dir="LayoutPlugin/ios/src" compiler-flags="-fobjc-arc-exceptions"/>
+     <header-file src="ios/src/ViewOnlyImpl.h" target-dir="LayoutPlugin/ios/src"/>
+     <source-file src="ios/src/ViewOnlyImpl.m" target-dir="LayoutPlugin/ios/src" compiler-flags="-fobjc-arc-exceptions"/>
+     <header-file src="ios/src/WebViewImpl.h" target-dir="LayoutPlugin/ios/src"/>
+     <source-file src="ios/src/WebViewImpl.m" target-dir="LayoutPlugin/ios/src" compiler-flags="-fobjc-arc-exceptions"/>
+     <!-- ios end -->
+    <!-- start ios_ext -->
+     <header-file src="ios_ext/src/ASUIActivityIndicatorView.h" target-dir="LayoutPlugin/ios_ext/src"/>
+     <source-file src="ios_ext/src/ASUIActivityIndicatorView.m" target-dir="LayoutPlugin/ios_ext/src" compiler-flags="-fobjc-arc-exceptions"/>
+     <header-file src="ios_ext/src/ASUIButton.h" target-dir="LayoutPlugin/ios_ext/src"/>
+     <source-file src="ios_ext/src/ASUIButton.m" target-dir="LayoutPlugin/ios_ext/src" compiler-flags="-fobjc-arc-exceptions"/>
+     <header-file src="ios_ext/src/ASUIImageView.h" target-dir="LayoutPlugin/ios_ext/src"/>
+     <source-file src="ios_ext/src/ASUIImageView.m" target-dir="LayoutPlugin/ios_ext/src" compiler-flags="-fobjc-arc-exceptions"/>
+     <header-file src="ios_ext/src/ASUILabel.h" target-dir="LayoutPlugin/ios_ext/src"/>
+     <source-file src="ios_ext/src/ASUILabel.m" target-dir="LayoutPlugin/ios_ext/src" compiler-flags="-fobjc-arc-exceptions"/>
+     <header-file src="ios_ext/src/ASUILongTapGestureRecognizer.h" target-dir="LayoutPlugin/ios_ext/src"/>
+     <source-file src="ios_ext/src/ASUILongTapGestureRecognizer.m" target-dir="LayoutPlugin/ios_ext/src" compiler-flags="-fobjc-arc-exceptions"/>
+     <header-file src="ios_ext/src/ASUIProgressView.h" target-dir="LayoutPlugin/ios_ext/src"/>
+     <source-file src="ios_ext/src/ASUIProgressView.m" target-dir="LayoutPlugin/ios_ext/src" compiler-flags="-fobjc-arc-exceptions"/>
+     <header-file src="ios_ext/src/ASUIScrollView.h" target-dir="LayoutPlugin/ios_ext/src"/>
+     <source-file src="ios_ext/src/ASUIScrollView.m" target-dir="LayoutPlugin/ios_ext/src" compiler-flags="-fobjc-arc-exceptions"/>
+     <header-file src="ios_ext/src/ASUITableView.h" target-dir="LayoutPlugin/ios_ext/src"/>
+     <source-file src="ios_ext/src/ASUITableView.m" target-dir="LayoutPlugin/ios_ext/src" compiler-flags="-fobjc-arc-exceptions"/>
+     <header-file src="ios_ext/src/ASUITapGestureRecognizer.h" target-dir="LayoutPlugin/ios_ext/src"/>
+     <source-file src="ios_ext/src/ASUITapGestureRecognizer.m" target-dir="LayoutPlugin/ios_ext/src" compiler-flags="-fobjc-arc-exceptions"/>
+     <header-file src="ios_ext/src/ASUITextField.h" target-dir="LayoutPlugin/ios_ext/src"/>
+     <source-file src="ios_ext/src/ASUITextField.m" target-dir="LayoutPlugin/ios_ext/src" compiler-flags="-fobjc-arc-exceptions"/>
+     <header-file src="ios_ext/src/ASUITextView.h" target-dir="LayoutPlugin/ios_ext/src"/>
+     <source-file src="ios_ext/src/ASUITextView.m" target-dir="LayoutPlugin/ios_ext/src" compiler-flags="-fobjc-arc-exceptions"/>
+     <header-file src="ios_ext/src/ASUITextViewLabel.h" target-dir="LayoutPlugin/ios_ext/src"/>
+     <source-file src="ios_ext/src/ASUITextViewLabel.m" target-dir="LayoutPlugin/ios_ext/src" compiler-flags="-fobjc-arc-exceptions"/>
+     <header-file src="ios_ext/src/ASUIView.h" target-dir="LayoutPlugin/ios_ext/src"/>
+     <source-file src="ios_ext/src/ASUIView.m" target-dir="LayoutPlugin/ios_ext/src" compiler-flags="-fobjc-arc-exceptions"/>
+     <header-file src="ios_ext/src/ASWKWebView.h" target-dir="LayoutPlugin/ios_ext/src"/>
+     <source-file src="ios_ext/src/ASWKWebView.m" target-dir="LayoutPlugin/ios_ext/src" compiler-flags="-fobjc-arc-exceptions"/>
+     <header-file src="ios_ext/src/CGRectWrapper.h" target-dir="LayoutPlugin/ios_ext/src"/>
+     <source-file src="ios_ext/src/CGRectWrapper.m" target-dir="LayoutPlugin/ios_ext/src" compiler-flags="-fobjc-arc-exceptions"/>
+     <header-file src="ios_ext/src/CustomUITableViewCell.h" target-dir="LayoutPlugin/ios_ext/src"/>
+     <source-file src="ios_ext/src/CustomUITableViewCell.m" target-dir="LayoutPlugin/ios_ext/src" compiler-flags="-fobjc-arc-exceptions"/>
+     <header-file src="ios_ext/src/INativeWidget.h" target-dir="LayoutPlugin/ios_ext/src"/>
+     <!-- ios_ext end -->
+  </platform>
+</plugin>

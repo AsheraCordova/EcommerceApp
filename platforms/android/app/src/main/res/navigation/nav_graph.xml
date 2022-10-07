@@ -1,0 +1,211 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/index">
+    <fragment
+        android:id="@+id/index"
+        android:name="com.ashera.core.GenericFragment"
+        android:label="Home"
+        tools:layout="@layout/index">
+        <argument
+            android:name="fileName"
+            android:defaultValue="layout/index.xml"
+            app:argType="string"
+            app:nullable="false" />
+        <action
+            android:id="@+id/action_index_to_login"
+            app:destination="@id/login" />
+    </fragment>
+    
+    <fragment
+        android:id="@+id/error"
+        android:name="com.ashera.core.GenericFragment"
+        android:label="Error"
+        tools:layout="@layout/error">
+         <action
+             android:id="@+id/action_error_to_error_detail"
+             app:destination="@id/error_detail" />
+     </fragment>
+    
+     <fragment
+        android:id="@+id/error_detail"
+        android:name="com.ashera.core.GenericFragment"
+        android:label="Error Detail"
+        tools:layout="@layout/error_detail"> 
+    </fragment>
+
+    <fragment
+        android:id="@+id/login"
+        android:name="com.ashera.core.GenericFragment"
+        android:label=""
+        tools:layout="@layout/login">
+        <action
+            android:id="@+id/action_login_to_forgot_password"
+            app:destination="@id/forgot_password" />
+        <action
+            android:id="@+id/action_login_to_register"
+            app:destination="@id/register" />
+        <action
+            android:id="@+id/action_login_to_selectstore"
+            app:destination="@id/selectstore" />
+    </fragment>
+    <fragment
+        android:id="@+id/forgot_password"
+        android:name="com.ashera.core.GenericFragment"
+        android:label=""
+        tools:layout="@layout/forgot_password">
+        <action
+            android:id="@+id/action_forgot_password_to_forgot_password_otp"
+            app:destination="@id/forgot_password_otp" />
+    </fragment>
+    <fragment
+        android:id="@+id/forgot_password_otp"
+        android:name="com.ashera.core.GenericFragment"
+        android:label=""
+        tools:layout="@layout/forgot_password_otp">
+    </fragment>
+
+    <fragment
+        android:id="@+id/dashboard"
+        android:name="com.ashera.core.GenericFragment"
+        android:label=""
+        tools:layout="@layout/dashboard">
+        <action
+            android:id="@+id/action_dashboard_to_dashboard_quantity"
+            app:destination="@id/dashboard_quantity" />
+        <action
+            android:id="@+id/action_dashboard_to_order_preview_cart"
+            app:destination="@id/order_preview_cart" />
+        <action
+            android:id="@+id/action_dashboard_to_change_password"
+            app:destination="@id/change_password" />
+        <action
+            android:id="@+id/action_dashboard_to_faq"
+            app:destination="@id/faq" />
+        <action
+            android:id="@+id/action_dashboard_to_notification_list"
+            app:destination="@id/notification_list" />
+        <action
+            android:id="@+id/action_dashboard_to_order_list"
+            app:destination="@id/order_list" />
+        <action
+            android:id="@+id/action_dashboard_to_dashboard_filter"
+            app:destination="@id/dashboard_filter" />
+        <action
+            android:id="@+id/action_dashboard_to_webview"
+            app:destination="@id/webview" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/order_preview_cart"
+        android:name="com.ashera.core.GenericFragment"
+        android:label=""
+        tools:layout="@layout/order_preview_cart">
+        <action
+            android:id="@+id/action_order_preview_cart_to_order_booked"
+            app:destination="@id/order_booked" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/notification_list"
+        android:name="com.ashera.core.GenericFragment"
+        android:label=""
+        tools:layout="@layout/notification_list">
+    </fragment>
+
+    <fragment
+        android:id="@+id/order_list"
+        android:name="com.ashera.core.GenericFragment"
+        android:label=""
+        tools:layout="@layout/order_list">
+    </fragment>
+
+    <fragment
+        android:id="@+id/faq"
+        android:name="com.ashera.core.GenericFragment"
+        android:label=""
+        tools:layout="@layout/faq">
+    </fragment>
+
+    <fragment
+        android:id="@+id/webview"
+        android:name="com.ashera.core.GenericFragment"
+        android:label=""
+        tools:layout="@layout/webview">
+    </fragment>
+
+    <fragment
+        android:id="@+id/register"
+        android:name="com.ashera.core.GenericFragment"
+        android:label=""
+        tools:layout="@layout/register">
+    </fragment>
+
+    <fragment
+        android:id="@+id/change_password"
+        android:name="com.ashera.core.GenericFragment"
+        android:label=""
+        tools:layout="@layout/change_password">
+    </fragment>
+
+    <fragment
+        android:id="@+id/qrcode_scanner"
+        android:name="com.ashera.core.GenericFragment"
+        android:label=""
+        tools:layout="@layout/qrcode_scanner">
+    </fragment>
+
+    <fragment
+        android:id="@+id/selectstore"
+        android:name="com.ashera.core.GenericFragment"
+        android:label=""
+        tools:layout="@layout/selectstore">
+        <action
+            android:id="@+id/action_selectstore_to_selectstore_dialog"
+            app:destination="@id/selectstore_dialog" />
+        <action
+            android:id="@+id/action_selectstore_to_dashboard"
+            app:destination="@id/dashboard" />
+    </fragment>
+    <dialog
+        android:id="@+id/dashboard_filter"
+        android:name="com.ashera.core.MyDialog"
+        android:label=""
+        style="@style/MyDialogStyle"
+        tools:layout="@layout/dashboard_filter"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+    </dialog>
+
+    <dialog
+        android:id="@+id/dashboard_quantity"
+        android:name="com.ashera.core.MyDialog"
+        android:label=""
+        style="@style/MyDialogStyle"
+        tools:layout="@layout/dashboard_quantity"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+    </dialog>
+
+
+    <dialog
+        android:id="@+id/order_booked"
+        android:name="com.ashera.core.MyDialog"
+        android:label=""
+        style="@style/MyDialogStyle"
+        tools:layout="@layout/order_booked"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+    </dialog>
+
+    <dialog
+        android:id="@+id/selectstore_dialog"
+        android:name="com.ashera.core.MyDialog"
+        android:label=""
+        style="@style/MyDialogStyle"
+        tools:layout="@layout/selectstore_dialog"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"/>
+</navigation>

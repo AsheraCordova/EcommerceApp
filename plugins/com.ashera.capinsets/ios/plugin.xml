@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<plugin xmlns="http://www.phonegap.com/ns/plugins/1.0"
+        id="com.ashera.capinsets.ios"
+        version="1.0">
+
+  <name>CordovaCapInsetsPlugin Plugin</name>
+
+  <engines>
+    <engine name="cordova" version=">=3.4.0"/>
+  </engines>
+  
+  <platform name="ios">
+    <config-file target="config.xml" parent="/widget">
+      <feature name="CordovaCapInsetsPlugin">
+        	<param name="ios-package" value="CordovaCapInsetsPlugin" />
+         	<param name="onload" value="true" />
+      </feature>
+    </config-file>
+
+   	 <!-- start ios -->
+     <header-file src="ios/src/CapInsetsCommandConverter.h" target-dir="CapInsetsPlugin/ios/src"/>
+     <source-file src="ios/src/CapInsetsCommandConverter.m" target-dir="CapInsetsPlugin/ios/src" compiler-flags="-fobjc-arc-exceptions"/>
+     <header-file src="ios/src/CapInsetsPlugin.h" target-dir="CapInsetsPlugin/ios/src"/>
+     <source-file src="ios/src/CapInsetsPlugin.m" target-dir="CapInsetsPlugin/ios/src" compiler-flags="-fobjc-arc-exceptions"/>
+     <header-file src="ios/src/CapInsetsViewImpl.h" target-dir="CapInsetsPlugin/ios/src"/>
+     <source-file src="ios/src/CapInsetsViewImpl.m" target-dir="CapInsetsPlugin/ios/src" compiler-flags="-fobjc-arc-exceptions"/>
+     <header-file src="ios/src/CGCapInsetsCommandConverter.h" target-dir="CapInsetsPlugin/ios/src"/>
+     <source-file src="ios/src/CGCapInsetsCommandConverter.m" target-dir="CapInsetsPlugin/ios/src" compiler-flags="-fobjc-arc-exceptions"/>
+     <header-file src="ios/src/CordovaCapInsetsPlugin.h" target-dir="CapInsetsPlugin/ios/src"/>
+     <source-file src="ios/src/CordovaCapInsetsPlugin.m" target-dir="CapInsetsPlugin/ios/src" compiler-flags="-fobjc-arc-exceptions"/>
+     <!-- ios end -->
+     <!-- start tsc -->
+     <source-file src="tsc/src/ios/widget/CapInsetsViewImpl.ts" target-dir="tsc/src/ios/widget"/>
+     <!-- tsc end -->
+  </platform>
+  
+
+
+</plugin>

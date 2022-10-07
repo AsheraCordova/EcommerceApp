@@ -1,0 +1,292 @@
+<?xml version="1.0" encoding="utf-8"?>
+<plugin xmlns="http://www.phonegap.com/ns/plugins/1.0"
+        id="com.ashera.constraintlayout.ios"
+        version="1.0">
+
+  <name>ConstraintLayoutCordovaPlugin</name>
+
+  <engines>
+    <engine name="cordova" version=">=3.4.0"/>
+  </engines>
+  
+  <platform name="ios">
+   <config-file target="config.xml" parent="/widget">
+      <feature name="com.ashera.constraintlayout.ios">
+        	<param name="ios-package" value="ConstraintLayoutCordovaPlugin" />
+         	<param name="onload" value="true" />
+      </feature>
+    </config-file>
+
+	 <!-- start tsc -->
+     <source-file src="tsc/src/ios/widget/BarrierImpl.ts" target-dir="tsc/src/ios/widget"/>
+     <source-file src="tsc/src/ios/widget/CircularFlowImpl.ts" target-dir="tsc/src/ios/widget"/>
+     <source-file src="tsc/src/ios/widget/ConstraintLayoutImpl.ts" target-dir="tsc/src/ios/widget"/>
+     <source-file src="tsc/src/ios/widget/FlowImpl.ts" target-dir="tsc/src/ios/widget"/>
+     <source-file src="tsc/src/ios/widget/GroupImpl.ts" target-dir="tsc/src/ios/widget"/>
+     <source-file src="tsc/src/ios/widget/GuidelineImpl.ts" target-dir="tsc/src/ios/widget"/>
+     <source-file src="tsc/src/ios/widget/PlaceholderImpl.ts" target-dir="tsc/src/ios/widget"/>
+     <!-- tsc end -->
+	<!-- start ios -->
+     <header-file src="ios/src/BarrierImpl.h" target-dir="ConstraintLayoutPlugin/ios/src"/>
+     <source-file src="ios/src/BarrierImpl.m" target-dir="ConstraintLayoutPlugin/ios/src" compiler-flags="-fobjc-arc-exceptions"/>
+     <header-file src="ios/src/CircularFlowImpl.h" target-dir="ConstraintLayoutPlugin/ios/src"/>
+     <source-file src="ios/src/CircularFlowImpl.m" target-dir="ConstraintLayoutPlugin/ios/src" compiler-flags="-fobjc-arc-exceptions"/>
+     <header-file src="ios/src/ConstraintLayoutCordovaPlugin.h" target-dir="ConstraintLayoutPlugin/ios/src"/>
+     <source-file src="ios/src/ConstraintLayoutCordovaPlugin.m" target-dir="ConstraintLayoutPlugin/ios/src" compiler-flags="-fobjc-arc-exceptions"/>
+     <header-file src="ios/src/ConstraintLayoutImpl.h" target-dir="ConstraintLayoutPlugin/ios/src"/>
+     <source-file src="ios/src/ConstraintLayoutImpl.m" target-dir="ConstraintLayoutPlugin/ios/src" compiler-flags="-fobjc-arc-exceptions"/>
+     <header-file src="ios/src/ConstraintLayoutPlugin.h" target-dir="ConstraintLayoutPlugin/ios/src"/>
+     <source-file src="ios/src/ConstraintLayoutPlugin.m" target-dir="ConstraintLayoutPlugin/ios/src" compiler-flags="-fobjc-arc-exceptions"/>
+     <header-file src="ios/src/ConstraintReferencedIdsConverter.h" target-dir="ConstraintLayoutPlugin/ios/src"/>
+     <source-file src="ios/src/ConstraintReferencedIdsConverter.m" target-dir="ConstraintLayoutPlugin/ios/src" compiler-flags="-fobjc-arc-exceptions"/>
+     <header-file src="ios/src/FlowImpl.h" target-dir="ConstraintLayoutPlugin/ios/src"/>
+     <source-file src="ios/src/FlowImpl.m" target-dir="ConstraintLayoutPlugin/ios/src" compiler-flags="-fobjc-arc-exceptions"/>
+     <header-file src="ios/src/GroupImpl.h" target-dir="ConstraintLayoutPlugin/ios/src"/>
+     <source-file src="ios/src/GroupImpl.m" target-dir="ConstraintLayoutPlugin/ios/src" compiler-flags="-fobjc-arc-exceptions"/>
+     <header-file src="ios/src/GuidelineImpl.h" target-dir="ConstraintLayoutPlugin/ios/src"/>
+     <source-file src="ios/src/GuidelineImpl.m" target-dir="ConstraintLayoutPlugin/ios/src" compiler-flags="-fobjc-arc-exceptions"/>
+     <header-file src="ios/src/PlaceholderImpl.h" target-dir="ConstraintLayoutPlugin/ios/src"/>
+     <source-file src="ios/src/PlaceholderImpl.m" target-dir="ConstraintLayoutPlugin/ios/src" compiler-flags="-fobjc-arc-exceptions"/>
+     <!-- ios end -->
+	 <!-- start AndroidXConstraintLayout -->
+     <header-file src="library/AndroidXConstraintLayout/src/AlignHorizontallyReference.h" target-dir="ConstraintLayoutPlugin/AndroidXConstraintLayout/src"/>
+     <source-file src="library/AndroidXConstraintLayout/src/AlignHorizontallyReference.m" target-dir="ConstraintLayoutPlugin/AndroidXConstraintLayout/src" compiler-flags="-fno-objc-arc"/>
+     <header-file src="library/AndroidXConstraintLayout/src/AlignVerticallyReference.h" target-dir="ConstraintLayoutPlugin/AndroidXConstraintLayout/src"/>
+     <source-file src="library/AndroidXConstraintLayout/src/AlignVerticallyReference.m" target-dir="ConstraintLayoutPlugin/AndroidXConstraintLayout/src" compiler-flags="-fno-objc-arc"/>
+     <header-file src="library/AndroidXConstraintLayout/src/ArcCurveFit.h" target-dir="ConstraintLayoutPlugin/AndroidXConstraintLayout/src"/>
+     <source-file src="library/AndroidXConstraintLayout/src/ArcCurveFit.m" target-dir="ConstraintLayoutPlugin/AndroidXConstraintLayout/src" compiler-flags="-fno-objc-arc"/>
+     <header-file src="library/AndroidXConstraintLayout/src/ArrayLinkedVariables.h" target-dir="ConstraintLayoutPlugin/AndroidXConstraintLayout/src"/>
+     <source-file src="library/AndroidXConstraintLayout/src/ArrayLinkedVariables.m" target-dir="ConstraintLayoutPlugin/AndroidXConstraintLayout/src" compiler-flags="-fno-objc-arc"/>
+     <header-file src="library/AndroidXConstraintLayout/src/ArrayRow.h" target-dir="ConstraintLayoutPlugin/AndroidXConstraintLayout/src"/>
+     <source-file src="library/AndroidXConstraintLayout/src/ArrayRow.m" target-dir="ConstraintLayoutPlugin/AndroidXConstraintLayout/src" compiler-flags="-fno-objc-arc"/>
+     <header-file src="library/AndroidXConstraintLayout/src/Barrier.h" target-dir="ConstraintLayoutPlugin/AndroidXConstraintLayout/src"/>
+     <source-file src="library/AndroidXConstraintLayout/src/Barrier.m" target-dir="ConstraintLayoutPlugin/AndroidXConstraintLayout/src" compiler-flags="-fno-objc-arc"/>
+     <header-file src="library/AndroidXConstraintLayout/src/BarrierReference.h" target-dir="ConstraintLayoutPlugin/AndroidXConstraintLayout/src"/>
+     <source-file src="library/AndroidXConstraintLayout/src/BarrierReference.m" target-dir="ConstraintLayoutPlugin/AndroidXConstraintLayout/src" compiler-flags="-fno-objc-arc"/>
+     <header-file src="library/AndroidXConstraintLayout/src/BaselineDimensionDependency.h" target-dir="ConstraintLayoutPlugin/AndroidXConstraintLayout/src"/>
+     <source-file src="library/AndroidXConstraintLayout/src/BaselineDimensionDependency.m" target-dir="ConstraintLayoutPlugin/AndroidXConstraintLayout/src" compiler-flags="-fno-objc-arc"/>
+     <header-file src="library/AndroidXConstraintLayout/src/BasicMeasure.h" target-dir="ConstraintLayoutPlugin/AndroidXConstraintLayout/src"/>
+     <source-file src="library/AndroidXConstraintLayout/src/BasicMeasure.m" target-dir="ConstraintLayoutPlugin/AndroidXConstraintLayout/src" compiler-flags="-fno-objc-arc"/>
+     <header-file src="library/AndroidXConstraintLayout/src/Cache.h" target-dir="ConstraintLayoutPlugin/AndroidXConstraintLayout/src"/>
+     <source-file src="library/AndroidXConstraintLayout/src/Cache.m" target-dir="ConstraintLayoutPlugin/AndroidXConstraintLayout/src" compiler-flags="-fno-objc-arc"/>
+     <header-file src="library/AndroidXConstraintLayout/src/Chain.h" target-dir="ConstraintLayoutPlugin/AndroidXConstraintLayout/src"/>
+     <source-file src="library/AndroidXConstraintLayout/src/Chain.m" target-dir="ConstraintLayoutPlugin/AndroidXConstraintLayout/src" compiler-flags="-fno-objc-arc"/>
+     <header-file src="library/AndroidXConstraintLayout/src/ChainHead.h" target-dir="ConstraintLayoutPlugin/AndroidXConstraintLayout/src"/>
+     <source-file src="library/AndroidXConstraintLayout/src/ChainHead.m" target-dir="ConstraintLayoutPlugin/AndroidXConstraintLayout/src" compiler-flags="-fno-objc-arc"/>
+     <header-file src="library/AndroidXConstraintLayout/src/ChainReference.h" target-dir="ConstraintLayoutPlugin/AndroidXConstraintLayout/src"/>
+     <source-file src="library/AndroidXConstraintLayout/src/ChainReference.m" target-dir="ConstraintLayoutPlugin/AndroidXConstraintLayout/src" compiler-flags="-fno-objc-arc"/>
+     <header-file src="library/AndroidXConstraintLayout/src/ChainRun.h" target-dir="ConstraintLayoutPlugin/AndroidXConstraintLayout/src"/>
+     <source-file src="library/AndroidXConstraintLayout/src/ChainRun.m" target-dir="ConstraintLayoutPlugin/AndroidXConstraintLayout/src" compiler-flags="-fno-objc-arc"/>
+     <header-file src="library/AndroidXConstraintLayout/src/CircularFlow.h" target-dir="ConstraintLayoutPlugin/AndroidXConstraintLayout/src"/>
+     <source-file src="library/AndroidXConstraintLayout/src/CircularFlow.m" target-dir="ConstraintLayoutPlugin/AndroidXConstraintLayout/src" compiler-flags="-fno-objc-arc"/>
+     <header-file src="library/AndroidXConstraintLayout/src/CLArray.h" target-dir="ConstraintLayoutPlugin/AndroidXConstraintLayout/src"/>
+     <source-file src="library/AndroidXConstraintLayout/src/CLArray.m" target-dir="ConstraintLayoutPlugin/AndroidXConstraintLayout/src" compiler-flags="-fno-objc-arc"/>
+     <header-file src="library/AndroidXConstraintLayout/src/CLContainer.h" target-dir="ConstraintLayoutPlugin/AndroidXConstraintLayout/src"/>
+     <source-file src="library/AndroidXConstraintLayout/src/CLContainer.m" target-dir="ConstraintLayoutPlugin/AndroidXConstraintLayout/src" compiler-flags="-fno-objc-arc"/>
+     <header-file src="library/AndroidXConstraintLayout/src/CLCustomAttribute.h" target-dir="ConstraintLayoutPlugin/AndroidXConstraintLayout/src"/>
+     <source-file src="library/AndroidXConstraintLayout/src/CLCustomAttribute.m" target-dir="ConstraintLayoutPlugin/AndroidXConstraintLayout/src" compiler-flags="-fno-objc-arc"/>
+     <header-file src="library/AndroidXConstraintLayout/src/CLDebug.h" target-dir="ConstraintLayoutPlugin/AndroidXConstraintLayout/src"/>
+     <source-file src="library/AndroidXConstraintLayout/src/CLDebug.m" target-dir="ConstraintLayoutPlugin/AndroidXConstraintLayout/src" compiler-flags="-fno-objc-arc"/>
+     <header-file src="library/AndroidXConstraintLayout/src/CLElement.h" target-dir="ConstraintLayoutPlugin/AndroidXConstraintLayout/src"/>
+     <source-file src="library/AndroidXConstraintLayout/src/CLElement.m" target-dir="ConstraintLayoutPlugin/AndroidXConstraintLayout/src" compiler-flags="-fno-objc-arc"/>
+     <header-file src="library/AndroidXConstraintLayout/src/CLKey.h" target-dir="ConstraintLayoutPlugin/AndroidXConstraintLayout/src"/>
+     <source-file src="library/AndroidXConstraintLayout/src/CLKey.m" target-dir="ConstraintLayoutPlugin/AndroidXConstraintLayout/src" compiler-flags="-fno-objc-arc"/>
+     <header-file src="library/AndroidXConstraintLayout/src/CLNumber.h" target-dir="ConstraintLayoutPlugin/AndroidXConstraintLayout/src"/>
+     <source-file src="library/AndroidXConstraintLayout/src/CLNumber.m" target-dir="ConstraintLayoutPlugin/AndroidXConstraintLayout/src" compiler-flags="-fno-objc-arc"/>
+     <header-file src="library/AndroidXConstraintLayout/src/CLObject.h" target-dir="ConstraintLayoutPlugin/AndroidXConstraintLayout/src"/>
+     <source-file src="library/AndroidXConstraintLayout/src/CLObject.m" target-dir="ConstraintLayoutPlugin/AndroidXConstraintLayout/src" compiler-flags="-fno-objc-arc"/>
+     <header-file src="library/AndroidXConstraintLayout/src/CLParser.h" target-dir="ConstraintLayoutPlugin/AndroidXConstraintLayout/src"/>
+     <source-file src="library/AndroidXConstraintLayout/src/CLParser.m" target-dir="ConstraintLayoutPlugin/AndroidXConstraintLayout/src" compiler-flags="-fno-objc-arc"/>
+     <header-file src="library/AndroidXConstraintLayout/src/CLParsingException.h" target-dir="ConstraintLayoutPlugin/AndroidXConstraintLayout/src"/>
+     <source-file src="library/AndroidXConstraintLayout/src/CLParsingException.m" target-dir="ConstraintLayoutPlugin/AndroidXConstraintLayout/src" compiler-flags="-fno-objc-arc"/>
+     <header-file src="library/AndroidXConstraintLayout/src/CLPools.h" target-dir="ConstraintLayoutPlugin/AndroidXConstraintLayout/src"/>
+     <source-file src="library/AndroidXConstraintLayout/src/CLPools.m" target-dir="ConstraintLayoutPlugin/AndroidXConstraintLayout/src" compiler-flags="-fno-objc-arc"/>
+     <header-file src="library/AndroidXConstraintLayout/src/CLRect.h" target-dir="ConstraintLayoutPlugin/AndroidXConstraintLayout/src"/>
+     <source-file src="library/AndroidXConstraintLayout/src/CLRect.m" target-dir="ConstraintLayoutPlugin/AndroidXConstraintLayout/src" compiler-flags="-fno-objc-arc"/>
+     <header-file src="library/AndroidXConstraintLayout/src/CLString.h" target-dir="ConstraintLayoutPlugin/AndroidXConstraintLayout/src"/>
+     <source-file src="library/AndroidXConstraintLayout/src/CLString.m" target-dir="ConstraintLayoutPlugin/AndroidXConstraintLayout/src" compiler-flags="-fno-objc-arc"/>
+     <header-file src="library/AndroidXConstraintLayout/src/CLToken.h" target-dir="ConstraintLayoutPlugin/AndroidXConstraintLayout/src"/>
+     <source-file src="library/AndroidXConstraintLayout/src/CLToken.m" target-dir="ConstraintLayoutPlugin/AndroidXConstraintLayout/src" compiler-flags="-fno-objc-arc"/>
+     <header-file src="library/AndroidXConstraintLayout/src/ConstraintAnchor.h" target-dir="ConstraintLayoutPlugin/AndroidXConstraintLayout/src"/>
+     <source-file src="library/AndroidXConstraintLayout/src/ConstraintAnchor.m" target-dir="ConstraintLayoutPlugin/AndroidXConstraintLayout/src" compiler-flags="-fno-objc-arc"/>
+     <header-file src="library/AndroidXConstraintLayout/src/ConstraintAttribute.h" target-dir="ConstraintLayoutPlugin/AndroidXConstraintLayout/src"/>
+     <source-file src="library/AndroidXConstraintLayout/src/ConstraintAttribute.m" target-dir="ConstraintLayoutPlugin/AndroidXConstraintLayout/src" compiler-flags="-fno-objc-arc"/>
+     <header-file src="library/AndroidXConstraintLayout/src/ConstraintHelper.h" target-dir="ConstraintLayoutPlugin/AndroidXConstraintLayout/src"/>
+     <source-file src="library/AndroidXConstraintLayout/src/ConstraintHelper.m" target-dir="ConstraintLayoutPlugin/AndroidXConstraintLayout/src" compiler-flags="-fno-objc-arc"/>
+     <header-file src="library/AndroidXConstraintLayout/src/ConstraintLayout.h" target-dir="ConstraintLayoutPlugin/AndroidXConstraintLayout/src"/>
+     <source-file src="library/AndroidXConstraintLayout/src/ConstraintLayout.m" target-dir="ConstraintLayoutPlugin/AndroidXConstraintLayout/src" compiler-flags="-fno-objc-arc"/>
+     <header-file src="library/AndroidXConstraintLayout/src/ConstraintReference.h" target-dir="ConstraintLayoutPlugin/AndroidXConstraintLayout/src"/>
+     <source-file src="library/AndroidXConstraintLayout/src/ConstraintReference.m" target-dir="ConstraintLayoutPlugin/AndroidXConstraintLayout/src" compiler-flags="-fno-objc-arc"/>
+     <header-file src="library/AndroidXConstraintLayout/src/Constraints.h" target-dir="ConstraintLayoutPlugin/AndroidXConstraintLayout/src"/>
+     <source-file src="library/AndroidXConstraintLayout/src/Constraints.m" target-dir="ConstraintLayoutPlugin/AndroidXConstraintLayout/src" compiler-flags="-fno-objc-arc"/>
+     <header-file src="library/AndroidXConstraintLayout/src/ConstraintSet.h" target-dir="ConstraintLayoutPlugin/AndroidXConstraintLayout/src"/>
+     <source-file src="library/AndroidXConstraintLayout/src/ConstraintSet.m" target-dir="ConstraintLayoutPlugin/AndroidXConstraintLayout/src" compiler-flags="-fno-objc-arc"/>
+     <header-file src="library/AndroidXConstraintLayout/src/ConstraintWidget.h" target-dir="ConstraintLayoutPlugin/AndroidXConstraintLayout/src"/>
+     <source-file src="library/AndroidXConstraintLayout/src/ConstraintWidget.m" target-dir="ConstraintLayoutPlugin/AndroidXConstraintLayout/src" compiler-flags="-fno-objc-arc"/>
+     <header-file src="library/AndroidXConstraintLayout/src/ConstraintWidgetContainer.h" target-dir="ConstraintLayoutPlugin/AndroidXConstraintLayout/src"/>
+     <source-file src="library/AndroidXConstraintLayout/src/ConstraintWidgetContainer.m" target-dir="ConstraintLayoutPlugin/AndroidXConstraintLayout/src" compiler-flags="-fno-objc-arc"/>
+     <header-file src="library/AndroidXConstraintLayout/src/CoreBarrier.h" target-dir="ConstraintLayoutPlugin/AndroidXConstraintLayout/src"/>
+     <source-file src="library/AndroidXConstraintLayout/src/CoreBarrier.m" target-dir="ConstraintLayoutPlugin/AndroidXConstraintLayout/src" compiler-flags="-fno-objc-arc"/>
+     <header-file src="library/AndroidXConstraintLayout/src/CoreFlow.h" target-dir="ConstraintLayoutPlugin/AndroidXConstraintLayout/src"/>
+     <source-file src="library/AndroidXConstraintLayout/src/CoreFlow.m" target-dir="ConstraintLayoutPlugin/AndroidXConstraintLayout/src" compiler-flags="-fno-objc-arc"/>
+     <header-file src="library/AndroidXConstraintLayout/src/CoreGuideline.h" target-dir="ConstraintLayoutPlugin/AndroidXConstraintLayout/src"/>
+     <source-file src="library/AndroidXConstraintLayout/src/CoreGuideline.m" target-dir="ConstraintLayoutPlugin/AndroidXConstraintLayout/src" compiler-flags="-fno-objc-arc"/>
+     <header-file src="library/AndroidXConstraintLayout/src/CoreVirtualLayout.h" target-dir="ConstraintLayoutPlugin/AndroidXConstraintLayout/src"/>
+     <source-file src="library/AndroidXConstraintLayout/src/CoreVirtualLayout.m" target-dir="ConstraintLayoutPlugin/AndroidXConstraintLayout/src" compiler-flags="-fno-objc-arc"/>
+     <header-file src="library/AndroidXConstraintLayout/src/CurveFit.h" target-dir="ConstraintLayoutPlugin/AndroidXConstraintLayout/src"/>
+     <source-file src="library/AndroidXConstraintLayout/src/CurveFit.m" target-dir="ConstraintLayoutPlugin/AndroidXConstraintLayout/src" compiler-flags="-fno-objc-arc"/>
+     <header-file src="library/AndroidXConstraintLayout/src/CustomVariable.h" target-dir="ConstraintLayoutPlugin/AndroidXConstraintLayout/src"/>
+     <source-file src="library/AndroidXConstraintLayout/src/CustomVariable.m" target-dir="ConstraintLayoutPlugin/AndroidXConstraintLayout/src" compiler-flags="-fno-objc-arc"/>
+     <header-file src="library/AndroidXConstraintLayout/src/Dependency.h" target-dir="ConstraintLayoutPlugin/AndroidXConstraintLayout/src"/>
+     <source-file src="library/AndroidXConstraintLayout/src/Dependency.m" target-dir="ConstraintLayoutPlugin/AndroidXConstraintLayout/src" compiler-flags="-fno-objc-arc"/>
+     <header-file src="library/AndroidXConstraintLayout/src/DependencyGraph.h" target-dir="ConstraintLayoutPlugin/AndroidXConstraintLayout/src"/>
+     <source-file src="library/AndroidXConstraintLayout/src/DependencyGraph.m" target-dir="ConstraintLayoutPlugin/AndroidXConstraintLayout/src" compiler-flags="-fno-objc-arc"/>
+     <header-file src="library/AndroidXConstraintLayout/src/DependencyNode.h" target-dir="ConstraintLayoutPlugin/AndroidXConstraintLayout/src"/>
+     <source-file src="library/AndroidXConstraintLayout/src/DependencyNode.m" target-dir="ConstraintLayoutPlugin/AndroidXConstraintLayout/src" compiler-flags="-fno-objc-arc"/>
+     <header-file src="library/AndroidXConstraintLayout/src/DifferentialInterpolator.h" target-dir="ConstraintLayoutPlugin/AndroidXConstraintLayout/src"/>
+     <source-file src="library/AndroidXConstraintLayout/src/DifferentialInterpolator.m" target-dir="ConstraintLayoutPlugin/AndroidXConstraintLayout/src" compiler-flags="-fno-objc-arc"/>
+     <header-file src="library/AndroidXConstraintLayout/src/Dimension.h" target-dir="ConstraintLayoutPlugin/AndroidXConstraintLayout/src"/>
+     <source-file src="library/AndroidXConstraintLayout/src/Dimension.m" target-dir="ConstraintLayoutPlugin/AndroidXConstraintLayout/src" compiler-flags="-fno-objc-arc"/>
+     <header-file src="library/AndroidXConstraintLayout/src/DimensionDependency.h" target-dir="ConstraintLayoutPlugin/AndroidXConstraintLayout/src"/>
+     <source-file src="library/AndroidXConstraintLayout/src/DimensionDependency.m" target-dir="ConstraintLayoutPlugin/AndroidXConstraintLayout/src" compiler-flags="-fno-objc-arc"/>
+     <header-file src="library/AndroidXConstraintLayout/src/Direct.h" target-dir="ConstraintLayoutPlugin/AndroidXConstraintLayout/src"/>
+     <source-file src="library/AndroidXConstraintLayout/src/Direct.m" target-dir="ConstraintLayoutPlugin/AndroidXConstraintLayout/src" compiler-flags="-fno-objc-arc"/>
+     <header-file src="library/AndroidXConstraintLayout/src/Easing.h" target-dir="ConstraintLayoutPlugin/AndroidXConstraintLayout/src"/>
+     <source-file src="library/AndroidXConstraintLayout/src/Easing.m" target-dir="ConstraintLayoutPlugin/AndroidXConstraintLayout/src" compiler-flags="-fno-objc-arc"/>
+     <header-file src="library/AndroidXConstraintLayout/src/Facade.h" target-dir="ConstraintLayoutPlugin/AndroidXConstraintLayout/src"/>
+     <source-file src="library/AndroidXConstraintLayout/src/Facade.m" target-dir="ConstraintLayoutPlugin/AndroidXConstraintLayout/src" compiler-flags="-fno-objc-arc"/>
+     <header-file src="library/AndroidXConstraintLayout/src/FloatRect.h" target-dir="ConstraintLayoutPlugin/AndroidXConstraintLayout/src"/>
+     <source-file src="library/AndroidXConstraintLayout/src/FloatRect.m" target-dir="ConstraintLayoutPlugin/AndroidXConstraintLayout/src" compiler-flags="-fno-objc-arc"/>
+     <header-file src="library/AndroidXConstraintLayout/src/Flow.h" target-dir="ConstraintLayoutPlugin/AndroidXConstraintLayout/src"/>
+     <source-file src="library/AndroidXConstraintLayout/src/Flow.m" target-dir="ConstraintLayoutPlugin/AndroidXConstraintLayout/src" compiler-flags="-fno-objc-arc"/>
+     <header-file src="library/AndroidXConstraintLayout/src/GoalRow.h" target-dir="ConstraintLayoutPlugin/AndroidXConstraintLayout/src"/>
+     <source-file src="library/AndroidXConstraintLayout/src/GoalRow.m" target-dir="ConstraintLayoutPlugin/AndroidXConstraintLayout/src" compiler-flags="-fno-objc-arc"/>
+     <header-file src="library/AndroidXConstraintLayout/src/Group.h" target-dir="ConstraintLayoutPlugin/AndroidXConstraintLayout/src"/>
+     <source-file src="library/AndroidXConstraintLayout/src/Group.m" target-dir="ConstraintLayoutPlugin/AndroidXConstraintLayout/src" compiler-flags="-fno-objc-arc"/>
+     <header-file src="library/AndroidXConstraintLayout/src/Grouping.h" target-dir="ConstraintLayoutPlugin/AndroidXConstraintLayout/src"/>
+     <source-file src="library/AndroidXConstraintLayout/src/Grouping.m" target-dir="ConstraintLayoutPlugin/AndroidXConstraintLayout/src" compiler-flags="-fno-objc-arc"/>
+     <header-file src="library/AndroidXConstraintLayout/src/Guideline.h" target-dir="ConstraintLayoutPlugin/AndroidXConstraintLayout/src"/>
+     <source-file src="library/AndroidXConstraintLayout/src/Guideline.m" target-dir="ConstraintLayoutPlugin/AndroidXConstraintLayout/src" compiler-flags="-fno-objc-arc"/>
+     <header-file src="library/AndroidXConstraintLayout/src/GuidelineReference.h" target-dir="ConstraintLayoutPlugin/AndroidXConstraintLayout/src"/>
+     <source-file src="library/AndroidXConstraintLayout/src/GuidelineReference.m" target-dir="ConstraintLayoutPlugin/AndroidXConstraintLayout/src" compiler-flags="-fno-objc-arc"/>
+     <header-file src="library/AndroidXConstraintLayout/src/GuidelineReferenceHelper.h" target-dir="ConstraintLayoutPlugin/AndroidXConstraintLayout/src"/>
+     <source-file src="library/AndroidXConstraintLayout/src/GuidelineReferenceHelper.m" target-dir="ConstraintLayoutPlugin/AndroidXConstraintLayout/src" compiler-flags="-fno-objc-arc"/>
+     <header-file src="library/AndroidXConstraintLayout/src/Helper.h" target-dir="ConstraintLayoutPlugin/AndroidXConstraintLayout/src"/>
+     <source-file src="library/AndroidXConstraintLayout/src/Helper.m" target-dir="ConstraintLayoutPlugin/AndroidXConstraintLayout/src" compiler-flags="-fno-objc-arc"/>
+     <header-file src="library/AndroidXConstraintLayout/src/HelperReference.h" target-dir="ConstraintLayoutPlugin/AndroidXConstraintLayout/src"/>
+     <source-file src="library/AndroidXConstraintLayout/src/HelperReference.m" target-dir="ConstraintLayoutPlugin/AndroidXConstraintLayout/src" compiler-flags="-fno-objc-arc"/>
+     <header-file src="library/AndroidXConstraintLayout/src/HelperReferences.h" target-dir="ConstraintLayoutPlugin/AndroidXConstraintLayout/src"/>
+     <source-file src="library/AndroidXConstraintLayout/src/HelperReferences.m" target-dir="ConstraintLayoutPlugin/AndroidXConstraintLayout/src" compiler-flags="-fno-objc-arc"/>
+     <header-file src="library/AndroidXConstraintLayout/src/HelperWidget.h" target-dir="ConstraintLayoutPlugin/AndroidXConstraintLayout/src"/>
+     <source-file src="library/AndroidXConstraintLayout/src/HelperWidget.m" target-dir="ConstraintLayoutPlugin/AndroidXConstraintLayout/src" compiler-flags="-fno-objc-arc"/>
+     <header-file src="library/AndroidXConstraintLayout/src/HorizontalChainReference.h" target-dir="ConstraintLayoutPlugin/AndroidXConstraintLayout/src"/>
+     <source-file src="library/AndroidXConstraintLayout/src/HorizontalChainReference.m" target-dir="ConstraintLayoutPlugin/AndroidXConstraintLayout/src" compiler-flags="-fno-objc-arc"/>
+     <header-file src="library/AndroidXConstraintLayout/src/HorizontalWidgetRun.h" target-dir="ConstraintLayoutPlugin/AndroidXConstraintLayout/src"/>
+     <source-file src="library/AndroidXConstraintLayout/src/HorizontalWidgetRun.m" target-dir="ConstraintLayoutPlugin/AndroidXConstraintLayout/src" compiler-flags="-fno-objc-arc"/>
+     <header-file src="library/AndroidXConstraintLayout/src/HyperSpline.h" target-dir="ConstraintLayoutPlugin/AndroidXConstraintLayout/src"/>
+     <source-file src="library/AndroidXConstraintLayout/src/HyperSpline.m" target-dir="ConstraintLayoutPlugin/AndroidXConstraintLayout/src" compiler-flags="-fno-objc-arc"/>
+     <header-file src="library/AndroidXConstraintLayout/src/KeyCache.h" target-dir="ConstraintLayoutPlugin/AndroidXConstraintLayout/src"/>
+     <source-file src="library/AndroidXConstraintLayout/src/KeyCache.m" target-dir="ConstraintLayoutPlugin/AndroidXConstraintLayout/src" compiler-flags="-fno-objc-arc"/>
+     <header-file src="library/AndroidXConstraintLayout/src/KeyCycleOscillator.h" target-dir="ConstraintLayoutPlugin/AndroidXConstraintLayout/src"/>
+     <source-file src="library/AndroidXConstraintLayout/src/KeyCycleOscillator.m" target-dir="ConstraintLayoutPlugin/AndroidXConstraintLayout/src" compiler-flags="-fno-objc-arc"/>
+     <header-file src="library/AndroidXConstraintLayout/src/KeyFrameArray.h" target-dir="ConstraintLayoutPlugin/AndroidXConstraintLayout/src"/>
+     <source-file src="library/AndroidXConstraintLayout/src/KeyFrameArray.m" target-dir="ConstraintLayoutPlugin/AndroidXConstraintLayout/src" compiler-flags="-fno-objc-arc"/>
+     <header-file src="library/AndroidXConstraintLayout/src/LinearCurveFit.h" target-dir="ConstraintLayoutPlugin/AndroidXConstraintLayout/src"/>
+     <source-file src="library/AndroidXConstraintLayout/src/LinearCurveFit.m" target-dir="ConstraintLayoutPlugin/AndroidXConstraintLayout/src" compiler-flags="-fno-objc-arc"/>
+     <header-file src="library/AndroidXConstraintLayout/src/LinearSystem.h" target-dir="ConstraintLayoutPlugin/AndroidXConstraintLayout/src"/>
+     <source-file src="library/AndroidXConstraintLayout/src/LinearSystem.m" target-dir="ConstraintLayoutPlugin/AndroidXConstraintLayout/src" compiler-flags="-fno-objc-arc"/>
+     <header-file src="library/AndroidXConstraintLayout/src/Metrics.h" target-dir="ConstraintLayoutPlugin/AndroidXConstraintLayout/src"/>
+     <source-file src="library/AndroidXConstraintLayout/src/Metrics.m" target-dir="ConstraintLayoutPlugin/AndroidXConstraintLayout/src" compiler-flags="-fno-objc-arc"/>
+     <header-file src="library/AndroidXConstraintLayout/src/MonotonicCurveFit.h" target-dir="ConstraintLayoutPlugin/AndroidXConstraintLayout/src"/>
+     <source-file src="library/AndroidXConstraintLayout/src/MonotonicCurveFit.m" target-dir="ConstraintLayoutPlugin/AndroidXConstraintLayout/src" compiler-flags="-fno-objc-arc"/>
+     <header-file src="library/AndroidXConstraintLayout/src/Motion.h" target-dir="ConstraintLayoutPlugin/AndroidXConstraintLayout/src"/>
+     <source-file src="library/AndroidXConstraintLayout/src/Motion.m" target-dir="ConstraintLayoutPlugin/AndroidXConstraintLayout/src" compiler-flags="-fno-objc-arc"/>
+     <header-file src="library/AndroidXConstraintLayout/src/MotionConstrainedPoint.h" target-dir="ConstraintLayoutPlugin/AndroidXConstraintLayout/src"/>
+     <source-file src="library/AndroidXConstraintLayout/src/MotionConstrainedPoint.m" target-dir="ConstraintLayoutPlugin/AndroidXConstraintLayout/src" compiler-flags="-fno-objc-arc"/>
+     <header-file src="library/AndroidXConstraintLayout/src/MotionConstraintSet.h" target-dir="ConstraintLayoutPlugin/AndroidXConstraintLayout/src"/>
+     <source-file src="library/AndroidXConstraintLayout/src/MotionConstraintSet.m" target-dir="ConstraintLayoutPlugin/AndroidXConstraintLayout/src" compiler-flags="-fno-objc-arc"/>
+     <header-file src="library/AndroidXConstraintLayout/src/MotionKey.h" target-dir="ConstraintLayoutPlugin/AndroidXConstraintLayout/src"/>
+     <source-file src="library/AndroidXConstraintLayout/src/MotionKey.m" target-dir="ConstraintLayoutPlugin/AndroidXConstraintLayout/src" compiler-flags="-fno-objc-arc"/>
+     <header-file src="library/AndroidXConstraintLayout/src/MotionKeyAttributes.h" target-dir="ConstraintLayoutPlugin/AndroidXConstraintLayout/src"/>
+     <source-file src="library/AndroidXConstraintLayout/src/MotionKeyAttributes.m" target-dir="ConstraintLayoutPlugin/AndroidXConstraintLayout/src" compiler-flags="-fno-objc-arc"/>
+     <header-file src="library/AndroidXConstraintLayout/src/MotionKeyCycle.h" target-dir="ConstraintLayoutPlugin/AndroidXConstraintLayout/src"/>
+     <source-file src="library/AndroidXConstraintLayout/src/MotionKeyCycle.m" target-dir="ConstraintLayoutPlugin/AndroidXConstraintLayout/src" compiler-flags="-fno-objc-arc"/>
+     <header-file src="library/AndroidXConstraintLayout/src/MotionKeyPosition.h" target-dir="ConstraintLayoutPlugin/AndroidXConstraintLayout/src"/>
+     <source-file src="library/AndroidXConstraintLayout/src/MotionKeyPosition.m" target-dir="ConstraintLayoutPlugin/AndroidXConstraintLayout/src" compiler-flags="-fno-objc-arc"/>
+     <header-file src="library/AndroidXConstraintLayout/src/MotionKeyTimeCycle.h" target-dir="ConstraintLayoutPlugin/AndroidXConstraintLayout/src"/>
+     <source-file src="library/AndroidXConstraintLayout/src/MotionKeyTimeCycle.m" target-dir="ConstraintLayoutPlugin/AndroidXConstraintLayout/src" compiler-flags="-fno-objc-arc"/>
+     <header-file src="library/AndroidXConstraintLayout/src/MotionKeyTrigger.h" target-dir="ConstraintLayoutPlugin/AndroidXConstraintLayout/src"/>
+     <source-file src="library/AndroidXConstraintLayout/src/MotionKeyTrigger.m" target-dir="ConstraintLayoutPlugin/AndroidXConstraintLayout/src" compiler-flags="-fno-objc-arc"/>
+     <header-file src="library/AndroidXConstraintLayout/src/MotionPaths.h" target-dir="ConstraintLayoutPlugin/AndroidXConstraintLayout/src"/>
+     <source-file src="library/AndroidXConstraintLayout/src/MotionPaths.m" target-dir="ConstraintLayoutPlugin/AndroidXConstraintLayout/src" compiler-flags="-fno-objc-arc"/>
+     <header-file src="library/AndroidXConstraintLayout/src/MotionWidget.h" target-dir="ConstraintLayoutPlugin/AndroidXConstraintLayout/src"/>
+     <source-file src="library/AndroidXConstraintLayout/src/MotionWidget.m" target-dir="ConstraintLayoutPlugin/AndroidXConstraintLayout/src" compiler-flags="-fno-objc-arc"/>
+     <header-file src="library/AndroidXConstraintLayout/src/Optimizer.h" target-dir="ConstraintLayoutPlugin/AndroidXConstraintLayout/src"/>
+     <source-file src="library/AndroidXConstraintLayout/src/Optimizer.m" target-dir="ConstraintLayoutPlugin/AndroidXConstraintLayout/src" compiler-flags="-fno-objc-arc"/>
+     <header-file src="library/AndroidXConstraintLayout/src/Oscillator.h" target-dir="ConstraintLayoutPlugin/AndroidXConstraintLayout/src"/>
+     <source-file src="library/AndroidXConstraintLayout/src/Oscillator.m" target-dir="ConstraintLayoutPlugin/AndroidXConstraintLayout/src" compiler-flags="-fno-objc-arc"/>
+     <header-file src="library/AndroidXConstraintLayout/src/Placeholder.h" target-dir="ConstraintLayoutPlugin/AndroidXConstraintLayout/src"/>
+     <source-file src="library/AndroidXConstraintLayout/src/Placeholder.m" target-dir="ConstraintLayoutPlugin/AndroidXConstraintLayout/src" compiler-flags="-fno-objc-arc"/>
+     <header-file src="library/AndroidXConstraintLayout/src/PriorityGoalRow.h" target-dir="ConstraintLayoutPlugin/AndroidXConstraintLayout/src"/>
+     <source-file src="library/AndroidXConstraintLayout/src/PriorityGoalRow.m" target-dir="ConstraintLayoutPlugin/AndroidXConstraintLayout/src" compiler-flags="-fno-objc-arc"/>
+     <header-file src="library/AndroidXConstraintLayout/src/Rectangle.h" target-dir="ConstraintLayoutPlugin/AndroidXConstraintLayout/src"/>
+     <source-file src="library/AndroidXConstraintLayout/src/Rectangle.m" target-dir="ConstraintLayoutPlugin/AndroidXConstraintLayout/src" compiler-flags="-fno-objc-arc"/>
+     <header-file src="library/AndroidXConstraintLayout/src/Reference.h" target-dir="ConstraintLayoutPlugin/AndroidXConstraintLayout/src"/>
+     <source-file src="library/AndroidXConstraintLayout/src/Reference.m" target-dir="ConstraintLayoutPlugin/AndroidXConstraintLayout/src" compiler-flags="-fno-objc-arc"/>
+     <header-file src="library/AndroidXConstraintLayout/src/Registry.h" target-dir="ConstraintLayoutPlugin/AndroidXConstraintLayout/src"/>
+     <source-file src="library/AndroidXConstraintLayout/src/Registry.m" target-dir="ConstraintLayoutPlugin/AndroidXConstraintLayout/src" compiler-flags="-fno-objc-arc"/>
+     <header-file src="library/AndroidXConstraintLayout/src/RegistryCallback.h" target-dir="ConstraintLayoutPlugin/AndroidXConstraintLayout/src"/>
+     <source-file src="library/AndroidXConstraintLayout/src/RegistryCallback.m" target-dir="ConstraintLayoutPlugin/AndroidXConstraintLayout/src" compiler-flags="-fno-objc-arc"/>
+     <header-file src="library/AndroidXConstraintLayout/src/RunGroup.h" target-dir="ConstraintLayoutPlugin/AndroidXConstraintLayout/src"/>
+     <source-file src="library/AndroidXConstraintLayout/src/RunGroup.m" target-dir="ConstraintLayoutPlugin/AndroidXConstraintLayout/src" compiler-flags="-fno-objc-arc"/>
+     <header-file src="library/AndroidXConstraintLayout/src/Schlick.h" target-dir="ConstraintLayoutPlugin/AndroidXConstraintLayout/src"/>
+     <source-file src="library/AndroidXConstraintLayout/src/Schlick.m" target-dir="ConstraintLayoutPlugin/AndroidXConstraintLayout/src" compiler-flags="-fno-objc-arc"/>
+     <header-file src="library/AndroidXConstraintLayout/src/SolverVariable.h" target-dir="ConstraintLayoutPlugin/AndroidXConstraintLayout/src"/>
+     <source-file src="library/AndroidXConstraintLayout/src/SolverVariable.m" target-dir="ConstraintLayoutPlugin/AndroidXConstraintLayout/src" compiler-flags="-fno-objc-arc"/>
+     <header-file src="library/AndroidXConstraintLayout/src/SolverVariableValues.h" target-dir="ConstraintLayoutPlugin/AndroidXConstraintLayout/src"/>
+     <source-file src="library/AndroidXConstraintLayout/src/SolverVariableValues.m" target-dir="ConstraintLayoutPlugin/AndroidXConstraintLayout/src" compiler-flags="-fno-objc-arc"/>
+     <header-file src="library/AndroidXConstraintLayout/src/SplineSet.h" target-dir="ConstraintLayoutPlugin/AndroidXConstraintLayout/src"/>
+     <source-file src="library/AndroidXConstraintLayout/src/SplineSet.m" target-dir="ConstraintLayoutPlugin/AndroidXConstraintLayout/src" compiler-flags="-fno-objc-arc"/>
+     <header-file src="library/AndroidXConstraintLayout/src/SpringStopEngine.h" target-dir="ConstraintLayoutPlugin/AndroidXConstraintLayout/src"/>
+     <source-file src="library/AndroidXConstraintLayout/src/SpringStopEngine.m" target-dir="ConstraintLayoutPlugin/AndroidXConstraintLayout/src" compiler-flags="-fno-objc-arc"/>
+     <header-file src="library/AndroidXConstraintLayout/src/State.h" target-dir="ConstraintLayoutPlugin/AndroidXConstraintLayout/src"/>
+     <source-file src="library/AndroidXConstraintLayout/src/State.m" target-dir="ConstraintLayoutPlugin/AndroidXConstraintLayout/src" compiler-flags="-fno-objc-arc"/>
+     <header-file src="library/AndroidXConstraintLayout/src/StepCurve.h" target-dir="ConstraintLayoutPlugin/AndroidXConstraintLayout/src"/>
+     <source-file src="library/AndroidXConstraintLayout/src/StepCurve.m" target-dir="ConstraintLayoutPlugin/AndroidXConstraintLayout/src" compiler-flags="-fno-objc-arc"/>
+     <header-file src="library/AndroidXConstraintLayout/src/StopEngine.h" target-dir="ConstraintLayoutPlugin/AndroidXConstraintLayout/src"/>
+     <source-file src="library/AndroidXConstraintLayout/src/StopEngine.m" target-dir="ConstraintLayoutPlugin/AndroidXConstraintLayout/src" compiler-flags="-fno-objc-arc"/>
+     <header-file src="library/AndroidXConstraintLayout/src/StopLogicEngine.h" target-dir="ConstraintLayoutPlugin/AndroidXConstraintLayout/src"/>
+     <source-file src="library/AndroidXConstraintLayout/src/StopLogicEngine.m" target-dir="ConstraintLayoutPlugin/AndroidXConstraintLayout/src" compiler-flags="-fno-objc-arc"/>
+     <header-file src="library/AndroidXConstraintLayout/src/TimeCycleSplineSet.h" target-dir="ConstraintLayoutPlugin/AndroidXConstraintLayout/src"/>
+     <source-file src="library/AndroidXConstraintLayout/src/TimeCycleSplineSet.m" target-dir="ConstraintLayoutPlugin/AndroidXConstraintLayout/src" compiler-flags="-fno-objc-arc"/>
+     <header-file src="library/AndroidXConstraintLayout/src/Transition.h" target-dir="ConstraintLayoutPlugin/AndroidXConstraintLayout/src"/>
+     <source-file src="library/AndroidXConstraintLayout/src/Transition.m" target-dir="ConstraintLayoutPlugin/AndroidXConstraintLayout/src" compiler-flags="-fno-objc-arc"/>
+     <header-file src="library/AndroidXConstraintLayout/src/TypedBundle.h" target-dir="ConstraintLayoutPlugin/AndroidXConstraintLayout/src"/>
+     <source-file src="library/AndroidXConstraintLayout/src/TypedBundle.m" target-dir="ConstraintLayoutPlugin/AndroidXConstraintLayout/src" compiler-flags="-fno-objc-arc"/>
+     <header-file src="library/AndroidXConstraintLayout/src/TypedValues.h" target-dir="ConstraintLayoutPlugin/AndroidXConstraintLayout/src"/>
+     <source-file src="library/AndroidXConstraintLayout/src/TypedValues.m" target-dir="ConstraintLayoutPlugin/AndroidXConstraintLayout/src" compiler-flags="-fno-objc-arc"/>
+     <header-file src="library/AndroidXConstraintLayout/src/Utils.h" target-dir="ConstraintLayoutPlugin/AndroidXConstraintLayout/src"/>
+     <source-file src="library/AndroidXConstraintLayout/src/Utils.m" target-dir="ConstraintLayoutPlugin/AndroidXConstraintLayout/src" compiler-flags="-fno-objc-arc"/>
+     <header-file src="library/AndroidXConstraintLayout/src/VelocityMatrix.h" target-dir="ConstraintLayoutPlugin/AndroidXConstraintLayout/src"/>
+     <source-file src="library/AndroidXConstraintLayout/src/VelocityMatrix.m" target-dir="ConstraintLayoutPlugin/AndroidXConstraintLayout/src" compiler-flags="-fno-objc-arc"/>
+     <header-file src="library/AndroidXConstraintLayout/src/VerticalChainReference.h" target-dir="ConstraintLayoutPlugin/AndroidXConstraintLayout/src"/>
+     <source-file src="library/AndroidXConstraintLayout/src/VerticalChainReference.m" target-dir="ConstraintLayoutPlugin/AndroidXConstraintLayout/src" compiler-flags="-fno-objc-arc"/>
+     <header-file src="library/AndroidXConstraintLayout/src/VerticalWidgetRun.h" target-dir="ConstraintLayoutPlugin/AndroidXConstraintLayout/src"/>
+     <source-file src="library/AndroidXConstraintLayout/src/VerticalWidgetRun.m" target-dir="ConstraintLayoutPlugin/AndroidXConstraintLayout/src" compiler-flags="-fno-objc-arc"/>
+     <header-file src="library/AndroidXConstraintLayout/src/ViewState.h" target-dir="ConstraintLayoutPlugin/AndroidXConstraintLayout/src"/>
+     <source-file src="library/AndroidXConstraintLayout/src/ViewState.m" target-dir="ConstraintLayoutPlugin/AndroidXConstraintLayout/src" compiler-flags="-fno-objc-arc"/>
+     <header-file src="library/AndroidXConstraintLayout/src/VirtualLayout.h" target-dir="ConstraintLayoutPlugin/AndroidXConstraintLayout/src"/>
+     <source-file src="library/AndroidXConstraintLayout/src/VirtualLayout.m" target-dir="ConstraintLayoutPlugin/AndroidXConstraintLayout/src" compiler-flags="-fno-objc-arc"/>
+     <header-file src="library/AndroidXConstraintLayout/src/WidgetContainer.h" target-dir="ConstraintLayoutPlugin/AndroidXConstraintLayout/src"/>
+     <source-file src="library/AndroidXConstraintLayout/src/WidgetContainer.m" target-dir="ConstraintLayoutPlugin/AndroidXConstraintLayout/src" compiler-flags="-fno-objc-arc"/>
+     <header-file src="library/AndroidXConstraintLayout/src/WidgetFrame.h" target-dir="ConstraintLayoutPlugin/AndroidXConstraintLayout/src"/>
+     <source-file src="library/AndroidXConstraintLayout/src/WidgetFrame.m" target-dir="ConstraintLayoutPlugin/AndroidXConstraintLayout/src" compiler-flags="-fno-objc-arc"/>
+     <header-file src="library/AndroidXConstraintLayout/src/WidgetGroup.h" target-dir="ConstraintLayoutPlugin/AndroidXConstraintLayout/src"/>
+     <source-file src="library/AndroidXConstraintLayout/src/WidgetGroup.m" target-dir="ConstraintLayoutPlugin/AndroidXConstraintLayout/src" compiler-flags="-fno-objc-arc"/>
+     <header-file src="library/AndroidXConstraintLayout/src/WidgetRun.h" target-dir="ConstraintLayoutPlugin/AndroidXConstraintLayout/src"/>
+     <source-file src="library/AndroidXConstraintLayout/src/WidgetRun.m" target-dir="ConstraintLayoutPlugin/AndroidXConstraintLayout/src" compiler-flags="-fno-objc-arc"/>
+     <!-- AndroidXConstraintLayout end -->
+  </platform>
+
+
+</plugin>

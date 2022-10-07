@@ -1,0 +1,56 @@
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data></data>
+
+    <LinearLayout
+        fragment="SelectstoreDialog"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        tools:ignore="MissingPrefix"
+        style="@style/dialog_layout">
+
+        <FrameLayout
+           style="@style/border_separator"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="10dp">
+
+                <TextView
+                    style="@style/h2_gray_500"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerInParent="true"
+                    android:text="@string/select_a_store"
+                    android:textStyle="bold"></TextView>
+
+                <ImageView
+                    android:scaleType="fitXY"
+                    onClick="dismissDialog"
+                    android:layout_width="20dp"
+                    android:layout_height="20dp"
+                    android:layout_alignParentRight="true"
+                    android:src="@drawable/close"></ImageView>
+
+            </RelativeLayout>
+        </FrameLayout>
+
+        <LinearLayout
+            autoInject="true"
+            android:id="@+id/selectStoreLL"
+            tools:listitem="@layout/selectstore_item"
+            modelFor="let item in . from stores->view into loopvar as map"
+            modelIdPath="id"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+        </LinearLayout>
+    </LinearLayout>
+</layout>

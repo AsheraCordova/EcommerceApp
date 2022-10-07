@@ -1,0 +1,32 @@
+{
+  "_from": "git+https://github.com/AsheraCordova/cordova-plugin-qrscanner-swt.git",
+  "_id": "cordova-plugin-qrscanner-swt@1.0.0",
+  "_inBundle": false,
+  "_integrity": "",
+  "_location": "/cordova-plugin-qrscanner-swt",
+  "_phantomChildren": {},
+  "_requested": {
+    "type": "git",
+    "raw": "https://github.com/AsheraCordova/cordova-plugin-qrscanner-swt",
+    "rawSpec": "https://github.com/AsheraCordova/cordova-plugin-qrscanner-swt",
+    "saveSpec": "git+https://github.com/AsheraCordova/cordova-plugin-qrscanner-swt.git",
+    "fetchSpec": "https://github.com/AsheraCordova/cordova-plugin-qrscanner-swt.git",
+    "gitCommittish": null
+  },
+  "_requiredBy": [
+    "#DEV:/",
+    "#USER"
+  ],
+  "_resolved": "git+https://github.com/AsheraCordova/cordova-plugin-qrscanner-swt.git#ddf47f79b360c9bc72b3c05f6faac5937484eeea",
+  "_spec": "https://github.com/AsheraCordova/cordova-plugin-qrscanner-swt",
+  "_where": "D:\\Java\\github_ashera\\EcommerceApp",
+  "author": {
+    "name": "Ram M"
+  },
+  "bundleDependencies": false,
+  "deprecated": false,
+  "description": "Plugin - cordova-plugin-qrscanner",
+  "license": "ISC",
+  "name": "cordova-plugin-qrscanner-swt",
+  "version": "1.0.0"
+}

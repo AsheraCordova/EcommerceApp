@@ -1,0 +1,76 @@
+{
+  "name": "com.ashera.ecommerce",
+  "displayName": "HelloCordova",
+  "version": "1.0.0",
+  "description": "A sample Apache Cordova application that responds to the deviceready event.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "ecosystem:cordova"
+  ],
+  "author": "Apache Cordova Team",
+  "license": "Apache-2.0",
+  "devDependencies": {
+    "browser": "git+https://github.com/AsheraCordova/cordova-web.git",
+    "com.ashera.capinsets": "git+https://github.com/AsheraCordova/CapInsets.git",
+    "com.ashera.constraintlayout": "git+https://github.com/AsheraCordova/ConstraintLayout.git",
+    "com.ashera.core": "git+https://github.com/AsheraCordova/Core.git",
+    "com.ashera.cssborder": "git+https://github.com/AsheraCordova/CSSBorder.git",
+    "com.ashera.datetime": "git+https://github.com/AsheraCordova/DateTime.git",
+    "com.ashera.drawerlayout": "git+https://github.com/AsheraCordova/Drawer.git",
+    "com.ashera.glide": "git+https://github.com/AsheraCordova/Glide.git",
+    "com.ashera.gridlayout": "git+https://github.com/AsheraCordova/GridLayout.git",
+    "com.ashera.indexeddbshim": "git+https://github.com/AsheraCordova/IndexedDB.git",
+    "com.ashera.iqkeyboardmanager.ios": "git+https://github.com/AsheraCordova/IQkeyboardManager.git",
+    "com.ashera.recycleview": "git+https://github.com/AsheraCordova/RecycleView.git",
+    "com.ashera.sdwebimage.ios": "git+https://github.com/AsheraCordova/SDWebImagePlugin.git",
+    "com.ashera.shutterbug": "git+https://github.com/AsheraCordova/ShutterBug.git",
+    "com.ashera.toolbar": "git+https://github.com/AsheraCordova/Toolbar.git",
+    "cordova-android": "^10.1.2",
+    "cordova-plugin-camera": "git+https://github.com/AsheraCordova/cordova-plugin-camera.git",
+    "cordova-plugin-qrscanner": "git+https://github.com/AsheraCordova/cordova-plugin-qrscanner.git",
+    "cordova-plugin-qrscanner-swt": "git+https://github.com/AsheraCordova/cordova-plugin-qrscanner-swt.git",
+    "cordova-plugin-splashscreen": "^6.0.2",
+    "cordova-plugin-splashscreen-web": "git+https://github.com/AsheraCordova/Splash.git",
+    "cordova-plugin-sqlite-2": "^1.0.7",
+    "cordova-plugin-sqlite-2-swt": "git+https://github.com/AsheraCordova/cordova-plugin-sqlite-2-swt.git",
+    "rds-spinner": "git+https://github.com/AsheraCordova/Dialog.git",
+    "swt": "git+https://github.com/AsheraCordova/cordova-swt.git"
+  },
+  "cordova": {
+    "platforms": [
+      "android",
+      "swt",
+      "browser"
+    ],
+    "plugins": {
+      "com.ashera.core": {},
+      "com.ashera.capinsets": {},
+      "com.ashera.constraintlayout": {},
+      "com.ashera.cssborder": {},
+      "com.ashera.datetime": {},
+      "com.ashera.drawerlayout": {},
+      "com.ashera.gridlayout": {},
+      "com.ashera.recycleview": {},
+      "com.ashera.toolbar": {},
+      "com.ashera.iqkeyboardmanager.ios": {},
+      "com.ashera.shutterbug": {},
+      "com.ashera.glide": {},
+      "com.ashera.sdwebimage.ios": {},
+      "cordova-plugin-splashscreen": {},
+      "cordova-plugin-splashscreen-ashera": {},
+      "com.filfatstudios.spinnerdialog": {},
+      "cordova-plugin-camera": {
+        "ANDROIDX_CORE_VERSION": "1.6.+"
+      },
+      "cordova-plugin-camera-swt": {},
+      "cordova-plugin-qrscanner": {},
+      "cordova-plugin-qrscanner-swt": {},
+      "cordova-plugin-sqlite-2": {},
+      "cordova-plugin-sqlite-2-swt": {},
+      "com.ashera.indexeddbshim": {}
+    }
+  }
+}

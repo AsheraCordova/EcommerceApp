@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<plugin xmlns="http://www.phonegap.com/ns/plugins/1.0"
+        id="com.ashera.indexeddbshim"
+        version="1.0">
+
+  <name>Indexeddbshim Plugin</name>
+
+  <platform name="swt">
+   	<resource-file src="www/js/indexeddbshim.min.js" target="../../src/main/assets/www/js/indexeddbshim.min.js" />
+   	<js-module src="www/js/add_res.js" name="indexeddbshimAddRes">
+    	 <runs/>
+  	</js-module>
+  </platform>
+  
+  <platform name="android">
+   	<resource-file src="www/js/indexeddbshim.min.js" target="../../src/main/assets/www/js/indexeddbshim.min.js" />
+   	<js-module src="www/js/add_res.js" name="indexeddbshimAddRes">
+    	 <runs/>
+  	</js-module>
+  </platform>
+  
+  <platform name="web">
+   	<resource-file src="www/js/indexeddbshim.min.js" target="../../src/main/assets/www/js/indexeddbshim.min.js" />
+   	<js-module src="www/js/add_res.js" name="indexeddbshimAddRes">
+    	 <runs/>
+  	</js-module>
+  </platform>
+  
+  <platform name="ios">
+   	<hook type="after_plugin_install" src="hooks/afterInstall.js" />
+   	<js-module src="www/js/add_res.js" name="indexeddbshimAddRes">
+    	 <runs/>
+  	</js-module>
+  </platform>
+</plugin>

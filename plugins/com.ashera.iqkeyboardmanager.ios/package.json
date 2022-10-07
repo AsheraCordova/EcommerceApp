@@ -1,0 +1,32 @@
+{
+  "_from": "git+https://github.com/AsheraCordova/IQkeyboardManager.git",
+  "_id": "com.ashera.iqkeyboardmanager.ios@1.0.0",
+  "_inBundle": false,
+  "_integrity": "",
+  "_location": "/com.ashera.iqkeyboardmanager.ios",
+  "_phantomChildren": {},
+  "_requested": {
+    "type": "git",
+    "raw": "https://github.com/AsheraCordova/IQkeyboardManager",
+    "rawSpec": "https://github.com/AsheraCordova/IQkeyboardManager",
+    "saveSpec": "git+https://github.com/AsheraCordova/IQkeyboardManager.git",
+    "fetchSpec": "https://github.com/AsheraCordova/IQkeyboardManager.git",
+    "gitCommittish": null
+  },
+  "_requiredBy": [
+    "#DEV:/",
+    "#USER"
+  ],
+  "_resolved": "git+https://github.com/AsheraCordova/IQkeyboardManager.git#e4e4866988338abe3c06b7b2c4f719a97681d42c",
+  "_spec": "https://github.com/AsheraCordova/IQkeyboardManager",
+  "_where": "D:\\Java\\github_ashera\\EcommerceApp",
+  "author": {
+    "name": "Ram M"
+  },
+  "bundleDependencies": false,
+  "deprecated": false,
+  "description": "@description@",
+  "license": "ISC",
+  "name": "com.ashera.iqkeyboardmanager.ios",
+  "version": "1.0.0"
+}

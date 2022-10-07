@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="utf-8"?>
+<plugin xmlns="http://www.phonegap.com/ns/plugins/1.0"
+        id="com.ashera.shutterbug"
+        version="1.0">
+
+  <name>CordovaShutterBugPlugin Plugin</name>
+
+  <engines>
+    <engine name="cordova" version=">=3.4.0"/>
+  </engines>
+  
+  
+  <platform name="android">
+    <config-file target="res/xml/config.xml" parent="/*">
+      <feature name="CordovaShutterBugPlugin">
+        <param name="android-package" value="com.ashera.shutterbug.CordovaShutterBugPlugin"/>
+        <param name="onload" value="true" />
+      </feature>
+    </config-file>
+
+   	 <!-- start src -->
+     <source-file src="android/src/com/applidium/shutterbug/cache/DiskLruCache.java" target-dir="src/com/applidium/shutterbug/cache"/>
+     <source-file src="android/src/com/applidium/shutterbug/cache/ImageCache.java" target-dir="src/com/applidium/shutterbug/cache"/>
+     <source-file src="android/src/com/applidium/shutterbug/cache/LruCache.java" target-dir="src/com/applidium/shutterbug/cache"/>
+     <source-file src="android/src/com/applidium/shutterbug/downloader/ShutterbugDownloader.java" target-dir="src/com/applidium/shutterbug/downloader"/>
+     <source-file src="android/src/com/applidium/shutterbug/ShutterbugImageCallBack.java" target-dir="src/com/applidium/shutterbug"/>
+     <source-file src="android/src/com/applidium/shutterbug/ShutterbugManager.java" target-dir="src/com/applidium/shutterbug"/>
+     <source-file src="android/src/com/applidium/shutterbug/utils/BitmapFactoryScale.java" target-dir="src/com/applidium/shutterbug/utils"/>
+     <source-file src="android/src/com/applidium/shutterbug/utils/DownloadRequest.java" target-dir="src/com/applidium/shutterbug/utils"/>
+     <source-file src="android/src/com/ashera/shutterbug/CordovaShutterBugPlugin.java" target-dir="src/com/ashera/shutterbug"/>
+     <source-file src="android/src/com/ashera/shutterbug/ImageLoader.java" target-dir="src/com/ashera/shutterbug"/>
+     <source-file src="android/src/com/ashera/shutterbug/ShutterBugPlugin.java" target-dir="src/com/ashera/shutterbug"/>
+     <!-- src end -->
+     <!-- start res -->
+
+     <!-- res end -->
+     <!-- start tsc -->
+
+     <!-- tsc end -->
+  </platform>
+  <platform name="ios">
+    <config-file target="config.xml" parent="/widget">
+      <feature name="CordovaShutterBugPlugin">
+        	<param name="ios-package" value="CordovaShutterBugPlugin" />
+         	<param name="onload" value="true" />
+      </feature>
+    </config-file>
+
+   	 <!-- start ios -->
+     <header-file src="ios/ios/src/BitmapFactoryScale.h" target-dir="ShutterBugPlugin/ios/src"/>
+     <source-file src="ios/ios/src/BitmapFactoryScale.m" target-dir="ShutterBugPlugin/ios/src" compiler-flags="-fobjc-arc-exceptions"/>
+     <header-file src="ios/ios/src/CordovaShutterBugPlugin.h" target-dir="ShutterBugPlugin/ios/src"/>
+     <source-file src="ios/ios/src/CordovaShutterBugPlugin.m" target-dir="ShutterBugPlugin/ios/src" compiler-flags="-fobjc-arc-exceptions"/>
+     <header-file src="ios/ios/src/DiskLruCache.h" target-dir="ShutterBugPlugin/ios/src"/>
+     <source-file src="ios/ios/src/DiskLruCache.m" target-dir="ShutterBugPlugin/ios/src" compiler-flags="-fobjc-arc-exceptions"/>
+     <header-file src="ios/ios/src/DownloadRequest.h" target-dir="ShutterBugPlugin/ios/src"/>
+     <source-file src="ios/ios/src/DownloadRequest.m" target-dir="ShutterBugPlugin/ios/src" compiler-flags="-fobjc-arc-exceptions"/>
+     <header-file src="ios/ios/src/ImageCache.h" target-dir="ShutterBugPlugin/ios/src"/>
+     <source-file src="ios/ios/src/ImageCache.m" target-dir="ShutterBugPlugin/ios/src" compiler-flags="-fobjc-arc-exceptions"/>
+     <header-file src="ios/ios/src/ImageLoader.h" target-dir="ShutterBugPlugin/ios/src"/>
+     <source-file src="ios/ios/src/ImageLoader.m" target-dir="ShutterBugPlugin/ios/src" compiler-flags="-fobjc-arc-exceptions"/>
+     <header-file src="ios/ios/src/LruCache.h" target-dir="ShutterBugPlugin/ios/src"/>
+     <source-file src="ios/ios/src/LruCache.m" target-dir="ShutterBugPlugin/ios/src" compiler-flags="-fobjc-arc-exceptions"/>
+     <header-file src="ios/ios/src/ShutterbugDownloader.h" target-dir="ShutterBugPlugin/ios/src"/>
+     <source-file src="ios/ios/src/ShutterbugDownloader.m" target-dir="ShutterBugPlugin/ios/src" compiler-flags="-fobjc-arc-exceptions"/>
+     <header-file src="ios/ios/src/ShutterbugImageCallBack.h" target-dir="ShutterBugPlugin/ios/src"/>
+     <source-file src="ios/ios/src/ShutterbugImageCallBack.m" target-dir="ShutterBugPlugin/ios/src" compiler-flags="-fobjc-arc-exceptions"/>
+     <header-file src="ios/ios/src/ShutterbugManager.h" target-dir="ShutterBugPlugin/ios/src"/>
+     <source-file src="ios/ios/src/ShutterbugManager.m" target-dir="ShutterBugPlugin/ios/src" compiler-flags="-fobjc-arc-exceptions"/>
+     <header-file src="ios/ios/src/ShutterBugPlugin.h" target-dir="ShutterBugPlugin/ios/src"/>
+     <source-file src="ios/ios/src/ShutterBugPlugin.m" target-dir="ShutterBugPlugin/ios/src" compiler-flags="-fobjc-arc-exceptions"/>
+     <!-- ios end -->
+     <!-- start tsc -->
+
+     <!-- tsc end -->
+  </platform>
+  <platform name="swt">
+    <config-file target="res/xml/config.xml" parent="/*">
+      <feature name="CordovaShutterBugPlugin">
+        <param name="android-package" value="com.ashera.shutterbug.CordovaShutterBugPlugin"/>
+        <param name="onload" value="true" />
+      </feature>
+    </config-file>
+
+   	 <framework src="swt/core.gradle" custom="true" type="gradleReference" />
+  </platform>
+
+
+
+
+</plugin>

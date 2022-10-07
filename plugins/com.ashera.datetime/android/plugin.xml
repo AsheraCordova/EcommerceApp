@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<plugin xmlns="http://www.phonegap.com/ns/plugins/1.0"
+        id="com.ashera.datetime"
+        version="1.0">
+
+  <name>CordovaDateTimePlugin Plugin</name>
+
+  <engines>
+    <engine name="cordova" version=">=3.4.0"/>
+  </engines>
+  
+  
+  <platform name="android">
+    <config-file target="res/xml/config.xml" parent="/*">
+      <feature name="CordovaDateTimePlugin">
+        <param name="android-package" value="com.ashera.datetime.CordovaDateTimePlugin"/>
+        <param name="onload" value="true" />
+      </feature>
+    </config-file>
+
+   	 <!-- start src -->
+     <source-file src="src/com/ashera/datetime/CordovaDateTimePlugin.java" target-dir="src/com/ashera/datetime"/>
+     <source-file src="src/com/ashera/datetime/DatePicker.java" target-dir="src/com/ashera/datetime"/>
+     <source-file src="src/com/ashera/datetime/DatePickerImpl.java" target-dir="src/com/ashera/datetime"/>
+     <source-file src="src/com/ashera/datetime/DateTimePlugin.java" target-dir="src/com/ashera/datetime"/>
+     <source-file src="src/com/ashera/datetime/TimePicker.java" target-dir="src/com/ashera/datetime"/>
+     <source-file src="src/com/ashera/datetime/TimePickerImpl.java" target-dir="src/com/ashera/datetime"/>
+     <!-- src end -->
+     <!-- start res -->
+     <source-file src="res/drawable-xxxhdpi/icon_calendar.png" target-dir="res/drawable-xxxhdpi"/>
+     <source-file src="res/drawable-xxxhdpi/icon_clear.png" target-dir="res/drawable-xxxhdpi"/>
+     <source-file src="res/drawable-xxxhdpi/icon_time.png" target-dir="res/drawable-xxxhdpi"/>
+     <source-file src="res/layout/datepicker.xml" target-dir="res/layout"/>
+     <source-file src="res/layout/timepicker.xml" target-dir="res/layout"/>
+     <!-- res end -->
+     <!-- start tsc -->
+     <source-file src="tsc/src/android/widget/DatePickerImpl.ts" target-dir="tsc/src/android/widget"/>
+     <source-file src="tsc/src/android/widget/TimePickerImpl.ts" target-dir="tsc/src/android/widget"/>
+     <!-- tsc end -->
+  </platform>
+
+
+</plugin>

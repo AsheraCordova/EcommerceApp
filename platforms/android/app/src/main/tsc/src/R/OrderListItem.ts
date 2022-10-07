@@ -1,0 +1,12 @@
+export const typeSelection:string = '@+id/typeSelection';
+export const image:string = '@+id/image';
+export const orderDate:string = '@+id/orderDate';
+export const orderDay:string = '@+id/orderDay';
+export const orderMonthYear:string = '@+id/orderMonthYear';
+export const orderRef:string = '@+id/orderRef';
+export const items:string = '@+id/items';
+export const ImageView_btn:string = '@+id/ImageView_btn';
+export const cost:string = '@+id/cost';
+export const timerLabelCont:string = '@+id/timerLabelCont';
+export const status:string = '@+id/status';
+export const timerLabel:string = '@+id/timerLabel';

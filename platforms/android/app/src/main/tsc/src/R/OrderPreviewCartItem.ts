@@ -1,0 +1,10 @@
+export const errorLabel:string = '@+id/errorLabel';
+export const type:string = '@+id/type';
+export const name:string = '@+id/name';
+export const deleteItem:string = '@+id/deleteItem';
+export const lowhighprice:string = '@+id/lowhighprice';
+export const OldPrice:string = '@+id/OldPrice';
+export const Price:string = '@+id/Price';
+export const increment:string = '@+id/increment';
+export const quantity:string = '@+id/quantity';
+export const decrement:string = '@+id/decrement';

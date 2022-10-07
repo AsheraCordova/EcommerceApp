@@ -1,0 +1,173 @@
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    borderRadius="5dp"
+    onClick="goToOrderDetail"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_margin="10dp"
+    android:background="#fff"
+    tools:ignore="MissingPrefix">
+
+    <RelativeLayout
+        android:id="@+id/typeSelection"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:padding="10dp">
+
+        <FrameLayout
+            android:id="@+id/image"
+            android:layout_width="1dp"
+            android:layout_height="80dp"
+            android:layout_marginLeft="15dp"
+            android:layout_marginRight="15dp"
+            android:layout_toRightOf="@+id/orderDate"
+            android:background="#999999"></FrameLayout>
+
+        <FrameLayout
+            android:id="@+id/orderDate"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:gravity="center"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/orderDay"
+                    borderRadius="25dp"
+                    modelPojoToUi="text = createdDay from item->loopvar"
+                    android:layout_marginBottom="10dp"
+                    android:text="25"
+                    style="@style/rounded_textview"></TextView>
+
+                <TextView
+                    android:id="@+id/orderMonthYear"
+                    modelPojoToUi="text = createdMonthYear from item->loopvar"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="JUN - 2017"
+                    style="@style/h2_black"
+                    android:textStyle="bold"></TextView>
+            </LinearLayout>
+        </FrameLayout>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_toRightOf="@+id/image">
+
+            <TextView
+                android:id="@+id/orderRef"
+                modelPojoToUi="text = orderRef from item->loopvar"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="8dp"
+                android:text="A12343434"
+                style="@style/h2_black"
+                android:textStyle="bold"></TextView>
+
+            <TextView
+                android:id="@+id/items"
+                modelPojoToUi="text = desc from item->loopvar"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/orderRef"
+                android:layout_marginBottom="8dp"
+                android:text="Desc"
+                style="@style/h2_gray_900"
+                android:textStyle="bold"></TextView>
+
+            <ImageView
+                zIndex-swt="1"
+                android:id="@+id/ImageView_btn"
+                android:layout_width="wrap_content"
+                android:layout_height="20dp"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:layout_marginRight="5dp"
+                android:adjustViewBounds="true"
+                android:src="@drawable/order_select_button"></ImageView>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/items"
+                android:layout_toLeftOf="@+id/ImageView_btn">
+
+                <TextView
+                    android:id="@+id/cost"
+                    modelPojoToUi="text = toString(cost) from item->loopvar"
+                    textFormat="@string/currency_format"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Rs 100"
+                    style="@style/h2_gray_900"
+                    android:textStyle="bold"></TextView>
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/cost"
+                    android:layout_alignParentTop="true"
+                    android:layout_alignParentRight="true"
+                    android:layout_marginRight="5dp"
+                    android:gravity="right"
+                    android:orientation="vertical">
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal">
+
+                        <ImageView
+                            android:layout_width="15dp"
+                            android:layout_height="15dp"
+                            android:layout_gravity="center"
+                            android:layout_marginRight="5dp"
+                            android:scaleType="centerInside"
+                            android:src="@drawable/order_success_icon"></ImageView>
+
+                        <TextView
+                            android:id="@+id/status"
+                            modelPojoToUi="text = status from item->loopvar"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Submitted"
+                            style="@style/h2_red"
+                            android:textStyle="bold"></TextView>
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:id="@+id/timerLabelCont"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginRight="3dp"
+                            android:text="Expires in"
+                            style="@style/h2_gray_900"></TextView>
+
+                        <Chronometer
+                            android:id="@+id/timerLabel"
+                            modelPojoToUi="baseElapsedTimeInMillis = baseElapsedTimeInMillis(expires) from item->loopvar"
+                            modelPojoToUiParams="varType:integer;"
+                            onChronometerTick=""
+                            stopWhenReached="00:00"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:countDown="true"
+                            style="@style/h2_gray_900"></Chronometer>
+                    </LinearLayout>
+                </LinearLayout>
+            </RelativeLayout>
+        </RelativeLayout>
+
+    </RelativeLayout>
+</FrameLayout>

@@ -1,0 +1,186 @@
+{
+  "com.ashera.core": {
+    "source": {
+      "type": "registry",
+      "id": "https://github.com/AsheraCordova/Core"
+    },
+    "is_top_level": true,
+    "variables": {}
+  },
+  "com.ashera.capinsets": {
+    "source": {
+      "type": "registry",
+      "id": "https://github.com/AsheraCordova/CapInsets"
+    },
+    "is_top_level": true,
+    "variables": {}
+  },
+  "com.ashera.constraintlayout": {
+    "source": {
+      "type": "registry",
+      "id": "https://github.com/AsheraCordova/ConstraintLayout"
+    },
+    "is_top_level": true,
+    "variables": {}
+  },
+  "com.ashera.cssborder": {
+    "source": {
+      "type": "registry",
+      "id": "https://github.com/AsheraCordova/CSSBorder"
+    },
+    "is_top_level": true,
+    "variables": {}
+  },
+  "com.ashera.datetime": {
+    "source": {
+      "type": "registry",
+      "id": "https://github.com/AsheraCordova/DateTime"
+    },
+    "is_top_level": true,
+    "variables": {}
+  },
+  "com.ashera.drawerlayout": {
+    "source": {
+      "type": "registry",
+      "id": "https://github.com/AsheraCordova/Drawer"
+    },
+    "is_top_level": true,
+    "variables": {}
+  },
+  "com.ashera.gridlayout": {
+    "source": {
+      "type": "registry",
+      "id": "https://github.com/AsheraCordova/GridLayout"
+    },
+    "is_top_level": true,
+    "variables": {}
+  },
+  "com.ashera.recycleview": {
+    "source": {
+      "type": "registry",
+      "id": "https://github.com/AsheraCordova/RecycleView"
+    },
+    "is_top_level": true,
+    "variables": {}
+  },
+  "com.ashera.toolbar": {
+    "source": {
+      "type": "registry",
+      "id": "https://github.com/AsheraCordova/Toolbar"
+    },
+    "is_top_level": true,
+    "variables": {}
+  },
+  "com.ashera.iqkeyboardmanager.ios": {
+    "source": {
+      "type": "registry",
+      "id": "https://github.com/AsheraCordova/IQkeyboardManager"
+    },
+    "is_top_level": true,
+    "variables": {}
+  },
+  "com.ashera.shutterbug": {
+    "source": {
+      "type": "registry",
+      "id": "https://github.com/AsheraCordova/ShutterBug"
+    },
+    "is_top_level": true,
+    "variables": {}
+  },
+  "com.ashera.glide": {
+    "source": {
+      "type": "registry",
+      "id": "https://github.com/AsheraCordova/Glide"
+    },
+    "is_top_level": true,
+    "variables": {}
+  },
+  "com.ashera.sdwebimage.ios": {
+    "source": {
+      "type": "registry",
+      "id": "https://github.com/AsheraCordova/SDWebImagePlugin"
+    },
+    "is_top_level": true,
+    "variables": {}
+  },
+  "cordova-plugin-splashscreen": {
+    "source": {
+      "type": "registry",
+      "id": "cordova-plugin-splashscreen@6.0.2"
+    },
+    "is_top_level": true,
+    "variables": {}
+  },
+  "cordova-plugin-splashscreen-ashera": {
+    "source": {
+      "type": "registry",
+      "id": "https://github.com/AsheraCordova/Splash"
+    },
+    "is_top_level": true,
+    "variables": {}
+  },
+  "com.filfatstudios.spinnerdialog": {
+    "source": {
+      "type": "registry",
+      "id": "https://github.com/AsheraCordova/Dialog"
+    },
+    "is_top_level": true,
+    "variables": {}
+  },
+  "cordova-plugin-camera": {
+    "source": {
+      "type": "registry",
+      "id": "https://github.com/AsheraCordova/cordova-plugin-camera"
+    },
+    "is_top_level": true,
+    "variables": {}
+  },
+  "cordova-plugin-camera-swt": {
+    "source": {
+      "type": "registry",
+      "id": "https://github.com/AsheraCordova/cordova-plugin-camera-swt"
+    },
+    "is_top_level": true,
+    "variables": {}
+  },
+  "cordova-plugin-qrscanner": {
+    "source": {
+      "type": "registry",
+      "id": "https://github.com/AsheraCordova/cordova-plugin-qrscanner"
+    },
+    "is_top_level": true,
+    "variables": {}
+  },
+  "cordova-plugin-qrscanner-swt": {
+    "source": {
+      "type": "registry",
+      "id": "https://github.com/AsheraCordova/cordova-plugin-qrscanner-swt"
+    },
+    "is_top_level": true,
+    "variables": {}
+  },
+  "cordova-plugin-sqlite-2": {
+    "source": {
+      "type": "registry",
+      "id": "cordova-plugin-sqlite-2"
+    },
+    "is_top_level": true,
+    "variables": {}
+  },
+  "cordova-plugin-sqlite-2-swt": {
+    "source": {
+      "type": "registry",
+      "id": "https://github.com/AsheraCordova/cordova-plugin-sqlite-2-swt.git"
+    },
+    "is_top_level": true,
+    "variables": {}
+  },
+  "com.ashera.indexeddbshim": {
+    "source": {
+      "type": "registry",
+      "id": "https://github.com/AsheraCordova/IndexedDB.git"
+    },
+    "is_top_level": true,
+    "variables": {}
+  }
+}

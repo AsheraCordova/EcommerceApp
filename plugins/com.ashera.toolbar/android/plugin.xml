@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<plugin xmlns="http://www.phonegap.com/ns/plugins/1.0"
+        id="com.ashera.toolbar"
+        version="1.0">
+
+  <name>CordovaToolbarPlugin Plugin</name>
+
+  <engines>
+    <engine name="cordova" version=">=3.4.0"/>
+  </engines>
+  
+  
+  <platform name="android">
+    <config-file target="res/xml/config.xml" parent="/*">
+      <feature name="CordovaToolbarPlugin">
+        <param name="android-package" value="com.ashera.toolbar.CordovaToolbarPlugin"/>
+        <param name="onload" value="true" />
+      </feature>
+    </config-file>
+
+   	 <!-- start src -->
+     <source-file src="src/com/ashera/toolbar/CordovaToolbarPlugin.java" target-dir="src/com/ashera/toolbar"/>
+     <source-file src="src/com/ashera/toolbar/ToolbarImpl.java" target-dir="src/com/ashera/toolbar"/>
+     <source-file src="src/com/ashera/toolbar/ToolbarPlugin.java" target-dir="src/com/ashera/toolbar"/>
+     <!-- src end -->
+     <!-- start res -->
+
+     <!-- res end -->
+     <!-- start tsc -->
+     <source-file src="tsc/src/android/widget/ToolbarImpl.ts" target-dir="tsc/src/android/widget"/>
+     <!-- tsc end -->
+  </platform>
+
+
+</plugin>
