@@ -9,6 +9,7 @@
         fragment="Webview"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
+        android:background="@color/bg_color"
         android:orientation="vertical">
 
         <include layout="@layout/toolbar" />
@@ -20,21 +21,21 @@
             android:orientation="vertical">
 
             <WebView
-                zIndex="0"
-                autoInject="true"
                 android:id="@+id/webview"
+                autoInject="true"
                 modelPojoToUi="loadUrl = . from webviewUrl->view;"
                 onPageFinished="showWebView"
+                zIndex="0"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"></WebView>
 
             <ProgressBar
-                zIndex="1"
-                android:layout_gravity="center"
                 android:id="@+id/progressbar"
                 modelPojoToUi="visibility = gone(.) from webviewVisible->view"
+                zIndex="1"
                 android:layout_width="wrap_content"
-                android:layout_height="wrap_content"></ProgressBar>
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"></ProgressBar>
         </FrameLayout>
     </LinearLayout>
 </layout>
