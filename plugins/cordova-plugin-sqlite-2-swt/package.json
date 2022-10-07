@@ -17,7 +17,7 @@
     "#DEV:/",
     "#USER"
   ],
-  "_resolved": "git+https://github.com/AsheraCordova/cordova-plugin-sqlite-2-swt.git#beb98f726fae840ceee9d0f8c103248654f100c3",
+  "_resolved": "git+https://github.com/AsheraCordova/cordova-plugin-sqlite-2-swt.git#c15b8cf4167eff67cf79536660117caf4cd4468b",
   "_spec": "https://github.com/AsheraCordova/cordova-plugin-sqlite-2-swt.git",
   "_where": "D:\\Java\\github_ashera\\EcommerceApp",
   "author": {

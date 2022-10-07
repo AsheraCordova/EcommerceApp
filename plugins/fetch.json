@@ -167,18 +167,18 @@
     "is_top_level": true,
     "variables": {}
   },
-  "cordova-plugin-sqlite-2-swt": {
-    "source": {
-      "type": "registry",
-      "id": "https://github.com/AsheraCordova/cordova-plugin-sqlite-2-swt.git"
-    },
-    "is_top_level": true,
-    "variables": {}
-  },
   "com.ashera.indexeddbshim": {
     "source": {
       "type": "registry",
       "id": "https://github.com/AsheraCordova/IndexedDB.git"
+    },
+    "is_top_level": true,
+    "variables": {}
+  },
+  "cordova-plugin-sqlite-2-swt": {
+    "source": {
+      "type": "registry",
+      "id": "https://github.com/AsheraCordova/cordova-plugin-sqlite-2-swt.git"
     },
     "is_top_level": true,
     "variables": {}

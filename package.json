@@ -69,8 +69,8 @@
       "cordova-plugin-qrscanner": {},
       "cordova-plugin-qrscanner-swt": {},
       "cordova-plugin-sqlite-2": {},
-      "cordova-plugin-sqlite-2-swt": {},
-      "com.ashera.indexeddbshim": {}
+      "com.ashera.indexeddbshim": {},
+      "cordova-plugin-sqlite-2-swt": {}
     }
   }
 }

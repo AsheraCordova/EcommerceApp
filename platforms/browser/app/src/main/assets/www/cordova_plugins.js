@@ -129,7 +129,7 @@ cordova.define('cordova/plugin_list', function(require, exports, module) {
     "cordova-plugin-qrscanner": "3.0.1",
     "cordova-plugin-qrscanner-swt": "1.0",
     "cordova-plugin-sqlite-2": "1.0.6",
-    "cordova-plugin-sqlite-2-swt": "1.0.6",
-    "com.ashera.indexeddbshim": "1.0"
+    "com.ashera.indexeddbshim": "1.0",
+    "cordova-plugin-sqlite-2-swt": "1.0.6"
   };
 });

@@ -75,18 +75,17 @@
             {
               "xml": "<feature name=\"QRScanner\"><param name=\"android-package\" value=\"com.bitpay.cordova.qrscanner.QRScanner\" /></feature>",
               "count": 1
+            },
+            {
+              "xml": "<feature name=\"SQLitePlugin\"><param name=\"android-package\" value=\"com.nolanlawson.cordova.sqlite.SQLitePlugin\" /></feature>",
+              "count": 1
             }
           ]
         }
       },
       "config.xml": {
         "parents": {
-          "/*": [
-            {
-              "xml": "<feature name=\"SQLitePlugin\"><param name=\"android-package\" value=\"com.nolanlawson.cordova.sqlite.SQLitePlugin\" /></feature>",
-              "count": 1
-            }
-          ]
+          "/*": []
         }
       }
     }
@@ -113,8 +112,8 @@
     "cordova-plugin-qrscanner": {},
     "cordova-plugin-qrscanner-swt": {},
     "cordova-plugin-sqlite-2": {},
-    "cordova-plugin-sqlite-2-swt": {},
-    "com.ashera.indexeddbshim": {}
+    "com.ashera.indexeddbshim": {},
+    "cordova-plugin-sqlite-2-swt": {}
   },
   "dependent_plugins": {},
   "modules": [
@@ -203,7 +202,7 @@
     "cordova-plugin-qrscanner": "3.0.1",
     "cordova-plugin-qrscanner-swt": "1.0",
     "cordova-plugin-sqlite-2": "1.0.6",
-    "cordova-plugin-sqlite-2-swt": "1.0.6",
-    "com.ashera.indexeddbshim": "1.0"
+    "com.ashera.indexeddbshim": "1.0",
+    "cordova-plugin-sqlite-2-swt": "1.0.6"
   }
 }

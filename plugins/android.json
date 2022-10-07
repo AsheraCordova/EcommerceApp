@@ -71,10 +71,10 @@
     "cordova-plugin-sqlite-2": {
       "PACKAGE_NAME": "com.ashera.ecommerce"
     },
-    "cordova-plugin-sqlite-2-swt": {
+    "com.ashera.indexeddbshim": {
       "PACKAGE_NAME": "com.ashera.ecommerce"
     },
-    "com.ashera.indexeddbshim": {
+    "cordova-plugin-sqlite-2-swt": {
       "PACKAGE_NAME": "com.ashera.ecommerce"
     }
   },
