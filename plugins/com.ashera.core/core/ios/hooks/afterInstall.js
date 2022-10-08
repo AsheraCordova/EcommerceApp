@@ -17,7 +17,7 @@ module.exports = (context) => {
 	myProj = xcode.project(projectPath);
 	var plistPath = "platforms/ios/" + appName + "/" + appName + "-Info.plist";
 	var fontPath = "platforms/android/app/src/main/res/font";
-	fs.copyFileSync("plugins/com.ashera.core.ios/build.xml", "platforms/ios/build.xml");
+	//fs.copyFileSync("plugins/com.ashera.core.ios/build.xml", "platforms/ios/build.xml");
 	
 	//27E45212286452BC00FEBE6F /* color */ = {isa = PBXFileReference; lastKnownFileType = folder; name = color; path = resources/color; sourceTree = "<group>"; };
 	myProj.parse(function (err) {

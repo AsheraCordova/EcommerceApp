@@ -10,7 +10,7 @@
   </engines>
   
   <platform name="ios">
-	<framework src="ios/IQKeyboardManager" type="podspec" spec="~> 6.5.6" />
+	<framework src="IQKeyboardManager" type="podspec" spec="~> 6.5.6" />
   	
     <config-file target="config.xml" parent="/widget">
       <feature name="CordovaIQkeyboardManagerPlugin">

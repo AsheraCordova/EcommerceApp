@@ -973,7 +973,6 @@
      <source-file src="converter/ios/ios/src/TransformCommandConverter.m" target-dir="ConverterPlugin/ios/src" compiler-flags="-fobjc-arc-exceptions"/>
      <!-- ios end -->
      <!-- start Plugin_Converter -->
-     <source-file src="converter/ios/library/Plugin_Converter/src/.DS_Store" target-dir="ConverterPlugin/Plugin_Converter/src"/>
      <header-file src="converter/ios/library/Plugin_Converter/src/AbstractBitFlagConverter.h" target-dir="ConverterPlugin/Plugin_Converter/src"/>
      <source-file src="converter/ios/library/Plugin_Converter/src/AbstractBitFlagConverter.m" target-dir="ConverterPlugin/Plugin_Converter/src" compiler-flags="-fno-objc-arc"/>
      <header-file src="converter/ios/library/Plugin_Converter/src/AbstractEnumToIntArrayConverter.h" target-dir="ConverterPlugin/Plugin_Converter/src"/>

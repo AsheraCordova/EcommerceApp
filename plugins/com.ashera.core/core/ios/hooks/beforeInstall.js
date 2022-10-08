@@ -44,7 +44,7 @@ var filestoreplace = [
 
 var filestoappend = [
 	"platforms/ios/cordova/build-debug.xcconfig",
-    'J2OBJC_HOME=/Users/ramm/Documents/JAVA/j2objc-2.7',
+    'J2OBJC_HOME=/Library/j2objc',
 	"platforms/ios/cordova/build-debug.xcconfig",
     'HEADER_SEARCH_PATHS = $(inherited) "${J2OBJC_HOME}/include" "${DERIVED_FILES_DIR}";',
 	"platforms/ios/cordova/build-debug.xcconfig",
