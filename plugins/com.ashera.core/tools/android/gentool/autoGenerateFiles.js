@@ -312,6 +312,8 @@ function runXSLTOnStr(xmlString, xslPath, outputFilePath, removeDuplicateLines, 
 	let text = xsltProcess(xml, xslt); // outXmlString: output xml string.
 	//console.log(outputFilePath);
 
+	text = text.replace(/&amp;lt;/gi, "<");
+	text = text.replace(/&amp;gt;/gi, ">");
 	text = text.replace(/&gt;/gi, ">");
 	text = text.replace(/&lt;/gi, "<");	
 
