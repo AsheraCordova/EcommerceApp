@@ -12,4 +12,5 @@
 	<preference name="AndroidXEnabled" value="true" />
 	<preference name="SplashMaintainAspectRatio" value="true" />
 	<preference name="webScaleFactor" value="1.4" />
+	<preference name="iosHidetoolbar" value="true" />
 </widget>
