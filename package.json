@@ -34,6 +34,8 @@
     "com.ashera.toolbar": "git+https://github.com/AsheraCordova/Toolbar.git",
     "com.filfatstudios.spinnerdialog": "git+https://github.com/AsheraCordova/Dialog.git",
     "cordova-android": "^10.1.2",
+    "cordova-ios": "^6.2.0",
+    "cordova-plugin-add-swift-support": "^2.0.2",
     "cordova-plugin-camera": "git+https://github.com/AsheraCordova/cordova-plugin-camera.git",
     "cordova-plugin-camera-swt": "git+https://github.com/AsheraCordova/cordova-plugin-camera-swt.git",
     "cordova-plugin-qrscanner": "git+https://github.com/AsheraCordova/cordova-plugin-qrscanner.git",
@@ -48,7 +50,8 @@
     "platforms": [
       "android",
       "swt",
-      "browser"
+      "browser",
+      "ios"
     ],
     "plugins": {
       "com.ashera.core": {},
