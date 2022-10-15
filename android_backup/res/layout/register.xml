@@ -1,0 +1,222 @@
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data></data>
+
+    <LinearLayout
+        fragment="Register"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/bg_color"
+        android:orientation="vertical">
+
+        <include layout="@layout/toolbar" />
+
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_below="@+id/toolbar"
+            android:fillViewport="true">
+
+            <RelativeLayout
+                android:id="@+id/registrationForm"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_centerInParent="true"
+                    android:layout_marginLeft="30dp"
+                    android:layout_marginRight="30dp"
+                    android:orientation="vertical">
+
+                    <ImageView
+                        android:layout_width="150dp"
+                        android:layout_height="150dp"
+                        android:layout_gravity="center"
+                        android:layout_marginTop="20dp"
+                        android:layout_marginBottom="20dp"
+                        android:adjustViewBounds="true"
+                        android:src="@drawable/ashera_logo_no_resize" />
+
+                    <LinearLayout
+                        weightSum="2"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal">
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:orientation="vertical">
+
+                            <EditText
+                                android:id="@+id/firstName"
+                                style="@style/form_edittext_style"
+                                formGroupId="defaultForm"
+                                hintTextFormat="@string/mandatory_format"
+                                validation="required"
+                                validationErrorDisplayType="label"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:hint="@string/first_name"
+                                android:text=""></EditText>
+
+                            <TextView
+                                android:id="@+id/firstNameError"
+                                style="@style/h3_red_300"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:visibility="gone"></TextView>
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:orientation="vertical">
+
+                            <EditText
+                                android:id="@+id/lastName"
+                                style="@style/form_edittext_style"
+                                formGroupId="defaultForm"
+                                hintTextFormat="@string/mandatory_format"
+                                validation="required"
+                                validationErrorDisplayType="label"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:hint="@string/last_name"
+                                android:text=""></EditText>
+
+                            <TextView
+                                android:id="@+id/lastNameError"
+                                style="@style/h3_red_300"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:visibility="gone"></TextView>
+                        </LinearLayout>
+                    </LinearLayout>
+
+                    <com.ashera.datetime.DatePicker
+                        android:id="@+id/dateOfBirth"
+                        formGroupId="defaultForm"
+                        hintTextFormat="@string/mandatory_format"
+                        showClearButton="true"
+                        validation="required,date(dd/MM/yyyy)"
+                        validationErrorDisplayType="label"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:hint="@string/date_of_birth_dd_mm_yyyy"></com.ashera.datetime.DatePicker>
+
+                    <TextView
+                        android:id="@+id/dateOfBirthError"
+                        style="@style/h3_red_300"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:visibility="gone"></TextView>
+
+                    <EditText
+                        android:id="@+id/phoneNumber"
+                        style="@style/form_edittext_style"
+                        formGroupId="defaultForm"
+                        hintTextFormat="@string/mandatory_format"
+                        validation="required,mobilenumber"
+                        validationErrorDisplayType="label"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:hint="Mobile Number"
+                        android:inputType="phone"
+                        android:text=""></EditText>
+
+                    <TextView
+                        android:id="@+id/phoneNumberError"
+                        style="@style/h3_red_300"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:visibility="gone"></TextView>
+
+                    <EditText
+                        android:id="@+id/emailId"
+                        style="@style/form_edittext_style"
+                        formGroupId="defaultForm"
+                        hintTextFormat="@string/mandatory_format"
+                        validation="required,email"
+                        validationErrorDisplayType="label"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:hint="@string/email"
+                        android:text="" />
+
+                    <TextView
+                        android:id="@+id/emailIdError"
+                        style="@style/h3_red_300"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:visibility="gone"></TextView>
+
+                    <EditText
+                        android:id="@+id/password"
+                        style="@style/form_password_style"
+                        formGroupId="defaultForm"
+                        hintTextFormat="@string/mandatory_format"
+                        validation="required,strongpassword"
+                        validationErrorDisplayType="label"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:hint="@string/password"
+                        android:inputType="textPassword"
+                        android:text=""></EditText>
+
+                    <TextView
+                        android:id="@+id/passwordError"
+                        style="@style/h3_red_300"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:visibility="gone"></TextView>
+
+                    <CheckBox
+                        android:id="@+id/agreeTerms"
+                        formGroupId="defaultForm"
+                        modelPojoToUi="checked = . from terms->view"
+                        modelSyncEvents="onCheckedChange"
+                        modelUiToPojo=". = checked into terms->view as bool"
+                        onCheckedChange="termsAndConditionsDialog(terms = . from terms->view)"
+                        validation="required"
+                        validationErrorDisplayType="label"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="10dp"
+                        android:layout_marginBottom="10dp"
+                        android:text="@string/agree_to_terms_and_conditions"></CheckBox>
+
+                    <TextView
+                        android:id="@+id/agreeTermsError"
+                        style="@style/h3_red_300"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:visibility="gone"></TextView>
+
+                    <TextView
+                        android:id="@+id/submit"
+                        style="@style/button_style"
+                        autoInject="true"
+                        onClick="registration"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_marginTop="10dp"
+                        android:layout_marginBottom="10dp"
+                        android:gravity="center"
+                        android:paddingHorizontal="40dp"
+                        android:text="@string/sign_up"></TextView>
+
+                </LinearLayout>
+
+            </RelativeLayout>
+        </ScrollView>
+    </LinearLayout>
+
+</layout>

@@ -1,0 +1,38 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/MainCategory"
+    style="@style/category"
+    swtAttachEventBubbler="mouseup"
+    invalidateOnFrameChange="true"
+    onClick="applyMainFilter(model = . from item->loopvar)"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:padding="10dp"
+    android:layout_gravity="center"
+    android:layout_marginRight="5dp"
+    android:gravity="center"
+    modelPojoToUi="selected = selected from item->loopvar;"
+    android:background="@drawable/tab_selector"
+    android:orientation="vertical"
+    tools:ignore="MissingPrefix,OnClick">
+
+    <ImageView
+        modelPojoToUi="src = image from item->loopvar"
+        android:src="@drawable/category_bbq"
+        android:id="@+id/mainCategoryImage"
+        android:layout_width="wrap_content"
+        android:layout_height="25dp"
+        android:adjustViewBounds="true"
+        android:layout_gravity="center"
+        android:scaleType="centerInside"></ImageView>
+
+    <TextView
+        android:textSize="@dimen/font_small"
+        android:textColor="@color/tab_text_selector"
+        modelPojoToUi="text = name from item->loopvar; selected = selected from item->loopvar;"
+        android:id="@+id/MainCategoryName"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Name"></TextView>
+</LinearLayout>

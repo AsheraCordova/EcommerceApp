@@ -1,0 +1,113 @@
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data></data>
+
+    <ScrollView
+        fragment="Selectstore"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/bg_color"
+        android:fillViewport="true">
+
+        <RelativeLayout
+            android:id="@+id/root"
+            autoInject="true"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:orientation="vertical">
+
+                <ImageView
+                    android:layout_width="150dp"
+                    android:layout_height="150dp"
+                    android:layout_gravity="center"
+                    android:adjustViewBounds="true"
+                    android:src="@drawable/ashera_logo_no_resize" />
+
+                <ImageView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_marginBottom="20dp"
+                    android:scaleType="centerCrop"
+                    android:src="@drawable/selectlocation_city_store" />
+
+
+                <LinearLayout
+                    borderColor="#fff"
+                    borderWidth="1dp"
+                    onClick="showSelectStoreDialog"
+                    swtAttachEventBubbler="mouseup"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:orientation="horizontal"
+                    android:padding="10dp">
+
+                    <ImageView
+                        android:id="@+id/storeImage"
+                        android:layout_width="20dp"
+                        android:layout_height="20dp"
+                        android:layout_marginRight="10dp"
+                        android:src="@drawable/selectlocation_store" />
+
+                    <TextView
+                        android:id="@+id/selectStoreText"
+                        style="@style/h2_white"
+                        modelPojoToUi="text = name from store->session"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginRight="30dp"
+                        android:text="@string/select_a_store"></TextView>
+
+                    <ImageView
+                        android:layout_width="20dp"
+                        android:layout_height="20dp"
+                        android:scaleType="centerInside"
+                        android:src="@drawable/common_arrow" />
+                </LinearLayout>
+
+
+                <LinearLayout
+                    android:id="@+id/letsGo"
+                    style="@style/button_style"
+                    modelPojoToUi="visibility = visible(.) from store->session"
+                    onClick="goToDashBoard"
+                    swtAttachEventBubbler="mouseup"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_marginTop="30dp"
+                    android:gravity="center"
+                    android:orientation="horizontal"
+                    android:paddingHorizontal="40dp"
+                    android:paddingVertical="5dp"
+                    android:visibility="gone">
+
+                    <TextView
+                        style="@style/h2_red"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:gravity="center"
+                        android:text="@string/let_s_go"></TextView>
+
+                    <ImageView
+
+                        android:id="@+id/arrowImage"
+                        android:layout_width="10dp"
+                        android:layout_height="10dp"
+                        android:layout_marginLeft="5dp"
+                        android:src="@drawable/selectlocation_letsgo_arw" />
+                </LinearLayout>
+
+            </LinearLayout>
+
+        </RelativeLayout>
+    </ScrollView>
+</layout>
