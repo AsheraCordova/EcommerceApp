@@ -1,7 +1,0 @@
-<layout xmlns:app="http://schemas.android.com/apk/res-auto"
-    adapter="simple">
-    <item
-        layout="@layout/order_preview_cart_item"
-        viewHolderIds="name,quantity,Price,increment,decrement,deleteItem" />
-    <footer layout="@layout/order_preview_cart_footer" viewHolderIds="grandTotal"></footer>
-</layout>

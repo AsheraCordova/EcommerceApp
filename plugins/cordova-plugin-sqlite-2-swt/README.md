@@ -1,1 +1,0 @@
-# cordova-plugin-sqlite-2-swt

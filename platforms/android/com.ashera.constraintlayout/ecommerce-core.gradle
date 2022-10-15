@@ -1,9 +1,0 @@
-repositories {
-    mavenLocal();
-    google();
-    jcenter();
-}
-
-dependencies {
-	implementation group: 'androidx.constraintlayout', name: 'constraintlayout', version: '2.1.0'
-}
