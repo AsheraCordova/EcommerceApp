@@ -5,10 +5,10 @@
   "description": "A sample Apache Cordova application that responds to the deviceready event.",
   "main": "index.js",
   "scripts": {
-	"swt-run": "cd platforms/swt/app && gradle run",
-	"browser-run": "cd platforms/browser/app && gradle execute && cd src/main/assets/www && http-server",
-	"generate-platform-res": "cd platforms/android/app/src/main/gentool && npm install && npm run resize && npm run start",
-	"generate-platform-js": "cd platforms/android/app/src/main/tsc && npm install && npm run build",
+    "swt-run": "cd platforms/swt/app && gradle run",
+    "browser-run": "cd platforms/browser/app && gradle execute && cd src/main/assets/www && http-server",
+    "generate-platform-res": "cd platforms/android/app/src/main/gentool && npm install && npm run resize && npm run start",
+    "generate-platform-js": "cd platforms/android/app/src/main/tsc && npm install && npm run build",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "keywords": [
@@ -32,22 +32,24 @@
     "com.ashera.sdwebimage.ios": "git+https://github.com/AsheraCordova/SDWebImagePlugin.git",
     "com.ashera.shutterbug": "git+https://github.com/AsheraCordova/ShutterBug.git",
     "com.ashera.toolbar": "git+https://github.com/AsheraCordova/Toolbar.git",
+    "com.filfatstudios.spinnerdialog": "git+https://github.com/AsheraCordova/Dialog.git",
     "cordova-android": "^10.1.2",
     "cordova-plugin-camera": "git+https://github.com/AsheraCordova/cordova-plugin-camera.git",
+    "cordova-plugin-camera-swt": "git+https://github.com/AsheraCordova/cordova-plugin-camera-swt.git",
     "cordova-plugin-qrscanner": "git+https://github.com/AsheraCordova/cordova-plugin-qrscanner.git",
     "cordova-plugin-qrscanner-swt": "git+https://github.com/AsheraCordova/cordova-plugin-qrscanner-swt.git",
     "cordova-plugin-splashscreen": "^6.0.2",
-    "cordova-plugin-splashscreen-web": "git+https://github.com/AsheraCordova/Splash.git",
+    "cordova-plugin-splashscreen-ashera": "git+https://github.com/AsheraCordova/Splash.git",
     "cordova-plugin-sqlite-2": "^1.0.7",
     "cordova-plugin-sqlite-2-swt": "git+https://github.com/AsheraCordova/cordova-plugin-sqlite-2-swt.git",
-    "rds-spinner": "git+https://github.com/AsheraCordova/Dialog.git",
     "swt": "git+https://github.com/AsheraCordova/cordova-swt.git"
   },
   "cordova": {
     "platforms": [
       "android",
       "swt",
-      "browser"
+      "browser",
+	  "ios"
     ],
     "plugins": {
       "com.ashera.core": {},
@@ -66,14 +68,12 @@
       "cordova-plugin-splashscreen": {},
       "cordova-plugin-splashscreen-ashera": {},
       "com.filfatstudios.spinnerdialog": {},
-      "cordova-plugin-camera": {
-        "ANDROIDX_CORE_VERSION": "1.6.+"
-      },
+      "cordova-plugin-camera": {},
       "cordova-plugin-camera-swt": {},
       "cordova-plugin-qrscanner": {},
       "cordova-plugin-qrscanner-swt": {},
-      "cordova-plugin-sqlite-2": {},
       "com.ashera.indexeddbshim": {},
+      "cordova-plugin-sqlite-2": {},
       "cordova-plugin-sqlite-2-swt": {}
     }
   }
