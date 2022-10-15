@@ -48,8 +48,7 @@
     "platforms": [
       "android",
       "swt",
-      "browser",
-	  "ios"
+      "browser"
     ],
     "plugins": {
       "com.ashera.core": {},
