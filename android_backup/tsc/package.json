@@ -43,6 +43,7 @@
     "moment": "^2.29.4",
     "reflect-metadata": "^0.1.12",
     "ts-bus": "^2.3.1",
-    "ts-mixer": "^5.3.0"
+    "ts-mixer": "^5.3.0",
+	"ts-dedent": "^2.2.0"
   }
 }

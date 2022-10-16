@@ -2,6 +2,7 @@ import Adapter from './Adapter';
 import { plainToClass, plainToInstance } from 'class-transformer';
 import { User, Notification, RegistrationScreenData, Registration, PasswordUpdate, Menu, Category, Order, Store } from "../Model";
 import DatabaseAdapter from './DatabaseAdapter';
+import dedent from "ts-dedent";
 
 function sleep(ms: number) {
     return new Promise(resolve => setTimeout(resolve, ms));
@@ -36,7 +37,7 @@ export default class MockAdapter implements Adapter {
                 [
                     {
                         "id": "0", "title": "Membership 1", "desc": "Best for starters between age 18 & 20",
-                        "details": `<span textStyle="bold">THE MEMBERSHIP FEE FOR ACQUIRING MEMBERSHIP 1 IS 1 INR INCLUSIVE OF GST</span>
+                        "details": dedent(`<span textStyle="bold">THE MEMBERSHIP FEE FOR ACQUIRING MEMBERSHIP 1 IS 1 INR INCLUSIVE OF GST</span>
                 <br><br>
                 <ul>
                 <li>Nulla pharetra metus ac ligula aliquam lacinia.</li>
@@ -44,26 +45,26 @@ export default class MockAdapter implements Adapter {
                 <li>Curabitur luctus purus eu purus laoreet egestas.</li>
                 <li>In vestibulum leo sit amet pellentesque rhoncus.</li>
                 <li>Mauris vel lectus sed tortor luctus sollicitudin at a nibh.</li>
-                </ul>`},
+                </ul>`)},
                     {
                         "id": "1", "title": "Membership 2", "desc": "Lot of facilities",
-                        "details": `<span textStyle="bold">THE MEMBERSHIP FEE FOR ACQUIRING MEMBERSHIP 2 IS 5 INR inclusive of GST</span>
+                        "details": dedent(`<span textStyle="bold">THE MEMBERSHIP FEE FOR ACQUIRING MEMBERSHIP 2 IS 5 INR inclusive of GST</span>
                 <br><br>
                 <ul>
                     <li>Morbi a sapien eget leo gravida vulputate.</li>
                     <li>Curabitur vestibulum lacus sit amet mauris dictum hendrerit.</li>
                     <li>Donec dictum orci vitae quam semper mollis.</li>
-                </ul>`},
+                </ul>`)},
                     {
                         "id": "2", "title": "Membership 3", "desc": "Lot of facilities",
-                        "details": `<span textStyle="bold">THE MEMBERSHIP FEE FOR ACQUIRING MEMBERSHIP 1 IS 100 INR INCLUSIVE OF GST</span>
+                        "details": dedent(`<span textStyle="bold">THE MEMBERSHIP FEE FOR ACQUIRING MEMBERSHIP 1 IS 100 INR INCLUSIVE OF GST</span>
                 <br><br>
                 <ul>
                 <li>Proin quis magna ac est facilisis scelerisque sit amet at erat.</li>
                 <li>Etiam quis tortor eget ligula bibendum porta.</li>
                 <li>Aenean sollicitudin dolor vel magna cursus, vitae mollis ante mollis.</li>
                 <li>Praesent volutpat orci eu purus consectetur, et congue turpis vestibulum.</li>
-                </ul>`}
+                </ul>`)}
                 ],
             "favDrinks": [{ "id": "", "value": "" }, { "id": "1", "value": "Sprite" }, { "id": "2", "value": "Coco-cola" }, { "id": "3", "value": "Mango Juice" }],
             "favStarters": [{ "id": "", "value": "" }, { "id": "1", "value": "Finger Chips" }, { "id": "2", "value": "Tomato Soup" }],
