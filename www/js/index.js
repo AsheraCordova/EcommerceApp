@@ -7752,9 +7752,10 @@ function () {
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-/* harmony import */ var class_transformer__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! class-transformer */ "./node_modules/class-transformer/esm5/index.js");
+/* harmony import */ var class_transformer__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! class-transformer */ "./node_modules/class-transformer/esm5/index.js");
 /* harmony import */ var _Model__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../Model */ "./src/Model.ts");
 /* harmony import */ var _DatabaseAdapter__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./DatabaseAdapter */ "./src/adapter/DatabaseAdapter.ts");
+/* harmony import */ var ts_dedent__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ts-dedent */ "./node_modules/ts-dedent/esm/index.js");
 var __awaiter = undefined && undefined.__awaiter || function (thisArg, _arguments, P, generator) {
   function adopt(value) {
     return value instanceof P ? value : new P(function (resolve) {
@@ -7902,6 +7903,7 @@ var __generator = undefined && undefined.__generator || function (thisArg, body)
 
 
 
+
 function sleep(ms) {
   return new Promise(function (resolve) {
     return setTimeout(resolve, ms);
@@ -7958,17 +7960,17 @@ function () {
           "id": "0",
           "title": "Membership 1",
           "desc": "Best for starters between age 18 & 20",
-          "details": "<span textStyle=\"bold\">THE MEMBERSHIP FEE FOR ACQUIRING MEMBERSHIP 1 IS 1 INR INCLUSIVE OF GST</span>\n                <br><br>\n                <ul>\n                <li>Nulla pharetra metus ac ligula aliquam lacinia.</li>\n                <li>Duis venenatis ante vel sem eleifend convallis.</li>\n                <li>Curabitur luctus purus eu purus laoreet egestas.</li>\n                <li>In vestibulum leo sit amet pellentesque rhoncus.</li>\n                <li>Mauris vel lectus sed tortor luctus sollicitudin at a nibh.</li>\n                </ul>"
+          "details": (0,ts_dedent__WEBPACK_IMPORTED_MODULE_2__["default"])("<span textStyle=\"bold\">THE MEMBERSHIP FEE FOR ACQUIRING MEMBERSHIP 1 IS 1 INR INCLUSIVE OF GST</span>\n                <br><br>\n                <ul>\n                <li>Nulla pharetra metus ac ligula aliquam lacinia.</li>\n                <li>Duis venenatis ante vel sem eleifend convallis.</li>\n                <li>Curabitur luctus purus eu purus laoreet egestas.</li>\n                <li>In vestibulum leo sit amet pellentesque rhoncus.</li>\n                <li>Mauris vel lectus sed tortor luctus sollicitudin at a nibh.</li>\n                </ul>")
         }, {
           "id": "1",
           "title": "Membership 2",
           "desc": "Lot of facilities",
-          "details": "<span textStyle=\"bold\">THE MEMBERSHIP FEE FOR ACQUIRING MEMBERSHIP 2 IS 5 INR inclusive of GST</span>\n                <br><br>\n                <ul>\n                    <li>Morbi a sapien eget leo gravida vulputate.</li>\n                    <li>Curabitur vestibulum lacus sit amet mauris dictum hendrerit.</li>\n                    <li>Donec dictum orci vitae quam semper mollis.</li>\n                </ul>"
+          "details": (0,ts_dedent__WEBPACK_IMPORTED_MODULE_2__["default"])("<span textStyle=\"bold\">THE MEMBERSHIP FEE FOR ACQUIRING MEMBERSHIP 2 IS 5 INR inclusive of GST</span>\n                <br><br>\n                <ul>\n                    <li>Morbi a sapien eget leo gravida vulputate.</li>\n                    <li>Curabitur vestibulum lacus sit amet mauris dictum hendrerit.</li>\n                    <li>Donec dictum orci vitae quam semper mollis.</li>\n                </ul>")
         }, {
           "id": "2",
           "title": "Membership 3",
           "desc": "Lot of facilities",
-          "details": "<span textStyle=\"bold\">THE MEMBERSHIP FEE FOR ACQUIRING MEMBERSHIP 1 IS 100 INR INCLUSIVE OF GST</span>\n                <br><br>\n                <ul>\n                <li>Proin quis magna ac est facilisis scelerisque sit amet at erat.</li>\n                <li>Etiam quis tortor eget ligula bibendum porta.</li>\n                <li>Aenean sollicitudin dolor vel magna cursus, vitae mollis ante mollis.</li>\n                <li>Praesent volutpat orci eu purus consectetur, et congue turpis vestibulum.</li>\n                </ul>"
+          "details": (0,ts_dedent__WEBPACK_IMPORTED_MODULE_2__["default"])("<span textStyle=\"bold\">THE MEMBERSHIP FEE FOR ACQUIRING MEMBERSHIP 1 IS 100 INR INCLUSIVE OF GST</span>\n                <br><br>\n                <ul>\n                <li>Proin quis magna ac est facilisis scelerisque sit amet at erat.</li>\n                <li>Etiam quis tortor eget ligula bibendum porta.</li>\n                <li>Aenean sollicitudin dolor vel magna cursus, vitae mollis ante mollis.</li>\n                <li>Praesent volutpat orci eu purus consectetur, et congue turpis vestibulum.</li>\n                </ul>")
         }],
         "favDrinks": [{
           "id": "",
@@ -8201,7 +8203,7 @@ function () {
           case 1:
             _a.sent();
 
-            user = (0,class_transformer__WEBPACK_IMPORTED_MODULE_2__.plainToClass)(_Model__WEBPACK_IMPORTED_MODULE_0__.User, this.mockData.user);
+            user = (0,class_transformer__WEBPACK_IMPORTED_MODULE_3__.plainToClass)(_Model__WEBPACK_IMPORTED_MODULE_0__.User, this.mockData.user);
 
             if (username === '1') {
               user.status = "Registered";
@@ -8231,7 +8233,7 @@ function () {
 
             return [2
             /*return*/
-            , (0,class_transformer__WEBPACK_IMPORTED_MODULE_2__.plainToClass)(_Model__WEBPACK_IMPORTED_MODULE_0__.RegistrationScreenData, this.mockData.registrationScreenData)];
+            , (0,class_transformer__WEBPACK_IMPORTED_MODULE_3__.plainToClass)(_Model__WEBPACK_IMPORTED_MODULE_0__.RegistrationScreenData, this.mockData.registrationScreenData)];
         }
       });
     });
@@ -8251,7 +8253,7 @@ function () {
 
             return [2
             /*return*/
-            , (0,class_transformer__WEBPACK_IMPORTED_MODULE_2__.plainToClass)(_Model__WEBPACK_IMPORTED_MODULE_0__.Notification, this.mockData.notifications)];
+            , (0,class_transformer__WEBPACK_IMPORTED_MODULE_3__.plainToClass)(_Model__WEBPACK_IMPORTED_MODULE_0__.Notification, this.mockData.notifications)];
         }
       });
     });
@@ -8271,7 +8273,7 @@ function () {
 
             return [2
             /*return*/
-            , (0,class_transformer__WEBPACK_IMPORTED_MODULE_2__.plainToClass)(_Model__WEBPACK_IMPORTED_MODULE_0__.Order, this.mockData.orders)];
+            , (0,class_transformer__WEBPACK_IMPORTED_MODULE_3__.plainToClass)(_Model__WEBPACK_IMPORTED_MODULE_0__.Order, this.mockData.orders)];
         }
       });
     });
@@ -8291,7 +8293,7 @@ function () {
 
             return [2
             /*return*/
-            , (0,class_transformer__WEBPACK_IMPORTED_MODULE_2__.plainToClass)(_Model__WEBPACK_IMPORTED_MODULE_0__.Store, this.mockData.stores)];
+            , (0,class_transformer__WEBPACK_IMPORTED_MODULE_3__.plainToClass)(_Model__WEBPACK_IMPORTED_MODULE_0__.Store, this.mockData.stores)];
         }
       });
     });
@@ -59524,6 +59526,68 @@ var EventBus_1 = __webpack_require__(/*! ./EventBus */ "./node_modules/ts-bus/Ev
 exports.EventBus = EventBus_1.EventBus;
 exports.defineEvent = EventBus_1.defineEvent;
 exports.createEventDefinition = EventBus_1.createEventDefinition;
+
+/***/ }),
+
+/***/ "./node_modules/ts-dedent/esm/index.js":
+/*!*********************************************!*\
+  !*** ./node_modules/ts-dedent/esm/index.js ***!
+  \*********************************************/
+/***/ (function(__unused_webpack_module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "dedent": function() { return /* binding */ dedent; }
+/* harmony export */ });
+function dedent(templ) {
+  var values = [];
+
+  for (var _i = 1; _i < arguments.length; _i++) {
+    values[_i - 1] = arguments[_i];
+  }
+
+  var strings = Array.from(typeof templ === 'string' ? [templ] : templ);
+  strings[strings.length - 1] = strings[strings.length - 1].replace(/\r?\n([\t ]*)$/, '');
+  var indentLengths = strings.reduce(function (arr, str) {
+    var matches = str.match(/\n([\t ]+|(?!\s).)/g);
+
+    if (matches) {
+      return arr.concat(matches.map(function (match) {
+        var _a, _b;
+
+        return (_b = (_a = match.match(/[\t ]/g)) === null || _a === void 0 ? void 0 : _a.length) !== null && _b !== void 0 ? _b : 0;
+      }));
+    }
+
+    return arr;
+  }, []);
+
+  if (indentLengths.length) {
+    var pattern_1 = new RegExp("\n[\t ]{" + Math.min.apply(Math, indentLengths) + "}", 'g');
+    strings = strings.map(function (str) {
+      return str.replace(pattern_1, '\n');
+    });
+  }
+
+  strings[0] = strings[0].replace(/^\r?\n/, '');
+  var string = strings[0];
+  values.forEach(function (value, i) {
+    var endentations = string.match(/(?:^|\n)( *)$/);
+    var endentation = endentations ? endentations[1] : '';
+    var indentedValue = value;
+
+    if (typeof value === 'string' && value.includes('\n')) {
+      indentedValue = String(value).split('\n').map(function (str, i) {
+        return i === 0 ? str : "" + endentation + str;
+      }).join('\n');
+    }
+
+    string += indentedValue + strings[i + 1];
+  });
+  return string;
+}
+/* harmony default export */ __webpack_exports__["default"] = (dedent);
 
 /***/ }),
 
