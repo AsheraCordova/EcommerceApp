@@ -9,7 +9,13 @@
     "browser-run": "cd platforms/browser/app && gradle execute && cd src/main/assets/www && http-server",
     "generate-platform-res": "cd platforms/android/app/src/main/gentool && npm install && npm run resize && npm run start",
     "generate-platform-js": "cd platforms/android/app/src/main/tsc && npm install && npm run build",
-	"clean-start-windows": "rmdir /s /q platforms node_modules plugins && cordova prepare || cd platforms/android/app/src/main/gentool && npm install && npm run fixIosSymLinks && npm run restore && npm run resize && cd ../tsc && npm install && cd ../gentool && npm run start skip_watch && cd ../tsc && npm run build",
+    "generate-platform-drawable": "cd platforms/android/app/src/main/gentool && npm run resize",
+    "fix-ios-symLinks": "cd platforms/android/app/src/main/gentool && npm run fixIosSymLinks",
+    "update-ios-plist": "cd platforms/android/app/src/main/gentool && npm run plist",
+    "backup-android": "cd platforms/android/app/src/main/gentool && npm run backup",
+    "restore-android": "cd platforms/android/app/src/main/gentool && npm run restore",
+    "clean": "npm install && node cleanup.js",
+    "start-dev": "cordova prepare || cd platforms/android/app/src/main/gentool && npm install && npm run fixIosSymLinks && npm run restore && npm run resize && cd ../tsc && npm install && cd ../gentool && npm run start skip_watch && cd ../tsc && npm run build",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "keywords": [
@@ -17,6 +23,9 @@
   ],
   "author": "Apache Cordova Team",
   "license": "Apache-2.0",
+  "dependencies": {
+    "fs-extra": "^10.1.0"
+  },
   "devDependencies": {
     "browser": "git+https://github.com/AsheraCordova/cordova-web.git",
     "com.ashera.capinsets": "git+https://github.com/AsheraCordova/CapInsets.git",
