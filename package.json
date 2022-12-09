@@ -5,8 +5,9 @@
   "description": "A sample Apache Cordova application that responds to the deviceready event.",
   "main": "index.js",
   "scripts": {
-    "swt": "cd platforms/swt/app && gradle run $GRADLE_ARGS",
-    "browser": "cd platforms/browser/app && gradle execute $GRADLE_ARGS && cd src/main/assets/www && http-server",
+    "swt": "cd platforms/swt/app && gradle run",
+    "browser-prepare": "cd platforms/browser/app && gradle execute",
+	"browser": "cd src/main/assets/www && npm install -g http-server && http-server",
     "generate-platform-res": "cd platforms/android/app/src/main/gentool && npm install && npm run resize && npm run start",
     "generate-platform-js": "cd platforms/android/app/src/main/tsc && npm install && npm run build",
     "generate-platform-drawable": "cd platforms/android/app/src/main/gentool && npm run resize",
