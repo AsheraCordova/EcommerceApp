@@ -7,7 +7,7 @@
   "scripts": {
     "swt": "cd platforms/swt/app && gradle run",
     "prebrowser": "cd platforms/browser/app && gradle execute",
-	"browser": "cd platforms/browser/app/src/main/assets/www && npm install -g http-server && http-server",
+    "browser": "cd platforms/browser/app/src/main/assets/www && npm install -g http-server && http-server",
     "generate-platform-res": "cd platforms/android/app/src/main/gentool && npm install && npm run resize && npm run start",
     "generate-platform-js": "cd platforms/android/app/src/main/tsc && npm install && npm run build",
     "generate-platform-drawable": "cd platforms/android/app/src/main/gentool && npm run resize",

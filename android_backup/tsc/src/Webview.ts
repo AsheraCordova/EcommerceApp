@@ -1,8 +1,8 @@
-
-//start - import
 import { Fragment, Inject } from './app/Fragment';
 import { NavController, InjectController } from './navigation/NavController';
 import { ScopedObject } from './app/ScopedObject';
+
+//start - import
 
 import { WebView } from './android/widget/WebViewImpl';
 
