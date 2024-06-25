@@ -206,6 +206,7 @@ export class OnClickEvent implements Event {
   action: string;
   eventType: string;
   event: string;
+  parentFragments: string;
 }
 
 export class CategorySelectionEvent extends OnClickEvent {
