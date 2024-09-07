@@ -5,18 +5,18 @@
   "description": "A sample Apache Cordova application that responds to the deviceready event.",
   "main": "index.js",
   "scripts": {
+    "clean": "npm install && node cleanup.js",
     "swt": "cd platforms/swt/app && gradle run",
     "prebrowser": "cd platforms/browser/app && gradle execute",
     "browser": "cd platforms/browser/app/src/main/assets/www && npm install -g http-server && http-server",
-    "generate-platform-res": "cd platforms/android/app/src/main/gentool && npm install && npm run resize && npm run start",
-    "generate-platform-js": "cd platforms/android/app/src/main/tsc && npm install && npm run build",
+    "generate-platform-res": "cd platforms/android/app/src/main/gentool && npm install --legacy-peer-deps && npm run resize && npm run start",
+    "generate-platform-js": "cd platforms/android/app/src/main/tsc && npm install --legacy-peer-deps && npm run build",
     "generate-platform-drawable": "cd platforms/android/app/src/main/gentool && npm run resize",
     "fix-ios-symLinks": "cd platforms/android/app/src/main/gentool && npm run fixIosSymLinks",
     "update-ios-plist": "cd platforms/android/app/src/main/gentool && npm run plist",
     "backup-android": "cd platforms/android/app/src/main/gentool && npm run backup",
     "restore-android": "cd platforms/android/app/src/main/gentool && npm run restore",
-    "clean": "npm install && node cleanup.js",
-    "start-dev": "cd platforms/android/app/src/main/gentool && npm install && npm run fixIosSymLinks && npm run restore && npm run resize && cd ../tsc && npm install && cd ../gentool && npm run start skip_watch && cd ../tsc && npm run build",
+    "start-dev": "cd platforms/android/app/src/main/gentool && npm install --legacy-peer-deps && npm run fixIosSymLinks && npm run restore && npm run resize && cd ../tsc && npm install --legacy-peer-deps && cd ../gentool && npm run start skip_watch && cd ../tsc && npm run build",	  
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "keywords": [
@@ -44,18 +44,20 @@
     "com.ashera.shutterbug": "git+https://github.com/AsheraCordova/ShutterBug.git",
     "com.ashera.toolbar": "git+https://github.com/AsheraCordova/Toolbar.git",
     "com.filfatstudios.spinnerdialog": "git+https://github.com/AsheraCordova/Dialog.git",
-    "cordova-android": "^10.1.2",
-    "cordova-ios": "^6.2.0",
+    "cordova-android": "^13.0.0",
+    "cordova-ios": "^7.1.1",
     "cordova-plugin-add-swift-support": "^2.0.2",
     "cordova-plugin-camera": "git+https://github.com/AsheraCordova/cordova-plugin-camera.git",
     "cordova-plugin-camera-swt": "git+https://github.com/AsheraCordova/cordova-plugin-camera-swt.git",
     "cordova-plugin-qrscanner": "git+https://github.com/AsheraCordova/cordova-plugin-qrscanner.git",
     "cordova-plugin-qrscanner-swt": "git+https://github.com/AsheraCordova/cordova-plugin-qrscanner-swt.git",
-    "cordova-plugin-splashscreen": "^6.0.2",
+    "cordova-plugin-splashscreen": "git+https://github.com/apache/cordova-plugin-splashscreen.git",
     "cordova-plugin-splashscreen-ashera": "git+https://github.com/AsheraCordova/Splash.git",
     "cordova-plugin-sqlite-2": "^1.0.7",
     "cordova-plugin-sqlite-2-swt": "git+https://github.com/AsheraCordova/cordova-plugin-sqlite-2-swt.git",
-    "swt": "git+https://github.com/AsheraCordova/cordova-swt.git"
+    "swt": "git+https://github.com/AsheraCordova/cordova-swt.git",
+    "cordova-plugin-dialogs": "^2.0.2",
+    "cordova-plugin-dialogs-ashera": "git+https://github.com/AsheraCordova/BrowserDialogs.git"
   },
   "cordova": {
     "platforms": [
@@ -87,7 +89,9 @@
       "cordova-plugin-qrscanner-swt": {},
       "com.ashera.indexeddbshim": {},
       "cordova-plugin-sqlite-2": {},
-      "cordova-plugin-sqlite-2-swt": {}
+      "cordova-plugin-sqlite-2-swt": {},
+      "cordova-plugin-dialogs": {},
+      "cordova-plugin-dialogs-ashera": {}
     }
   }
 }
