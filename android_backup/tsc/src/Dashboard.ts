@@ -276,8 +276,9 @@ export default class Dashboard extends Fragment
 
     async logout() {
         let confirmMsg = LocaleManager.getInstance().translate("@string/confirm_logout");
-        DialogHelper.confirm(confirmMsg, async(flag: any) => {
-            if (flag) {
+        DialogHelper.confirm(confirmMsg, async(index: number) => {      
+            alert(index);      
+            if (index == 1) {
                 await this.navController.navigateAsTop(login, 
                     new ScopedObject("login->view as map", {})).executeCommand(); 
             }

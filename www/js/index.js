@@ -833,12 +833,13 @@ var Dashboard = /** @class */function (_super) {
       var _this = this;
       return __generator(this, function (_a) {
         confirmMsg = _app_LocaleManager__WEBPACK_IMPORTED_MODULE_13__["default"].getInstance().translate("@string/confirm_logout");
-        _helpers_DialogHelper__WEBPACK_IMPORTED_MODULE_14__.DialogHelper.confirm(confirmMsg, function (flag) {
+        _helpers_DialogHelper__WEBPACK_IMPORTED_MODULE_14__.DialogHelper.confirm(confirmMsg, function (index) {
           return __awaiter(_this, void 0, void 0, function () {
             return __generator(this, function (_a) {
               switch (_a.label) {
                 case 0:
-                  if (!flag) return [3 /*break*/, 2];
+                  alert(index);
+                  if (!(index == 1)) return [3 /*break*/, 2];
                   return [4 /*yield*/, this.navController.navigateAsTop(_R_NavGraph__WEBPACK_IMPORTED_MODULE_7__.login, new _app_ScopedObject__WEBPACK_IMPORTED_MODULE_2__.ScopedObject("login->view as map", {})).executeCommand()];
                 case 1:
                   _a.sent();
@@ -4083,12 +4084,12 @@ var OrderPreviewCart = /** @class */function (_super) {
     return __awaiter(this, void 0, void 0, function () {
       var _this = this;
       return __generator(this, function (_a) {
-        _helpers_DialogHelper__WEBPACK_IMPORTED_MODULE_8__.DialogHelper.confirm("Do you want to clear all items in cart?", function (flag) {
+        _helpers_DialogHelper__WEBPACK_IMPORTED_MODULE_8__.DialogHelper.confirm("Do you want to clear all items in cart?", function (index) {
           return __awaiter(_this, void 0, void 0, function () {
             return __generator(this, function (_a) {
               switch (_a.label) {
                 case 0:
-                  if (!flag) return [3 /*break*/, 3];
+                  if (!(index == 1)) return [3 /*break*/, 3];
                   return [4 /*yield*/, _adapter_DatabaseAdapter__WEBPACK_IMPORTED_MODULE_5__["default"].getInstance().clearCart()];
                 case 1:
                   _a.sent();
@@ -4679,12 +4680,12 @@ var Register = /** @class */function (_super) {
       var _this = this;
       return __generator(this, function (_a) {
         if (event.terms) {
-          _helpers_DialogHelper__WEBPACK_IMPORTED_MODULE_5__.DialogHelper.confirm('Please click ok to view the terms and condition.', function (flag) {
+          _helpers_DialogHelper__WEBPACK_IMPORTED_MODULE_5__.DialogHelper.confirm('Please click ok to view the terms and condition.', function (index) {
             return __awaiter(_this, void 0, void 0, function () {
               return __generator(this, function (_a) {
                 switch (_a.label) {
                   case 0:
-                    if (!flag) return [3 /*break*/, 2];
+                    if (!(index == 1)) return [3 /*break*/, 2];
                     return [4 /*yield*/, this.navController.navigateTo(_R_NavGraph__WEBPACK_IMPORTED_MODULE_4__.webview, new _app_ScopedObject__WEBPACK_IMPORTED_MODULE_2__.ScopedObject("webviewVisible->view as bool", false), new _app_ScopedObject__WEBPACK_IMPORTED_MODULE_2__.ScopedObject("webviewTitle->view as string", "@string/terms_and_conditions"), new _app_ScopedObject__WEBPACK_IMPORTED_MODULE_2__.ScopedObject("webviewUrl->view as string", "https://www.lipsum.com/")).executeCommand()];
                   case 1:
                     _a.sent();
