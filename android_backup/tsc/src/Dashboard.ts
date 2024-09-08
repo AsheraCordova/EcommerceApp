@@ -21,6 +21,7 @@ import EventType from './app/EventType';
 import AdapterFactory from './adapter/AdapterFactory';
 import Progress from './decorator/Progress';
 import LocaleManager from './app/LocaleManager';
+import { DialogHelper } from './helpers/DialogHelper';
 
 //start - className
 export default class Dashboard extends Fragment
@@ -275,11 +276,12 @@ export default class Dashboard extends Fragment
 
     async logout() {
         let confirmMsg = LocaleManager.getInstance().translate("@string/confirm_logout");
-        let flag = confirm(confirmMsg);
-        if (flag) {
-            await this.navController.navigateAsTop(login, 
-                new ScopedObject("login->view as map", {})).executeCommand(); 
-        }
+        DialogHelper.confirm(confirmMsg, async(flag: any) => {
+            if (flag) {
+                await this.navController.navigateAsTop(login, 
+                    new ScopedObject("login->view as map", {})).executeCommand(); 
+            }
+        });
     }
 
 

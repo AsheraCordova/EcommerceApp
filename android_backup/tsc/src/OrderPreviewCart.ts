@@ -13,6 +13,7 @@ import { AddToBagEvent, CartItem, eventBus, filterChangeEvent } from './Model';
 import DatabaseAdapter from './adapter/DatabaseAdapter';
 import EventType from './app/EventType';
 import { order_booked } from './R/NavGraph';
+import { DialogHelper } from './helpers/DialogHelper';
 
 //start - className
 export default class OrderPreviewCart extends Fragment
@@ -85,16 +86,16 @@ export default class OrderPreviewCart extends Fragment
     }
 
     async removeAllItems() {
-        let flag = confirm("Do you want to clear all items in cart?");
+        DialogHelper.confirm("Do you want to clear all items in cart?", async(flag:any) => {
+            if (flag) {
+                await DatabaseAdapter.getInstance().clearCart();
 
-        if (flag) {
-            await DatabaseAdapter.getInstance().clearCart();
-
-            this.cartItemsRecyclerView.updateModelData("cartItems->view as list", []).notifyDataSetChanged(true)
-                .refreshUiFromModel("cartItemsContainer,noData");
-            await this.executeCommand(this.cartItemsRecyclerView);
-            eventBus.publish(filterChangeEvent({ categories: [] }));
-        }
+                this.cartItemsRecyclerView.updateModelData("cartItems->view as list", []).notifyDataSetChanged(true)
+                    .refreshUiFromModel("cartItemsContainer,noData");
+                await this.executeCommand(this.cartItemsRecyclerView);
+                eventBus.publish(filterChangeEvent({ categories: [] }));
+            }
+        });
     }
 
     async bookItem() {

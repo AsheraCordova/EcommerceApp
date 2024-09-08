@@ -8,6 +8,7 @@ import { TextView } from './android/widget/TextViewImpl';
 
 //end - import
 import { webview } from './R/NavGraph';
+import { DialogHelper } from './helpers/DialogHelper';
 
 //start - className
 export default class Register extends Fragment
@@ -29,16 +30,17 @@ export default class Register extends Fragment
         
     async termsAndConditionsDialog(event: any) {
         if (event.terms) {
-            let flag = confirm('Please click ok to view the terms and condition.');
-
-            if (flag) {
-                await this.navController.navigateTo(webview,
-                    new ScopedObject("webviewVisible->view as bool", false),
-                    new ScopedObject("webviewTitle->view as string", "@string/terms_and_conditions"),
-                    new ScopedObject("webviewUrl->view as string", "https://www.lipsum.com/")).executeCommand();
             
-            }
+            DialogHelper.confirm('Please click ok to view the terms and condition.', async(flag: any) => {
+                if (flag) {
+                    await this.navController.navigateTo(webview,
+                        new ScopedObject("webviewVisible->view as bool", false),
+                        new ScopedObject("webviewTitle->view as string", "@string/terms_and_conditions"),
+                        new ScopedObject("webviewUrl->view as string", "https://www.lipsum.com/")).executeCommand();
+                }            
+            });
         }
+        
     }
 
     async registration() {

@@ -247,6 +247,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _adapter_AdapterFactory__WEBPACK_IMPORTED_MODULE_11__ = __webpack_require__(/*! ./adapter/AdapterFactory */ "./src/adapter/AdapterFactory.ts");
 /* harmony import */ var _decorator_Progress__WEBPACK_IMPORTED_MODULE_12__ = __webpack_require__(/*! ./decorator/Progress */ "./src/decorator/Progress.ts");
 /* harmony import */ var _app_LocaleManager__WEBPACK_IMPORTED_MODULE_13__ = __webpack_require__(/*! ./app/LocaleManager */ "./src/app/LocaleManager.ts");
+/* harmony import */ var _helpers_DialogHelper__WEBPACK_IMPORTED_MODULE_14__ = __webpack_require__(/*! ./helpers/DialogHelper */ "./src/helpers/DialogHelper.ts");
 function _typeof(o) { "@babel/helpers - typeof"; return _typeof = "function" == typeof Symbol && "symbol" == typeof Symbol.iterator ? function (o) { return typeof o; } : function (o) { return o && "function" == typeof Symbol && o.constructor === Symbol && o !== Symbol.prototype ? "symbol" : typeof o; }, _typeof(o); }
 var __extends = undefined && undefined.__extends || function () {
   var _extendStatics = function extendStatics(d, b) {
@@ -406,6 +407,7 @@ var __spreadArray = undefined && undefined.__spreadArray || function (to, from, 
 
 
 //start - import
+
 
 
 
@@ -827,20 +829,27 @@ var Dashboard = /** @class */function (_super) {
   };
   Dashboard.prototype.logout = function () {
     return __awaiter(this, void 0, void 0, function () {
-      var confirmMsg, flag;
+      var confirmMsg;
+      var _this = this;
       return __generator(this, function (_a) {
-        switch (_a.label) {
-          case 0:
-            confirmMsg = _app_LocaleManager__WEBPACK_IMPORTED_MODULE_13__["default"].getInstance().translate("@string/confirm_logout");
-            flag = confirm(confirmMsg);
-            if (!flag) return [3 /*break*/, 2];
-            return [4 /*yield*/, this.navController.navigateAsTop(_R_NavGraph__WEBPACK_IMPORTED_MODULE_7__.login, new _app_ScopedObject__WEBPACK_IMPORTED_MODULE_2__.ScopedObject("login->view as map", {})).executeCommand()];
-          case 1:
-            _a.sent();
-            _a.label = 2;
-          case 2:
-            return [2 /*return*/];
-        }
+        confirmMsg = _app_LocaleManager__WEBPACK_IMPORTED_MODULE_13__["default"].getInstance().translate("@string/confirm_logout");
+        _helpers_DialogHelper__WEBPACK_IMPORTED_MODULE_14__.DialogHelper.confirm(confirmMsg, function (flag) {
+          return __awaiter(_this, void 0, void 0, function () {
+            return __generator(this, function (_a) {
+              switch (_a.label) {
+                case 0:
+                  if (!flag) return [3 /*break*/, 2];
+                  return [4 /*yield*/, this.navController.navigateAsTop(_R_NavGraph__WEBPACK_IMPORTED_MODULE_7__.login, new _app_ScopedObject__WEBPACK_IMPORTED_MODULE_2__.ScopedObject("login->view as map", {})).executeCommand()];
+                case 1:
+                  _a.sent();
+                  _a.label = 2;
+                case 2:
+                  return [2 /*return*/];
+              }
+            });
+          });
+        });
+        return [2 /*return*/];
       });
     });
   };
@@ -3821,6 +3830,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _adapter_DatabaseAdapter__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./adapter/DatabaseAdapter */ "./src/adapter/DatabaseAdapter.ts");
 /* harmony import */ var _app_EventType__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ./app/EventType */ "./src/app/EventType.ts");
 /* harmony import */ var _R_NavGraph__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ./R/NavGraph */ "./src/R/NavGraph.ts");
+/* harmony import */ var _helpers_DialogHelper__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! ./helpers/DialogHelper */ "./src/helpers/DialogHelper.ts");
 function _typeof(o) { "@babel/helpers - typeof"; return _typeof = "function" == typeof Symbol && "symbol" == typeof Symbol.iterator ? function (o) { return typeof o; } : function (o) { return o && "function" == typeof Symbol && o.constructor === Symbol && o !== Symbol.prototype ? "symbol" : typeof o; }, _typeof(o); }
 var __extends = undefined && undefined.__extends || function () {
   var _extendStatics = function extendStatics(d, b) {
@@ -3977,6 +3987,7 @@ var __generator = undefined && undefined.__generator || function (thisArg, body)
 
 
 
+
 //start - className
 var OrderPreviewCart = /** @class */function (_super) {
   __extends(OrderPreviewCart, _super);
@@ -4070,26 +4081,32 @@ var OrderPreviewCart = /** @class */function (_super) {
   };
   OrderPreviewCart.prototype.removeAllItems = function () {
     return __awaiter(this, void 0, void 0, function () {
-      var flag;
+      var _this = this;
       return __generator(this, function (_a) {
-        switch (_a.label) {
-          case 0:
-            flag = confirm("Do you want to clear all items in cart?");
-            if (!flag) return [3 /*break*/, 3];
-            return [4 /*yield*/, _adapter_DatabaseAdapter__WEBPACK_IMPORTED_MODULE_5__["default"].getInstance().clearCart()];
-          case 1:
-            _a.sent();
-            this.cartItemsRecyclerView.updateModelData("cartItems->view as list", []).notifyDataSetChanged(true).refreshUiFromModel("cartItemsContainer,noData");
-            return [4 /*yield*/, this.executeCommand(this.cartItemsRecyclerView)];
-          case 2:
-            _a.sent();
-            _Model__WEBPACK_IMPORTED_MODULE_4__.eventBus.publish((0,_Model__WEBPACK_IMPORTED_MODULE_4__.filterChangeEvent)({
-              categories: []
-            }));
-            _a.label = 3;
-          case 3:
-            return [2 /*return*/];
-        }
+        _helpers_DialogHelper__WEBPACK_IMPORTED_MODULE_8__.DialogHelper.confirm("Do you want to clear all items in cart?", function (flag) {
+          return __awaiter(_this, void 0, void 0, function () {
+            return __generator(this, function (_a) {
+              switch (_a.label) {
+                case 0:
+                  if (!flag) return [3 /*break*/, 3];
+                  return [4 /*yield*/, _adapter_DatabaseAdapter__WEBPACK_IMPORTED_MODULE_5__["default"].getInstance().clearCart()];
+                case 1:
+                  _a.sent();
+                  this.cartItemsRecyclerView.updateModelData("cartItems->view as list", []).notifyDataSetChanged(true).refreshUiFromModel("cartItemsContainer,noData");
+                  return [4 /*yield*/, this.executeCommand(this.cartItemsRecyclerView)];
+                case 2:
+                  _a.sent();
+                  _Model__WEBPACK_IMPORTED_MODULE_4__.eventBus.publish((0,_Model__WEBPACK_IMPORTED_MODULE_4__.filterChangeEvent)({
+                    categories: []
+                  }));
+                  _a.label = 3;
+                case 3:
+                  return [2 /*return*/];
+              }
+            });
+          });
+        });
+        return [2 /*return*/];
       });
     });
   };
@@ -4144,6 +4161,7 @@ var OrderPreviewCart = /** @class */function (_super) {
 __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _app_Fragment__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./app/Fragment */ "./src/app/Fragment.ts");
 /* harmony import */ var _navigation_NavController__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./navigation/NavController */ "./src/navigation/NavController.ts");
+/* harmony import */ var _helpers_DialogHelper__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./helpers/DialogHelper */ "./src/helpers/DialogHelper.ts");
 function _typeof(o) { "@babel/helpers - typeof"; return _typeof = "function" == typeof Symbol && "symbol" == typeof Symbol.iterator ? function (o) { return typeof o; } : function (o) { return o && "function" == typeof Symbol && o.constructor === Symbol && o !== Symbol.prototype ? "symbol" : typeof o; }, _typeof(o); }
 var __extends = undefined && undefined.__extends || function () {
   var _extendStatics = function extendStatics(d, b) {
@@ -4292,6 +4310,7 @@ var __generator = undefined && undefined.__generator || function (thisArg, body)
 };
 
 
+
 //start - className
 var QrcodeScanner = /** @class */function (_super) {
   __extends(QrcodeScanner, _super);
@@ -4338,7 +4357,7 @@ var QrcodeScanner = /** @class */function (_super) {
   QrcodeScanner.prototype.onDone = function (err, status) {
     if (err) {
       // here we can handle errors and clean up any loose ends.
-      alert(JSON.stringify(err));
+      _helpers_DialogHelper__WEBPACK_IMPORTED_MODULE_2__.DialogHelper.alert(JSON.stringify(err), function () {});
       return;
     }
     if (status.authorized) {
@@ -4349,21 +4368,21 @@ var QrcodeScanner = /** @class */function (_super) {
       // The video preview will remain black, and scanning is disabled. We can
       // try to ask the user to change their mind, but we'll have to send them
       // to their device settings with `QRScanner.openSettings()`.
-      alert("Access is denied");
+      _helpers_DialogHelper__WEBPACK_IMPORTED_MODULE_2__.DialogHelper.alert("Access is denied", function () {});
     } else {
       // we didn't get permission, but we didn't get permanently denied. (On
       // Android, a denial isn't permanent unless the user checks the "Don't
       // ask again" box.) We can ask again at the next relevant opportunity.
-      alert("onDone");
+      _helpers_DialogHelper__WEBPACK_IMPORTED_MODULE_2__.DialogHelper.alert("onDone", function () {});
     }
   };
   QrcodeScanner.prototype.displayContents = function (err, text) {
     if (err) {
       // an error occurred, or the scan was canceled (error code `6`)
-      alert(JSON.stringify(err));
+      _helpers_DialogHelper__WEBPACK_IMPORTED_MODULE_2__.DialogHelper.alert(JSON.stringify(err), function () {});
     } else {
       // The scan completed, display the contents of the QR code:
-      alert(JSON.stringify(text));
+      _helpers_DialogHelper__WEBPACK_IMPORTED_MODULE_2__.DialogHelper.alert(JSON.stringify(text), function () {});
     }
   };
   QrcodeScanner.prototype.onDestroy = function (obj) {
@@ -4480,6 +4499,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _app_ScopedObject__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./app/ScopedObject */ "./src/app/ScopedObject.ts");
 /* harmony import */ var _android_widget_TextViewImpl__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./android/widget/TextViewImpl */ "./src/android/widget/TextViewImpl.ts");
 /* harmony import */ var _R_NavGraph__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./R/NavGraph */ "./src/R/NavGraph.ts");
+/* harmony import */ var _helpers_DialogHelper__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./helpers/DialogHelper */ "./src/helpers/DialogHelper.ts");
 function _typeof(o) { "@babel/helpers - typeof"; return _typeof = "function" == typeof Symbol && "symbol" == typeof Symbol.iterator ? function (o) { return typeof o; } : function (o) { return o && "function" == typeof Symbol && o.constructor === Symbol && o !== Symbol.prototype ? "symbol" : typeof o; }, _typeof(o); }
 var __extends = undefined && undefined.__extends || function () {
   var _extendStatics = function extendStatics(d, b) {
@@ -4633,6 +4653,7 @@ var __generator = undefined && undefined.__generator || function (thisArg, body)
 
 //end - import
 
+
 //start - className
 var Register = /** @class */function (_super) {
   __extends(Register, _super);
@@ -4655,20 +4676,27 @@ var Register = /** @class */function (_super) {
   //end - body
   Register.prototype.termsAndConditionsDialog = function (event) {
     return __awaiter(this, void 0, void 0, function () {
-      var flag;
+      var _this = this;
       return __generator(this, function (_a) {
-        switch (_a.label) {
-          case 0:
-            if (!event.terms) return [3 /*break*/, 2];
-            flag = confirm('Please click ok to view the terms and condition.');
-            if (!flag) return [3 /*break*/, 2];
-            return [4 /*yield*/, this.navController.navigateTo(_R_NavGraph__WEBPACK_IMPORTED_MODULE_4__.webview, new _app_ScopedObject__WEBPACK_IMPORTED_MODULE_2__.ScopedObject("webviewVisible->view as bool", false), new _app_ScopedObject__WEBPACK_IMPORTED_MODULE_2__.ScopedObject("webviewTitle->view as string", "@string/terms_and_conditions"), new _app_ScopedObject__WEBPACK_IMPORTED_MODULE_2__.ScopedObject("webviewUrl->view as string", "https://www.lipsum.com/")).executeCommand()];
-          case 1:
-            _a.sent();
-            _a.label = 2;
-          case 2:
-            return [2 /*return*/];
+        if (event.terms) {
+          _helpers_DialogHelper__WEBPACK_IMPORTED_MODULE_5__.DialogHelper.confirm('Please click ok to view the terms and condition.', function (flag) {
+            return __awaiter(_this, void 0, void 0, function () {
+              return __generator(this, function (_a) {
+                switch (_a.label) {
+                  case 0:
+                    if (!flag) return [3 /*break*/, 2];
+                    return [4 /*yield*/, this.navController.navigateTo(_R_NavGraph__WEBPACK_IMPORTED_MODULE_4__.webview, new _app_ScopedObject__WEBPACK_IMPORTED_MODULE_2__.ScopedObject("webviewVisible->view as bool", false), new _app_ScopedObject__WEBPACK_IMPORTED_MODULE_2__.ScopedObject("webviewTitle->view as string", "@string/terms_and_conditions"), new _app_ScopedObject__WEBPACK_IMPORTED_MODULE_2__.ScopedObject("webviewUrl->view as string", "https://www.lipsum.com/")).executeCommand()];
+                  case 1:
+                    _a.sent();
+                    _a.label = 2;
+                  case 2:
+                    return [2 /*return*/];
+                }
+              });
+            });
+          });
         }
+        return [2 /*return*/];
       });
     });
   };
@@ -18225,6 +18253,7 @@ var ScopedObject = /** @class */function () {
 "use strict";
 __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _app_LocaleManager__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../app/LocaleManager */ "./src/app/LocaleManager.ts");
+/* harmony import */ var _helpers_DialogHelper__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../helpers/DialogHelper */ "./src/helpers/DialogHelper.ts");
 var __awaiter = undefined && undefined.__awaiter || function (thisArg, _arguments, P, generator) {
   function adopt(value) {
     return value instanceof P ? value : new P(function (resolve) {
@@ -18341,6 +18370,7 @@ var __generator = undefined && undefined.__generator || function (thisArg, body)
   }
 };
 
+
 /* harmony default export */ __webpack_exports__["default"] = (function (config) {
   return function (target, propertyKey, descriptor) {
     // save a reference to the original method
@@ -18377,7 +18407,7 @@ var __generator = undefined && undefined.__generator || function (thisArg, body)
               return [2 /*return*/, result];
             case 3:
               e_1 = _a.sent();
-              alert(e_1);
+              _helpers_DialogHelper__WEBPACK_IMPORTED_MODULE_1__.DialogHelper.alert(e_1 + "", function () {});
               return [3 /*break*/, 5];
             case 4:
               if (showProgress) {
@@ -18393,6 +18423,35 @@ var __generator = undefined && undefined.__generator || function (thisArg, body)
     return descriptor;
   };
 });
+
+/***/ }),
+
+/***/ "./src/helpers/DialogHelper.ts":
+/*!*************************************!*\
+  !*** ./src/helpers/DialogHelper.ts ***!
+  \*************************************/
+/***/ (function(__unused_webpack_module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   DialogHelper: function() { return /* binding */ DialogHelper; }
+/* harmony export */ });
+/* harmony import */ var _app_LocaleManager__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../app/LocaleManager */ "./src/app/LocaleManager.ts");
+
+var DialogHelper = /** @class */function () {
+  function DialogHelper() {}
+  DialogHelper.alert = function (message, alertDismissed) {
+    message = _app_LocaleManager__WEBPACK_IMPORTED_MODULE_0__["default"].getInstance().translate(message);
+    navigator.notification.alert(message, alertDismissed);
+  };
+  DialogHelper.confirm = function (message, onConfirm) {
+    message = _app_LocaleManager__WEBPACK_IMPORTED_MODULE_0__["default"].getInstance().translate(message);
+    navigator.notification.confirm(message, onConfirm);
+  };
+  return DialogHelper;
+}();
+
 
 /***/ }),
 

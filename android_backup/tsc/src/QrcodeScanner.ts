@@ -1,6 +1,7 @@
 import { Fragment, Inject } from './app/Fragment';
 import { NavController, InjectController } from './navigation/NavController';
 import { ScopedObject } from './app/ScopedObject';
+import { DialogHelper } from './helpers/DialogHelper';
 
 //start - import
 
@@ -32,7 +33,7 @@ export default class QrcodeScanner extends Fragment
     onDone(err: any, status: any) {
         if (err) {
             // here we can handle errors and clean up any loose ends.
-            alert(JSON.stringify(err));
+            DialogHelper.alert(JSON.stringify(err), () => {});
             return;
         }
         if (status.authorized) {
@@ -43,22 +44,22 @@ export default class QrcodeScanner extends Fragment
             // The video preview will remain black, and scanning is disabled. We can
             // try to ask the user to change their mind, but we'll have to send them
             // to their device settings with `QRScanner.openSettings()`.
-            alert("Access is denied");
+            DialogHelper.alert("Access is denied", () => {});
         } else {
             // we didn't get permission, but we didn't get permanently denied. (On
             // Android, a denial isn't permanent unless the user checks the "Don't
             // ask again" box.) We can ask again at the next relevant opportunity.
-            alert("onDone");
+            DialogHelper.alert("onDone", () => {});
         }
     }
 
     displayContents(err: any, text: any) {
         if (err) {
             // an error occurred, or the scan was canceled (error code `6`)
-            alert(JSON.stringify(err));
+            DialogHelper.alert(JSON.stringify(err), () => {});
         } else {
             // The scan completed, display the contents of the QR code:
-            alert(JSON.stringify(text));
+            DialogHelper.alert(JSON.stringify(text), () => {});
         }
     }
 
