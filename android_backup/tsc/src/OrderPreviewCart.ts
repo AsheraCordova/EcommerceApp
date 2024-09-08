@@ -86,8 +86,8 @@ export default class OrderPreviewCart extends Fragment
     }
 
     async removeAllItems() {
-        DialogHelper.confirm("Do you want to clear all items in cart?", async(flag:any) => {
-            if (flag) {
+        DialogHelper.confirm("Do you want to clear all items in cart?", async(index:number) => {
+            if (index == 1) {
                 await DatabaseAdapter.getInstance().clearCart();
 
                 this.cartItemsRecyclerView.updateModelData("cartItems->view as list", []).notifyDataSetChanged(true)

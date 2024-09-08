@@ -31,8 +31,8 @@ export default class Register extends Fragment
     async termsAndConditionsDialog(event: any) {
         if (event.terms) {
             
-            DialogHelper.confirm('Please click ok to view the terms and condition.', async(flag: any) => {
-                if (flag) {
+            DialogHelper.confirm('Please click ok to view the terms and condition.', async(index: number) => {
+                if (index == 1) {
                     await this.navController.navigateTo(webview,
                         new ScopedObject("webviewVisible->view as bool", false),
                         new ScopedObject("webviewTitle->view as string", "@string/terms_and_conditions"),
