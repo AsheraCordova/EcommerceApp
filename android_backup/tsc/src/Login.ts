@@ -26,7 +26,9 @@ export default class Login extends Fragment
 
         private submit!:TextView;
 
-
+		static createInstance () {
+			return new Login();
+		}
         async goToPreviousScreen() {
             await this.navController.reset().popBackStack().executeCommand();
         }        

@@ -18,7 +18,9 @@ export default class ForgotPasswordOtp extends Fragment
 
         private submit!:TextView;
 
-
+		static createInstance () {
+			return new ForgotPasswordOtp();
+		}
         async goToPreviousScreen() {
             await this.navController.reset().popBackStack().executeCommand();
         }        

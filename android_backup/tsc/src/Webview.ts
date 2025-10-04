@@ -18,7 +18,9 @@ export default class Webview extends Fragment
 
         private webview!:WebView;
 
-
+		static createInstance () {
+			return new Webview();
+		}
         async goToPreviousScreen() {
             await this.navController.reset().popBackStack().executeCommand();
         }        

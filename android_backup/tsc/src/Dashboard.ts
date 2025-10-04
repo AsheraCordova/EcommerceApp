@@ -46,7 +46,9 @@ export default class Dashboard extends Fragment
 
         private categoriesContainer!:LinearLayout;
 
-
+		static createInstance () {
+			return new Dashboard();
+		}
         async goToPreviousScreen() {
             await this.navController.reset().popBackStack().executeCommand();
         }        

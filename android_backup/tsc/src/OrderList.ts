@@ -13,7 +13,9 @@ export default class OrderList extends Fragment
         @InjectController({})
         navController!: NavController;
         
-
+		static createInstance () {
+			return new OrderList();
+		}
         async goToPreviousScreen() {
             await this.navController.reset().popBackStack().executeCommand();
         }        

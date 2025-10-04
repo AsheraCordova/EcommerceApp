@@ -21,7 +21,9 @@ export default class SelectstoreDialog extends Fragment
 
         private selectStoreLL!:LinearLayout;
 
-
+		static createInstance () {
+			return new SelectstoreDialog();
+		}
         async goToPreviousScreen() {
             await this.navController.reset().popBackStack().executeCommand();
         }        

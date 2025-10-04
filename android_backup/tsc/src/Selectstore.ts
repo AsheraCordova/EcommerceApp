@@ -22,7 +22,9 @@ export default class Selectstore extends Fragment
 
         private root!:RelativeLayout;
 
-
+		static createInstance () {
+			return new Selectstore();
+		}
         async goToPreviousScreen() {
             await this.navController.reset().popBackStack().executeCommand();
         }        

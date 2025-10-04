@@ -23,7 +23,9 @@ export default class DashboardFilter extends Fragment
 
         private filterItems!:LinearLayout;
 
-
+		static createInstance () {
+			return new DashboardFilter();
+		}
         async goToPreviousScreen() {
             await this.navController.reset().popBackStack().executeCommand();
         }        

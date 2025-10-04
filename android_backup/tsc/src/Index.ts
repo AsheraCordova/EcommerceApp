@@ -21,7 +21,9 @@ export default class Index extends Fragment
 
         private mainLayout!:RelativeLayout;
 
-
+		static createInstance () {
+			return new Index();
+		}
         async goToPreviousScreen() {
             await this.navController.reset().popBackStack().executeCommand();
         }        

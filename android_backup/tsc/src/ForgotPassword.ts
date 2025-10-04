@@ -21,7 +21,9 @@ export default class ForgotPassword extends Fragment
 
         private submit!:ImageView;
 
-
+		static createInstance () {
+			return new ForgotPassword();
+		}
         async goToPreviousScreen() {
             await this.navController.reset().popBackStack().executeCommand();
         }        

@@ -201,12 +201,13 @@ export class Menu {
 }
 
 
-export class OnClickEvent implements Event {
+export class OnClickEvent implements Event {  
   id: string;
   action: string;
   eventType: string;
   event: string;
   parentFragments: string;
+  dialogClosed: string;
 }
 
 export class CategorySelectionEvent extends OnClickEvent {

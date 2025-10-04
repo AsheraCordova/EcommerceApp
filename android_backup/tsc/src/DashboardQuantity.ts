@@ -28,7 +28,9 @@ export default class DashboardQuantity extends Fragment
 
         private mixerGridLayout!:LinearLayout;
 
-
+		static createInstance () {
+			return new DashboardQuantity();
+		}
         async goToPreviousScreen() {
             await this.navController.reset().popBackStack().executeCommand();
         }        

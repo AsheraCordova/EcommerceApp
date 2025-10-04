@@ -13,7 +13,9 @@ export default class Faq extends Fragment
         @InjectController({})
         navController!: NavController;
         
-
+		static createInstance () {
+			return new Faq();
+		}
         async goToPreviousScreen() {
             await this.navController.reset().popBackStack().executeCommand();
         }        

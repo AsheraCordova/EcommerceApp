@@ -29,7 +29,9 @@ export default class OrderPreviewCart extends Fragment
 
         private cartItemsRecyclerView!:RecyclerView;
 
-
+		static createInstance () {
+			return new OrderPreviewCart();
+		}
         async goToPreviousScreen() {
             await this.navController.reset().popBackStack().executeCommand();
         }        

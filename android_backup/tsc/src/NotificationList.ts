@@ -13,7 +13,9 @@ export default class NotificationList extends Fragment
         @InjectController({})
         navController!: NavController;
         
-
+		static createInstance () {
+			return new NotificationList();
+		}
         async goToPreviousScreen() {
             await this.navController.reset().popBackStack().executeCommand();
         }        

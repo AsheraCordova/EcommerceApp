@@ -18,7 +18,9 @@ export default class ChangePassword extends Fragment
 
         private submit!:TextView;
 
-
+		static createInstance () {
+			return new ChangePassword();
+		}
         async goToPreviousScreen() {
             await this.navController.reset().popBackStack().executeCommand();
         }        

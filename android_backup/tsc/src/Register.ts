@@ -21,7 +21,9 @@ export default class Register extends Fragment
 
         private submit!:TextView;
 
-
+		static createInstance () {
+			return new Register();
+		}
         async goToPreviousScreen() {
             await this.navController.reset().popBackStack().executeCommand();
         }        
