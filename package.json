@@ -28,6 +28,8 @@
     "fs-extra": "^10.1.0"
   },
   "devDependencies": {
+    "@types/minimatch": "^6.0.0",
+	  "minimatch": "^10.0.3",
     "browser": "git+https://github.com/AsheraCordova/cordova-web.git",
     "com.ashera.capinsets": "git+https://github.com/AsheraCordova/CapInsets.git",
     "com.ashera.constraintlayout": "git+https://github.com/AsheraCordova/ConstraintLayout.git",
